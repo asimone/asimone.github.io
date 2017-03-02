@@ -1,0 +1,118 @@
+---
+layout: post
+title:  "Operation Geronimo"
+date:   2011-05-11 15:36:05 -0600
+categories: internet appdotnet
+---
+
+<em>This post was updated during the few days after Operation Geronimo became public.</em>
+
+<iframe frameborder="0" height="550" src="http://www.youtube.com/embed/ZNYmK19-d0U" width="800"></iframe>
+White House counterrorism adviser John Brennan's <a href="http://politicalwire.com/archives/2011/05/02/brennans_briefing.html"><span style="color: #ff0000;">press briefing transcription in full</span></a>, or, if you prefer, <a href="http://www.whitehouse.gov/photos-and-video/video/2011/05/02/press-briefing">here</a> is the video.
+
+Alex Madrigal <a href="http://www.theatlantic.com/politics/archive/2011/05/outside-the-white-house-a-celebration-of-osama-bin-ladens-death/238141/">in the Atlantic</a>:
+<blockquote>We treated the killing of a man who promoted the killing of thousands of Americans like a game with no consideration of the past or future costs. In other words, on night one in our nation's capital, Osama bin Laden's death did not change the face of the American body politic. We'll see if it has a greater impact on our politics.</blockquote>
+Tim Carmody <a href="http://kottke.org/11/05/the-limits-of-crowds">at kottke.org</a>:
+<blockquote>This guy -- this son-of-a-bitch who murdered thousands of people here ten years ago and helped murder many more all around the world -- has us so twisted up that we do not know how to feel about him, or ourselves, at all.
+
+And our inability to come together, and to talk about that, which was already latent in the way our media work, and all the more amplified by what ten years of this twisting and torturing, and being twisted into torture and then lying about torture, only makes it worse.</blockquote>
+The front pages from over 800 newspapers world-wide for <a href="http://www.newseum.org/todaysfrontpages/default.asp">Tuesday, May 03, 2011</a>.
+
+Megan McArdle, over at the Atlantic, <a href="http://www.theatlantic.com/national/archive/2011/05/out-of-osamas-death-a-fake-quotation-is-born/238220/">suggests that the MLK, Jr. quote may be fake</a> (<strong>Update</strong>: see <a href="http://twitter.com/#!/jmadly/status/65314784136011776"><span style="color: #ff0000;">@jmadly</span></a> and <span style="color: #ff0000;"><a href="http://kottke.org/11/05/giving-our-feelings-a-name">Carmody's article</a></span>, and <span style="color: #ff0000;"><a href="http://www.theatlantic.com/technology/archive/2011/05/the-shy-woman-whose-words-accidentally-became-martin-luther-kings/238309/">an interview with @jmadly</a></span>):
+<blockquote>A quick Google search turns up lots of tweets, all of them from today.  Searching Martin Luther King Jr. quote pages for the word "enemy" does not turn up this quote, only things that probably wouldn't go over nearly so well, like "Love is the only force capable of transforming an enemy to a friend." I'm pretty sure that this quote, too, is fake.</blockquote>
+Photo of President Barack Obama and staff <a href="http://www.flickr.com/photos/whitehouse/5680724572/">receiving an update on the mission against Osama bin Laden</a>. Hillary Clinton's face <a href="http://www.rexblog.com/2011/05/03/23046"><span style="color: #ff0000;">is striking</span></a> (turns out, <a href="http://www.patspapers.com/story_stack/item/hillary_clintons_allergic_reaction_to_osama_news/"><span style="color: #ff0000;">she was probably just coughing</span></a>). <em>Der Tzitung </em>actually <a href="http://thesocietypages.org/socimages/2011/05/09/removing-women-from-situation-room-photo/">photoshopped Hillary out</a> (they now <a href="http://thelede.blogs.nytimes.com/2011/05/10/newspaper-regrets-erasing-hillary-clinton/">regret it</a>).
+
+A man unwittingly <a href="http://abcnews.go.com/Blotter/sohaib-athar-unknowingly-live-tweets-raid-%20osama-bin/story?id=13506941">live tweets the raid on Osama bin Laden</a>. The tweets are aggregated<strong> in order</strong> <a href="http://almightylink.ksablan.com/social-media/the-reallyvirtual-tweets-reportedly-of-the-bin-laden-raid/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+almightylink+%28Almighty+Link%29">over at the Almighty Link</a>.
+
+<a href="http://www.theatlantic.com/infocus/2011/05/osama-bin-laden-killed-worldwide-reactions/100058/"><img class="size-large wp-image-1151 alignnone" title="Osama Bin Laden Killed" src="/assets/images/Osama-Bin-Laden-Killed-Worldwide-Reactions-Alan-Taylor-In-Focus-The-Atlantic-660x468.png" alt="" width="800" height="708" /></a>
+<a href="http://www.theatlantic.com/infocus/2011/05/osama-bin-laden-killed-worldwide-reactions/100058/">A collection of images</a>, from all over the world, responding to his death.
+
+The NYT <a href="http://www.nytimes.com/2011/05/03/world/asia/osama-bin-laden-dead.html?hp">discusses the operation</a>:
+<blockquote>The tensest moment for those watching, he said, came when one of two helicopters that flew the American troops into the compound broke down, stalling as it flew over the 18-foot wall of the compound and prepared to land. After the raid, the team blew up the helicopter and called in one of two backups. In all, 79 commandos and a dog were involved.</blockquote>
+<a href="http://www.foreignpolicy.com/articles/2011/05/04/war_dog?page=0,0">Dogs of War</a>.
+
+<a href="http://online.wsj.com/article/SB10001424052748703992704576307021339210488.html?mod=WSJ_hp_LEFTTopStories">Navy Seals</a>:
+<blockquote>SEALs are capable of great violence, but that's not what makes them truly special. Given two weeks of training and a bunch of rifles, any reasonably fit group of 16 athletes (the size of a SEAL platoon) can be trained to do harm. What distinguishes SEALs is that they can be thoughtful, disciplined and proportional in the use of force.</blockquote>
+Osama bin Laden <a href="http://tpmmuckraker.talkingpointsmemo.com/2011/05/administration_backs_off_tale_of_osama_bin_laden_using_wife_as_human_shield.php"><span style="color: #ff0000;">probably didn't use his wife as a human shield</span></a>:
+<blockquote>Hours later, other administration officials were clarifying Brennan's account. Turns out the woman that was killed on the compound wasn't bin Laden's wife. Bin Laden may have not even been using a human shield. And he might not have even been holding a gun.</blockquote>
+Filling out <a href="http://www.nytimes.com/2011/05/08/world/asia/08binladen.html?pagewanted=2&amp;_r=1">the narrative of Operation Geronimo</a>:
+<blockquote>But he said he was also struck that Bin Laden was not prepared for the kind of attack the commandos carried out. “There was no escape route, no tunnels, not even false rooms in the house in which to hide,” he said. “It makes you wonder: at what point did that extra degree of vigilance he had get dulled by routine?”</blockquote>
+<a href="http://www.theatlantic.com/international/archive/2011/05/photos-life-in-abbottabad-the-city-where-osama-bin-laden-hid/238201/">Life in Abbottabad</a>, the city where bin Laden hid.
+
+Mike Allen, <a href="http://www.politico.com/news/stories/0511/54093.html">over at Politico</a>, gives us a good sense of what the compound looks like, plus a comprehensive narrative of the operation and the events leading up to it:
+<blockquote>Contrary to the intelligence community’s long-held belief that bin Laden was in a lawless “no man’s land” on the Pakistani border, bin Laden had been hiding in a three-story house in a one-acre compound in Abbottabad, about 35 miles north of Islamabad, the Pakistani capital. Officials describe it as a relatively affluent community, with lots of residents who are retired military.</blockquote>
+UCLA geographer Thomas Gillespie calculated <a href="http://news.sciencemag.org/scienceinsider/2011/05/geographers-had-calculated.html?ref=hp">an 88.9% chance that Osama was in Abbottabad back in 2009</a>:
+<blockquote>“The theory was basically that if you’re going to try and survive, you’re going to a region with a low extinction rate: a large town,” Gillespie says. “We hypothesized he wouldn’t be in a small town where people could report on him.”
+
+“It’s not my thing to do this type of [terrorism] stuff,” he says. “But the same theories we use to study endangered birds can be used to do this.”</blockquote>
+MIT hosts Gillespie's paper <em><a href="http://web.mit.edu/mitir/2009/online/finding-bin-laden.pdf"><span style="color: #ff0000;">Osama bin Laden: An Application of Biogeophic Theories and Satellite Imagery</span></a></em> in .pdf form.
+
+The Guardian's <a href="http://www.guardian.co.uk/world/2011/may/02/osama-bin-laden-obituary">obit for Osama</a>:
+<blockquote>His life was one of extremes and of contradictions. Born to great wealth, he lived in relative poverty. A graduate of civil engineering, he assumed the mantle of a religious scholar. A gifted propagandist who had little real experience of battle, he projected himself as a mujahid, a holy warrior. A man who called for a return to the values and social systems of the seventh century as a means of restoring a just order in today's world, he justified the use of advanced modern technology to kill thousands through a rigorous and anachronistic interpretation of Islamic law.</blockquote>
+A nice diagram (below) from <a href="http://www.defense.gov/transcripts/transcript.aspx?transcriptid=4818">the DoD background briefing for senior officials</a>.
+
+<a href="http://www.defense.gov/DODCMSShare/briefingslide/359/110502-D-6570C-006.JPG"><img class="size-large wp-image-1185 alignnone" title="bin-laden-compound" src="/assets/images/bin-laden-compound-660x377.jpg" alt="" width="800" height="517" /></a>
+
+The WSJ has <a href="http://online.wsj.com/article/SB10001424052748704569404576298850337909570.html">a series of photos from after the operation</a>, much of it comes from <a href="http://abcnews.go.com/GMA/video/osama-bin-laden-dead-inside-pakistan-kill-site-13507839"><span style="color: #ff0000;">a short video</span></a> off a Blackberry.
+
+Reuters also has <a href="http://www.reuters.com/subjects/bin-laden-compound">some photos of the compound after the conflict</a>, including a couple dead men lying in pools of blood (you can click the link without seeing the images).
+
+<a href="http://www.economist.com/blogs/dailychart/2011/05/public_opinion_osama_bin_laden"><img class="size-full wp-image-1195 alignnone" title="public opinion of bin Laden" src="/assets/images/public-opinion-of-bin-Laden.gif" alt="" width="800" height="600" /></a>
+
+From <a href="http://www.economist.com/blogs/dailychart/2011/05/public_opinion_osama_bin_laden">The Economist</a> (see, <a href="http://www.economist.com/node/18651288?Story_ID=18651288">also</a>).
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=ahAz4c2H3Sw#at=71">Mets &amp; Phillies players exceedingly confused</a> as the news of Osama's death trickles through the stadium.
+
+What really happened at Tora Bora? How bin Laden <a href="https://www.readability.com/articles/455j395y">first alluded us</a>:
+<blockquote>Having reconstructed the battle--based on interviews with the top American ground commander, three Afghan commanders, and three CIA officials; accounts by Al Qaeda eyewitnesses that were subsequently published on jihadist websites; recollections of captured survivors who were later questioned by interrogators or reporters; an official history of the Afghan war by the U.S. Special Operations Command; an investigation by the Senate Foreign Relations Committee; and visits to the battle sites themselves--I am convinced that Tora Bora constitutes one of the greatest military blunders in recent U.S. history.</blockquote>
+The man behind Osama, <a href="http://www.newyorker.com/archive/2002/09/16/020916fa_fact2?currentPage=all">Ayman al-Zawahiri</a>:
+<blockquote>For Zawahiri, bin Laden was a savior—rich and generous, with nearly limitless resources, but also pliable and politically unformed. “Bin Laden had an Islamic frame of reference, but he didn’t have anything against the Arab regimes,” Montasser al-Zayat, a lawyer for many of the Islamists, told me recently in Cairo. “When Ayman met bin Laden, he created a revolution inside him.”</blockquote>
+According to Press Secretary Jim Carney's full description of the operation, it appears that <a href="http://www.cnn.com/2011/POLITICS/05/03/white.house.bin.laden/index.html"><span style="color: #ff0000;">Osama wasn't armed</span></a>.
+
+The Muslim Brotherhood, in refering to bin Ladin, used the honorific 'sheikh,' according to Eric Trager, a Fullbright fellow of Political Science in Egypt, <a href="http://www.theatlantic.com/international/archive/2011/05/egypts-muslim-brotherhood-sticks-with-bin-laden/238218/">this should demyth some perceptions about the organization</a>:
+<blockquote>The Muslim Brotherhood's response to bin Laden's death may finally end the mythology -- espoused frequently in the U.S. -- that the organization is moderate or, at the very least, could moderate once in power. This is, after all, precisely how Muslim Brothers describe their creed -- "moderate," as opposed to al-Qaeda, which is radical. "Moderate Islam means not using violence, denouncing terrorism, and not working with jihadists," said Muslim Brotherhood youth activist Khaled Hamza, for whom the organization's embrace of "moderate Islam" was the primary reason he joined.</blockquote>
+<p style="display: inline !important;"><a href="http://www.thedailyshow.com/watch/mon-may-2-2011/to-kill-a-mockingturd?xrs=share_copy">Jon Stewart's response</a> is not what some would suspect, I, er, suspect.</p>
+Juan Cole, Richard P. Mitchell Collegiate Professor of History at the University of Michigan, argues that in a post-bin Laden world, <a href="http://www.juancole.com/2011/05/obama-and-the-end-of-al-qaeda.html"><span style="color: #ff0000;">Obama now needs to pull troops out of Iraq</span></a>:
+<blockquote>The Arab Spring has demonstrated that the Arab masses yearn for liberty, not thuggish repression, for life, not death and destruction, for parliamentary democracy, not theocratic dictatorship. Bin Laden was already a dinosaur, a relic of the Cold War and the age of dictators in which a dissident such as he had no place in society and was shunted off to distant, frontier killing fields. The new generation of young Arabs in Egypt and Tunisia has a shot at a decent life. Obama has put the US on the right side of history in Tunisia, Egypt, Syria and Libya (where I see crowds for the first time in my life waving American flags). People might want a little help from a distance, but they don’t want to see Western troops deployed in fighting units on their soil.</blockquote>
+The bin Laden Raid has been <a href="http://online.wsj.com/article/SB10001424052748704740604576301551571673780.html?mod=WSJ_hp_LEFTTopStories&amp;_nocache=1304534112989&amp;mg=com-wsj">a substantive intelligence boon</a>, finding 10 hard drives and more than 100 storage devices (DVDs, removable flash drives, etc.):
+<blockquote>The intelligence find is a jolt to bin Laden's network that could force its terror operatives to move into areas or initiate communications that make them more easily detectable.</blockquote>
+<strong>Sadly, the above article is behind the paywall</strong>. If you don't have any access to the WSJ, then <strong>here are a few tidbits that I haven't seen elsewhere</strong>:
+<blockquote>Pakistani authorities in Islamabad, the capital, have custody of the four women and six children who survived the firefight, a senior U.S. administration official said. They also have some files and information that the Navy Seals didn't take, he said.
+
+Pakistani intelligence officials are interrogating bin Laden's 12-year-old daughter, Safia, who saw her father killed by American forces, according to a Pakistani intelligence officer. Safia was with her mother, the official said, and receiving medical treatment.
+
+A U.S. Embassy official in Islamabad said the U.S. hasn't asked Pakistan to hand over bin Laden's family members to American officials.
+
+Pakistan's foreign office said they would be returned to their country of origin.</blockquote>
+Pakistan's President, Asif Ali Zardari, wrote an Op-ed, <em><a href="http://www.washingtonpost.com/opinions/pakistan-did-its-part/2011/05/02/AFHxmybF_story.html"><span style="color: #ff0000;">Pakistan did its part</span></a></em>, in the Wasington Post:
+<blockquote>Some in the U.S. press have suggested that Pakistan lacked vitality in its pursuit of terrorism, or worse yet that we were disingenuous and actually protected the terrorists we claimed to be pursuing. Such baseless speculation may make exciting cable news, but it doesn’t reflect fact. Pakistan had as much reason to despise al-Qaeda as any nation. The war on terrorism is as much Pakistan’s war as as it is America’s. And though it may have started with bin Laden, the forces of modernity and moderation remain under serious threat.</blockquote>
+<a href="http://www.guardian.co.uk/world/2011/may/09/osama-bin-laden-us-pakistan-deal"><span style="color: #ff0000;">The secret deal</span></a> between Pakistan and the US:
+<blockquote>Under its terms, Pakistan would allow US forces to conduct a unilateral raid inside Pakistan in search of Bin Laden, his deputy, Ayman al-Zawahiri, and the al-Qaida No3. Afterwards, both sides agreed, Pakistan would vociferously protest the incursion.
+
+"There was an agreement between Bush and Musharraf that if we knew where Osama was, we were going to come and get him," said a former senior US official with knowledge of counterterrorism operations. "The Pakistanis would put up a hue and cry, but they wouldn't stop us."</blockquote>
+“We don’t need to spike the football” - President Obama on <a href="http://www.cbsnews.com/stories/2011/05/04/60minutes/main20059768.shtml?tag=contentMain;contentBody">not releasing the photos</a> (see, also,<a href="http://www.nytimes.com/2011/05/05/us/politics/05binladen.html"> the NYT</a>):
+<blockquote>You know, we discussed this internally. Keep in mind that we are absolutely certain this was him. We've done DNA sampling and testing. And so there is no doubt that we killed Osama bin Laden. It is important for us to make sure that very graphic photos of somebody who was shot in the head are not floating around as an incitement to additional violence. As a propaganda tool. You know, that's not who we are. You know, we don't trot out this stuff as trophies. You know, the fact of the matter is this was somebody who was deserving of the justice that he received. And I think-- Americans and people around the world are glad that he's gone. But we don't need to spike the football. And I think that given the graphic nature of these photos, it would create some national security risk. And I've discussed this with Bob Gates and Hillary Clinton and my intelligence teams and they all agree.</blockquote>
+<a href="http://www.whitehouse.gov/photos-and-video/video/2011/05/04/press-briefing">Here</a> is Carney's full press briefing on the photos.
+
+<blockquote class="twitter-tweet" lang="en" align="center"><p>While I’ve not seen the <a href="https://twitter.com/search?q=%23OBL&amp;src=hash">#OBL</a> photos &amp; there may be good reasons not to release them, I haven’t heard any yet.</p>&mdash; Donald Rumsfeld (@RumsfeldOffice) <a href="https://twitter.com/RumsfeldOffice/statuses/66170773735342080">May 5, 2011</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Jack Shafer, ironically, <a href="http://www.slate.com/id/2293031/">agrees with Rumsfeld</a>:
+<blockquote>I don't advocate the photos' release because I think it will convince the unconvincible that Bin Laden is dead or because I desire a "trophy" or a football "spiked," as Obama puts it in his 60 Minutes interview. I'm for the publication of the pictures because they're an essential part of the war on al-Qaida. Withholding the photos and couching their suppression in the name of national security misjudges what makes al-Qaida tick and infantilizes the nation. It also sets a precedent for "news that's too gruesome to reveal."</blockquote>
+Was <a href="https://www.readability.com/articles/q4xdbuet"><span style="color: #ff0000;">the killing of Osama legal</span></a>?
+<blockquote>The executive director of Human Rights Watch, Kenneth Roth, has criticized the White House for its public handling of the killing. He <a name="rdb-footnote-link-15" href="http://twitter.com/#!/asteris/statuses/65706182966390784" rel="nofollow" target="_blank"></a>recently wrote on Twitter, “White House still hasn’t clarified: OBL ‘resisted’ but how did he pose lethal threat to US forces on scene? Need facts.” This may be a worthwhile thing to know for broader ethical or policy or tactical reasons, but it is not the most pertinent question when judging the action against our existing military laws. The key legal question is not whether bin Laden was armed before he was killed, or even whether or not he posed an immediate “lethal threat,” but whether he was “positively identified” before the trigger was pulled, and whether Holder is accurate when he says that “there was no indication” that bin Laden was actively attempting to surrender. Those are the more relevant facts. And if there is a formal inquiry into the incident, this is what it will undoubtedly seek to establish.</blockquote>
+WaPo quotes officials on <a href="http://www.washingtonpost.com/world/cia-spied-on-bin-laden-from-safe-house/2011/05/05/AFXbG31F_story.html?hpid=z1">what exactly the soldiers saw when they entered Osama's room</a>:
+<blockquote>U.S. officials provided new details on bin Laden’s final moments, saying the al-Qaeda leader was first spotted by U.S. forces in the doorway of his room on the compound’s third floor. Bin Laden then turned and retreated into the room before being shot twice — in the head and in the chest. U.S. commandos later found an AK-47 and a pistol in the room.
+
+“He was retreating,” a move that was regarded as resistance, a U.S. official briefed on the operation said. “You don’t know why he’s retreating, what he’s doing when he goes back in there. Is he getting a weapon? Does he have a [suicide] vest?”</blockquote>
+<a href="http://parislemon.com/post/5206913531/on-bin-laden-killing-tech-blogging">SEO centered websites are caching in on Osama's death</a>, making more humble and useful sites (like mine?) less findable:
+<blockquote>Imagine that, you write 35 200-word posts featuring the words “Bin Laden” in the headline and they pull in traffic on the day it’s one of the most searched terms ever.
+
+Were any of those stories really about technology? A few, maybe. But none were given the actual attention that a story of such magnitude deserves. It was a pure traffic/SEO play.
+
+This is the state of tech blogging these days. It’s shifting more towards a mixture of quick-posted nonsense and pure SEO plays.</blockquote>
+A map of the compound <a href="http://www.gamepron.com/news/2011/05/08/osama-bin-ladens-hideout-recreated-in-css/">has been recreated in Counter Strike: Source</a>, a first person shooter. Too soon?
+
+<a href="http://www.andrewsimone.com/wp-content/uploads/2011/05/twitter-and-obl.png"><img class="alignnone size-large wp-image-1269" title="twitter and obl" src="/assets/images/twitter-and-obl-660x467.png" alt="" width="800" height="607" /></a>
+
+Keith Urbahn speculative tweet triggered a series of "<a href="http://blog.socialflow.com/post/5246404319/breaking-bin-laden-visualizing-the-power-of-a-single">retweets and conversations that would beat mainstream media as well as the White House announcement.</a>"

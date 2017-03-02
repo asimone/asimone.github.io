@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "But I liked binaries"
+date:   2008-07-05 15:36:05 -0600
+categories: language
+---
+
+This is an old-ish, revised work written during my Derridean phase of '07 which was something of a philosophical <a href="http://en.wikipedia.org/wiki/Picasso%27s_Blue_Period">blue period</a> (I was trying to be clever).
+
+<p class="center"><strong>The Ego, To Wit</strong></p>
+
+The most frustrating thing about reading Derrida is the dizzying force of his writing. In the turns, the circularity, the <em>ipse-isms</em> of his thought we find a resting the <em>autos, </em>the "I" which, consequently, is also the "he" (were one to speak in his voice). The interalism, the ultimate, excessive, etymological, endemic, elliptical (not to say, alliterative) egotism is the self-same force that propels him outward to get knowledge, though this knowledge is not a knowledge of rest but of progress. This progress, in turn, reveals a <em>non</em>progress for the very ceaseless progression is no progression at all.
+<blockquote>"Changing, it rests."</blockquote>
+Yet, it is in this ceaseless (non)progression that, by constantly searching for the other, we find ourselves returning to ourselves (all by moving away from ourselves toward what was once ourselves but is not, toward the "not-ourselves" which will/is <strong>now</strong> ourselves, for the time being). For this progression always involves a query which presupposes a querier that is always asking a query. But even this querier queries because of some other question which one sees posed. This heaping of question upon questions, the ceaseless wondering who is the Sphinx and who, Oedipus —by its very repetition— renders the query null and void. Its ceaseless repetitious lays its meaning to rest since the circularity unhinges itself because the self cannot justify oneself <em>by</em> oneself, thus this ceaselessness becomes <em>status quo</em> which is to say standard, stock, the norm, natural and, consequently, may be named "static".
+
+The consequence is the need to outwit oneself which involves a double duplicity: (1.) in order to outwit oneself, one must, of necessity, dialog with oneself which is to say he must become twice "half witted," from this comes the doubling double (this double bind) for (2.)it is impossible to half-wittingly outwit ([3.?]let alone outwit oneself or "half wit" oneself). The very duplicity, which may be a quad-plicity, is the very moment when (4.) the self is most honest . For, in order to outwit oneself, half-wittedly, one must first admit to himself the half-wittedness. Once one recognizes this, one may proceed merely by one's own wits (for in order to know one is foolish, one must be wise).
+
+Therefore, through this enfolding of oneself, one (that is to say "you" which is really, were one as honest as Buddy Glass, "me") may move outward towards the Other away from the <em>autos </em>to that which is not the <em>autos</em>, which is to say that which is not <em>ipse-istic</em> —and this is a purgative, salvific (in the most etymological and thermatological sense of the word) progression; hence, we are finally unable to escape from ourselves (for progress is nonprogress). So, in our constant state of difference (differance?), we eke out the very nature of who <em>we are</em>, rather than the thing in question, for all questions, both because they are asked by and posed because of self, must refer to self, the ever shifting and undefinable "I".
