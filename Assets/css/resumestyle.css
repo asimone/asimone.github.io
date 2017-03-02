@@ -1,0 +1,80 @@
+body {width: 100%; margin: 0; font-family: 'Ideal Sans SSm A', 'Ideal Sans SSm B', san-serif; font-weight: 400; font-style: normal; background-color: rgba(0, 153, 255, 0.69);}
+a:link, a:visited, a:active, a:hover {color:rgba(0, 153, 255, 0.69); text-decoration: none;}
+
+::selection {
+	color: #444;
+	background: rgba(0, 153, 255, 0.69); /* Safari */
+	}
+::-moz-selection {
+	color: #444;
+	background: rgba(0, 153, 255, 0.69); /* Firefox */
+}
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+blockquote {
+	text-indent: -0.8em;
+	font-size: 25px;
+	color: rgba(0, 0, 0, 0.54);
+	font-style: italic;
+	padding: 15px;
+}
+
+pre {
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -o-pre-wrap;
+}
+
+ol {
+list-style: lower-greek;}
+
+ul {list-style: square; font-size: 25px;}
+
+li {font-size: 25px; margin-left: 30px;}
+
+h3 {
+font-size: 50px;
+font-family: 'Verlag Comp A', 'Verlag Comp B', serif; 
+font-weight: 700; 
+font-style: normal;
+margin-top: 10px;
+margin-bottom: 10px;
+color: rgba(0, 0, 0, 0.84);
+line-height: 1em;
+}
+
+.center {margin-top: 45px;}
+
+.resume-content {
+background-color: #fff;
+margin: auto;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+width: 100%;
+height: 290px;
+}
+
+.resume-content p {
+font-size: 29px;
+text-align: center;
+width: 500px;
+margin: 15px auto;
+color: #444;
+}
+
+.fill-div {
+display: block;
+height: 100%;
+width: 100%;
+text-decoration: none;
+}
