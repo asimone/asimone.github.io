@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-03T18:41:15-06:00</updated><id>http://localhost:4000/</id><title type="html">A boring blog for boring people.</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-03T19:11:28-06:00</updated><id>http://localhost:4000/</id><title type="html">A boring blog for boring people.</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </subtitle><entry><title type="html">Weird Stuff I’ve recently made</title><link href="http://localhost:4000/weird-stuff-i-have-recently-made" rel="alternate" type="text/html" title="Weird Stuff I've recently made" /><published>2015-09-30T16:36:05-05:00</published><updated>2015-09-30T16:36:05-05:00</updated><id>http://localhost:4000/weird-stuff-i-have-recently-made</id><content type="html" xml:base="http://localhost:4000/weird-stuff-i-have-recently-made">&lt;p&gt;I don’t write like I once did because of the tiresome internet hate machine and the excessive noise from the content mills, but that doesn’t mean I eschew computering all together.&lt;/p&gt;
 
 &lt;h4&gt;Farhadlibs&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;http://andrewsimone.com/farhadlibs&quot;&gt;&lt;img style=&quot;width: 100%&quot; src=&quot;http://andrewsimone.com/images/farhad.PNG &quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://asimone.github.io/microsites/farhadlibs&quot;&gt;&lt;img style=&quot;width: 100%&quot; src=&quot;/assets/images/farhad.PNG &quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;If you know who &lt;a href=&quot;https://twitter.com/fmanjoo&quot;&gt;Farhad Manjoo&lt;/a&gt; is, then &lt;a href=&quot;http://andrewsimone.com/farhadlibs&quot;&gt;Farhadlibs&lt;/a&gt; will hopefully make some sort of twisted sense to you. A handful of very smart friends wrote most of the jokes.&lt;/p&gt;
+&lt;p&gt;If you know who &lt;a href=&quot;https://twitter.com/fmanjoo&quot;&gt;Farhad Manjoo&lt;/a&gt; is, then &lt;a href=&quot;https://asimone.github.io/microsites/farhadlibs&quot;&gt;Farhadlibs&lt;/a&gt; will hopefully make some sort of twisted sense to you. A handful of very smart friends wrote most of the jokes.&lt;/p&gt;
 
 &lt;h4&gt;GIFs&lt;/h4&gt;
 
-&lt;p&gt;&lt;img style=&quot;width: 100%&quot; src=&quot;http://andrewsimone.com/gif/2001/pentest.gif&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 100%&quot; src=&quot;/gif/2001/pentest.gif&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I love to make GIFs in my spare time (and do take requests). I’ve even been hired on two occasions for the film promotions, &lt;a href=&quot;http://www.imdb.com/title/tt3021360/&quot;&gt;Faults&lt;/a&gt; and &lt;a href=&quot;http://www.imdb.com/title/tt2980592/&quot;&gt;The Guest&lt;/a&gt;, and sometimes just remake better versions of popular GIFs I find poorly done. I have two semi-secret, completely design-bare GIF repos:&lt;/p&gt;
 
@@ -18,12 +18,12 @@
 &lt;/ul&gt;
 
 &lt;h4&gt;Shitty?&lt;/h4&gt;
-&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;http://andrewsimone.com/images/poopemoji.png&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src=&quot;assets/images/poopemoji.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I owned two URLs, &lt;a href=&quot;http://thisisshitty.com/&quot;&gt;thisisshitty.com&lt;/a&gt; and &lt;a href=&quot;http://thisisnotshitty.com/&quot;&gt;thisisnotshitty.com&lt;/a&gt;, for &lt;em&gt;years&lt;/em&gt; and figured they both finally deserved to be single serve sites. Both &lt;strike&gt;are&lt;/strike&gt; heavily &lt;strike&gt;inspired by&lt;/strike&gt; ripping off &lt;a href=&quot;http://loudgif.com/&quot;&gt;Loudgif&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4&gt;UGH&lt;/h4&gt;
-&lt;p&gt;&lt;img style=&quot;width: 100%&quot; src=&quot;http://andrewsimone.com/images/UGH.gif&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 100%&quot; src=&quot;/assets/images/UGH.gif&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Lastly, there is &lt;a href=&quot;http://ughkevin.com/&quot;&gt;ughkevin.com&lt;/a&gt;, &lt;a href=&quot;http://ughgarrett.com/&quot;&gt;ughgarrett.com&lt;/a&gt;, and &lt;a href=&quot;http://ughrusty.com/&quot;&gt;ughrusty.com&lt;/a&gt;. I expect my other friends will get UGH pages when they finally do something awful enough to merit it.&lt;/p&gt;</content><author><name></name></author><summary type="html">I don’t write like I once did because of the tiresome internet hate machine and the excessive noise from the content mills, but that doesn’t mean I eschew computering all together.</summary></entry><entry><title type="html">A Short List of Internet Security Tips</title><link href="http://localhost:4000/an-incomplete-list-of-internet-security-tips" rel="alternate" type="text/html" title="A Short List of Internet Security Tips" /><published>2014-11-17T15:36:05-06:00</published><updated>2014-11-17T15:36:05-06:00</updated><id>http://localhost:4000/an-incomplete-list-of-internet-security-tips</id><content type="html" xml:base="http://localhost:4000/an-incomplete-list-of-internet-security-tips">&lt;p&gt;A helpful list a friend put together for the less digitally savvy to prevent identity theft and personal information linked online as well as a triage for the times you have already been doxxed. I’ve edited it a little bit for ease of reading and reference.&lt;/p&gt;
 
@@ -61,7 +61,7 @@
 
 &lt;p&gt;Please recognize this is not a definitive, complete list but I think it’s a good place to start.&lt;/p&gt;</content><author><name></name></author><summary type="html">A helpful list a friend put together for the less digitally savvy to prevent identity theft and personal information linked online as well as a triage for the times you have already been doxxed. I’ve edited it a little bit for ease of reading and reference.</summary></entry><entry><title type="html">The Retro Console</title><link href="http://localhost:4000/the-retro-console" rel="alternate" type="text/html" title="The Retro Console" /><published>2014-02-06T15:36:05-06:00</published><updated>2014-02-06T15:36:05-06:00</updated><id>http://localhost:4000/the-retro-console</id><content type="html" xml:base="http://localhost:4000/the-retro-console">&lt;p&gt;Last month I started working on a retro gaming console to play some of my favorite classics on my television without the complication of a keyboard and mouse. I tried (and failed) a variety of different approaches and finally landed on this as the easiest and most manageable:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://andrewsimone.com/wp-content/uploads/random/retropie.JPG&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/retropie.JPG&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;####The Hardware####&lt;/p&gt;
 &lt;ul&gt;
@@ -148,7 +148,7 @@ sleep 1&lt;/pre&gt;
 
 &lt;p&gt;I’ve found the RetroArch controller auto-configuration a little lacking since there are a number of different options it doesn’t configure out of the box (at least, as of writing this post). To make adjustments, you’ll edit the &lt;strong&gt;retroarch.cfg&lt;/strong&gt; file which has a section at the end labeled &lt;strong&gt;#Player1&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;If you like, you can replace &lt;em&gt;just that section&lt;/em&gt; with my configuration in &lt;a href=&quot;http://andrewsimone.com/wp-content/uploads/random/asimone-config.txt&quot;&gt;this .txt file&lt;/a&gt;. To add this to &lt;strong&gt;retroarch.cfg&lt;/strong&gt; from the command line you can type:&lt;/p&gt;
+&lt;p&gt;If you like, you can replace &lt;em&gt;just that section&lt;/em&gt; with my configuration in &lt;a href=&quot;https://github.com/asimone/retropie-config/blob/master/config&quot;&gt;this .txt file&lt;/a&gt;. To add this to &lt;strong&gt;retroarch.cfg&lt;/strong&gt; from the command line you can type:&lt;/p&gt;
 
 &lt;pre&gt;sudo nano /home/REtroPie/configs/all/retroarch.cfg&lt;/pre&gt;
 
@@ -220,7 +220,7 @@ Password: raspberry&lt;/p&gt;
 
 &lt;h4&gt;The Situation&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://goo.gl/maps/D08bb&quot;&gt;&lt;img src=&quot;http://andrewsimone.com/images/map.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://goo.gl/maps/D08bb&quot;&gt;&lt;img src=&quot;/assets/images/map.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;It was about 3 or 4 am and my car was stuck on the side of route 70 about 150 miles outside of Grand Junction, Colorado, and we had lost the rest of the caravan. Cell phones were only just becoming a common and, despite the fact that I didn’t have one, that area of the country is pretty barren so reception would have been pretty sketchy then anyway.&lt;/p&gt;
 
@@ -319,11 +319,11 @@ Password: raspberry&lt;/p&gt;
 
 &lt;p&gt;These descriptions are as accurate as they are misguided. The game was originally developed for a &lt;em&gt;web browser&lt;/em&gt;. I have never found a robust story in a browser based game (please prove me wrong), let alone one that lasts more than twenty minutes. Their beauty tends to be in simple, repetitive game mechanics, something fun to pick up now and again, play a quick round, and then get back to work. If that’s the standard, then this game shines brilliantly.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-1293&quot; title=&quot;shoot pirates&quot; src=&quot;http://www.andrewsimone.com/wp-content/uploads/2011/08/shoot-pirates-1024x576.jpg&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;520&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-1293&quot; title=&quot;shoot pirates&quot; src=&quot;/assets/images/shoot-pirates-1024x576.jpg&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;520&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There are only really two game mechanics, shoot the attacking pirates and repair your ship. Each mission is measured by distance between the two locations you are carrying undescribed cargo. En route you are assaulted, depending on difficulty, by three different sorts of aircraft who damage your will damage your engines (which will eventually halt your progress forward), cargo hold (you get ship upgrades, if you have enough cargo left over), rigging, and the zeppelin (which will make you explode). The longer the route you take in the campaign, the more upgrades you get, and the more prepared you are to go &lt;strong&gt;Into The Breach&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-1294&quot; title=&quot;into the breach&quot; src=&quot;http://www.andrewsimone.com/wp-content/uploads/2011/08/into-the-breach-660x371.jpg&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;511&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;img class=”alignnone size-large wp-image-1294” title=”into the breach” src=/assets/images/into-the-breach-660x371.jpg” alt=”” width=”800” height=”511” /&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;You can’t not die in The Breach, the entire point is to survive as long as possible by killing by managing your time killing air pirates and repairing your ship. Your distance meter ticks up, rather than down, and the further the distance, the further the bragging rights.&lt;/p&gt;
 
@@ -354,7 +354,7 @@ And our inability to come together, and to talk about that, which was already la
 
 &lt;p&gt;A man unwittingly &lt;a href=&quot;http://abcnews.go.com/Blotter/sohaib-athar-unknowingly-live-tweets-raid-%20osama-bin/story?id=13506941&quot;&gt;live tweets the raid on Osama bin Laden&lt;/a&gt;. The tweets are aggregated&lt;strong&gt; in order&lt;/strong&gt; &lt;a href=&quot;http://almightylink.ksablan.com/social-media/the-reallyvirtual-tweets-reportedly-of-the-bin-laden-raid/?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+almightylink+%28Almighty+Link%29&quot;&gt;over at the Almighty Link&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.theatlantic.com/infocus/2011/05/osama-bin-laden-killed-worldwide-reactions/100058/&quot;&gt;&lt;img class=&quot;size-large wp-image-1151 alignnone&quot; title=&quot;Osama Bin Laden Killed&quot; src=&quot;http://www.andrewsimone.com/wp-content/uploads/2011/05/Osama-Bin-Laden-Killed-Worldwide-Reactions-Alan-Taylor-In-Focus-The-Atlantic-660x468.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;708&quot; /&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.theatlantic.com/infocus/2011/05/osama-bin-laden-killed-worldwide-reactions/100058/&quot;&gt;&lt;img class=&quot;size-large wp-image-1151 alignnone&quot; title=&quot;Osama Bin Laden Killed&quot; src=&quot;/assets/images/Osama-Bin-Laden-Killed-Worldwide-Reactions-Alan-Taylor-In-Focus-The-Atlantic-660x468.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;708&quot; /&gt;&lt;/a&gt;
 &lt;a href=&quot;http://www.theatlantic.com/infocus/2011/05/osama-bin-laden-killed-worldwide-reactions/100058/&quot;&gt;A collection of images&lt;/a&gt;, from all over the world, responding to his death.&lt;/p&gt;
 
 &lt;p&gt;The NYT &lt;a href=&quot;http://www.nytimes.com/2011/05/03/world/asia/osama-bin-laden-dead.html?hp&quot;&gt;discusses the operation&lt;/a&gt;:&lt;/p&gt;
@@ -381,13 +381,13 @@ And our inability to come together, and to talk about that, which was already la
 &lt;blockquote&gt;His life was one of extremes and of contradictions. Born to great wealth, he lived in relative poverty. A graduate of civil engineering, he assumed the mantle of a religious scholar. A gifted propagandist who had little real experience of battle, he projected himself as a mujahid, a holy warrior. A man who called for a return to the values and social systems of the seventh century as a means of restoring a just order in today's world, he justified the use of advanced modern technology to kill thousands through a rigorous and anachronistic interpretation of Islamic law.&lt;/blockquote&gt;
 &lt;p&gt;A nice diagram (below) from &lt;a href=&quot;http://www.defense.gov/transcripts/transcript.aspx?transcriptid=4818&quot;&gt;the DoD background briefing for senior officials&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.defense.gov/DODCMSShare/briefingslide/359/110502-D-6570C-006.JPG&quot;&gt;&lt;img class=&quot;size-large wp-image-1185 alignnone&quot; title=&quot;bin-laden-compound&quot; src=&quot;http://www.andrewsimone.com/wp-content/uploads/2011/05/bin-laden-compound-660x377.jpg&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;517&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.defense.gov/DODCMSShare/briefingslide/359/110502-D-6570C-006.JPG&quot;&gt;&lt;img class=&quot;size-large wp-image-1185 alignnone&quot; title=&quot;bin-laden-compound&quot; src=&quot;/assets/images/bin-laden-compound-660x377.jpg&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;517&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The WSJ has &lt;a href=&quot;http://online.wsj.com/article/SB10001424052748704569404576298850337909570.html&quot;&gt;a series of photos from after the operation&lt;/a&gt;, much of it comes from &lt;a href=&quot;http://abcnews.go.com/GMA/video/osama-bin-laden-dead-inside-pakistan-kill-site-13507839&quot;&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;a short video&lt;/span&gt;&lt;/a&gt; off a Blackberry.&lt;/p&gt;
 
 &lt;p&gt;Reuters also has &lt;a href=&quot;http://www.reuters.com/subjects/bin-laden-compound&quot;&gt;some photos of the compound after the conflict&lt;/a&gt;, including a couple dead men lying in pools of blood (you can click the link without seeing the images).&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.economist.com/blogs/dailychart/2011/05/public_opinion_osama_bin_laden&quot;&gt;&lt;img class=&quot;size-full wp-image-1195 alignnone&quot; title=&quot;public opinion of bin Laden&quot; src=&quot;http://www.andrewsimone.com/wp-content/uploads/2011/05/public-opinion-of-bin-Laden.gif&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.economist.com/blogs/dailychart/2011/05/public_opinion_osama_bin_laden&quot;&gt;&lt;img class=&quot;size-full wp-image-1195 alignnone&quot; title=&quot;public opinion of bin Laden&quot; src=&quot;/assets/images/public-opinion-of-bin-Laden.gif&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;600&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;From &lt;a href=&quot;http://www.economist.com/blogs/dailychart/2011/05/public_opinion_osama_bin_laden&quot;&gt;The Economist&lt;/a&gt; (see, &lt;a href=&quot;http://www.economist.com/node/18651288?Story_ID=18651288&quot;&gt;also&lt;/a&gt;).&lt;/p&gt;
 
@@ -443,7 +443,7 @@ Were any of those stories really about technology? A few, maybe. But none were g
 This is the state of tech blogging these days. It’s shifting more towards a mixture of quick-posted nonsense and pure SEO plays.&lt;/blockquote&gt;
 &lt;p&gt;A map of the compound &lt;a href=&quot;http://www.gamepron.com/news/2011/05/08/osama-bin-ladens-hideout-recreated-in-css/&quot;&gt;has been recreated in Counter Strike: Source&lt;/a&gt;, a first person shooter. Too soon?&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.andrewsimone.com/wp-content/uploads/2011/05/twitter-and-obl.png&quot;&gt;&lt;img class=&quot;alignnone size-large wp-image-1269&quot; title=&quot;twitter and obl&quot; src=&quot;http://www.andrewsimone.com/wp-content/uploads/2011/05/twitter-and-obl-660x467.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;607&quot; /&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.andrewsimone.com/wp-content/uploads/2011/05/twitter-and-obl.png&quot;&gt;&lt;img class=&quot;alignnone size-large wp-image-1269&quot; title=&quot;twitter and obl&quot; src=&quot;assets/images/twitter-and-obl-660x467.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;607&quot; /&gt;&lt;/a&gt;
 Keith Urbahn speculative tweet triggered a series of “&lt;a href=&quot;http://blog.socialflow.com/post/5246404319/breaking-bin-laden-visualizing-the-power-of-a-single&quot;&gt;retweets and conversations that would beat mainstream media as well as the White House announcement.&lt;/a&gt;”&lt;/p&gt;</content><author><name></name></author><summary type="html">This post was updated during the few days after Operation Geronimo became public.</summary></entry><entry><title type="html">A Day In The Life</title><link href="http://localhost:4000/a-day-in-the-life" rel="alternate" type="text/html" title="A Day In The Life" /><published>2010-12-16T15:36:05-06:00</published><updated>2010-12-16T15:36:05-06:00</updated><id>http://localhost:4000/a-day-in-the-life</id><content type="html" xml:base="http://localhost:4000/a-day-in-the-life">&lt;p&gt;This article was originally published over at &lt;span style=&quot;color: #ff0000;&quot;&gt;&lt;a href=&quot;http://idler-mag.com/2010/12/16/a-day-in-the-life/&quot;&gt;The Idler&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;This morning, around eleven, I rolled out of bed and into my computer chair to peruse this morning’s news. I took a sip of water—only to realize it was from yesterday evening—when it struck me: I hadn’t written this week’s &lt;em&gt;Idler&lt;/em&gt; piece. So, I rolled up my sleeves, gave myself a good stretch, and promptly made breakfast, took a shower, cleaned my room, organized my bookshelves, and went for a bike ride (code for 800-yard stint to a coffee shop for two hours reading of &lt;em&gt;The New York Times&lt;/em&gt;). Hours later, here I am, writing this piece.&lt;/p&gt;
@@ -454,7 +454,7 @@ Keith Urbahn speculative tweet triggered a series of “&lt;a href=&quot;http://
 
 &lt;p&gt;Now, if you debachelorize me, give me two human kids and make me a mimic octopus who is trying to hide the fact that he’s an octopus, you’ll begin to get a feel for the hilarious indie game, &lt;em&gt;&lt;a href=&quot;http://www.octodadgame.com/&quot;&gt;Octodad&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-1306&quot; title=&quot;octodad&quot; src=&quot;http://www.andrewsimone.com/wp-content/uploads/2011/11/octodad.jpg&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;560&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-1306&quot; title=&quot;octodad&quot; src=&quot;/assets/images/octodad.jpg&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;560&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It is a short game—maybe an hour long—so I am going to avoid spoilers so you can get the full experience. I will, however, mention that the controls are &lt;em&gt;terrible&lt;/em&gt;. The middle mouse button toggles between feet and hand mode, the left and right mouse buttons select which “arm” or “leg” you want to move, and the mouse movement manipulates them. And, while that makes walking across the room or picking something up an absolute chore, it also happens to be precisely the point.&lt;/p&gt;
 
@@ -478,7 +478,7 @@ Keith Urbahn speculative tweet triggered a series of “&lt;a href=&quot;http://
 
 &lt;p&gt;The game begins just after your father’s funeral I found myself wandering in my small, northern, childhood town talking to childhood friends and neighbors. My humor attribute was high, so I had a number of dialog options ranging from laughing to cold and stern. (There is actually an acheivement named &lt;em&gt;Les Aubes Sont Navrantes&lt;/em&gt;: “Sob or Sniff 20 times.”) And, while I haven’t determined whether or not those responses actually change the game or your character, I did find myself wanting to make my character contextually aware and consistent.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-165&quot; src=&quot;http://www.andrewsimone.com/wp-content/uploads/2010/11/image3-640x610.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;770&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-165&quot; src=&quot;/assets/images/image3-640x610.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;770&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I spent a couple of hours wandering around the small town trying to piece together the NPCs relationships (daughters, sons, wives) and how I know them. The Lisakki’s, for instance, were nice people. Magnus and Maija offered there condolences and the elderly Jesper was exceedingly kind to me once I reminded him he attended my father’s funeral yesterday. Even Stig was kind, despite the obvious distaste his wife, Kati, has for me (I should have known better than to talk to her, she’d alway been a bitch to me, apparently).  Fed up with Kati, I decided to go visit the foreigner and friend of my father, Olov to piece together a little more of who my father was.&lt;/p&gt;
 
@@ -490,11 +490,11 @@ Keith Urbahn speculative tweet triggered a series of “&lt;a href=&quot;http://
 
 &lt;p&gt;When I think about days past, when dear friends were lost, and the days following the news, I recall a sort term near-schizophrenia. Laughing and fine one minute,  a turn of phrase, a peculiar movement of a hand, a familiar place would unpredictably force old memories of the person in my head. The pressure would be unbearable, the condolences meaningless, and joy dead. There was not way to beat these feelings, you just had to let them pass.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-141&quot; src=&quot;http://www.andrewsimone.com/wp-content/uploads/2010/11/image12-640x360.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;520&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-141&quot; src=&quot;/assets/images/image12-640x360.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;520&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;While simply interacting with people yields experience [points], the traces of those conversations or places you find yourself may, themselves, evoke memories (encounters). Persistent Memories or Negative Feelings hound you, slowly draining your energy, and the ground itself may contain Buried Tramas (traps). The goal, consequently, cannot be to destroy or kill (memories always persist!), but to survive. If you do, you gain experience [points], but if you don’t, the game simply continues without any bonus since you learned nothing.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-140&quot; src=&quot;http://www.andrewsimone.com/wp-content/uploads/2010/11/image2-640x541.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;701&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-large wp-image-140&quot; src=&quot;/assets/images/image2-640x541.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;701&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The primary survive skills are Repel, which simply pushes memories (enemies) away, and Anticipation, which mitagates the damage received. But, as you level, your skills do become more sophisticated. For example:&lt;/p&gt;
 
