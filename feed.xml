@@ -1,5 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-04-03T18:07:45-05:00</updated><id>http://localhost:4000/</id><title type="html">A boring blog for boring people.</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">Weird Stuff I’ve recently made</title><link href="http://localhost:4000/weird-stuff-i-have-recently-made" rel="alternate" type="text/html" title="Weird Stuff I've recently made" /><published>2016-09-30T16:36:05-05:00</published><updated>2016-09-30T16:36:05-05:00</updated><id>http://localhost:4000/weird-stuff-i-have-recently-made</id><content type="html" xml:base="http://localhost:4000/weird-stuff-i-have-recently-made">&lt;p&gt;I don’t write like I once did because of the tiresome internet hate machine and the excessive noise from the content mills, but that doesn’t mean I eschew computering all together.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-06T15:15:52-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">A boring blog for boring people.</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><entry><title type="html">Dungeons and Dragons</title><link href="http://localhost:4000/dungeons-and-dragons" rel="alternate" type="text/html" title="Dungeons and Dragons" /><published>2019-03-05T15:36:05-06:00</published><updated>2019-03-05T15:36:05-06:00</updated><id>http://localhost:4000/dungeons-and-dragons</id><content type="html" xml:base="http://localhost:4000/dungeons-and-dragons">&lt;p&gt;I had the good fortune of reconnecting with some old friends who got me back into Dungeons and Dragons. I have since, perhaps, gone a little overboard with the hobby.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;width: 100%; border:1px solid #444;&quot; src=&quot;/assets/images/office.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve also created a few digital spaces to help out Dungeon Masters be better equipped to run campaigns for players who have more modern expectations.&lt;/p&gt;
+
+&lt;h4&gt;Spelljammer&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://laughingbeholder.com/&quot;&gt;&lt;img style=&quot;width: 100%; border:1px solid #444;&quot; src=&quot;/assets/images/laughingbeholder.PNG &quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The goal of this website was completely self-serving: I wanted to create such a good repository of Spelljammer content that people would just start sending me stuff, so I didn’t have to spend so much time preping for my own campaign.&lt;/p&gt;
+
+&lt;p&gt;It’s slowly grown (and will continue to do so), but the core premise is only to highlight the best Spelljammer content for digital and digitally augmented play.&lt;/p&gt;
+
+&lt;h4&gt;Dungeon Masters Tools&lt;/h4&gt;
+
+&lt;p&gt;&lt;img style=&quot;width: 100%;border:1px solid #444;&quot; src=&quot;/assets/images/dmtools.PNG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is less aesthetically pleasing as the previous site, but more functional. It has a variety of tables that are mobile friendly I can use for quick reference on my phone using Bootstrap.&lt;/p&gt;
+
+&lt;p&gt;I stole a &lt;a href=&quot;https://github.com/crobi/dnd5e-quickref&quot;&gt;Player Reference Page&lt;/a&gt; and a &lt;a href=&quot;https://dungeonbot.wordpress.com/2015/01/26/simple-weather-lookup-chart&quot;&gt;weather table&lt;/a&gt; to help fill out some areas that weren’t easily translatable directly from the 5th edition Dungeon Masters Guide.&lt;/p&gt;</content><author><name></name></author><summary type="html">I had the good fortune of reconnecting with some old friends who got me back into Dungeons and Dragons. I have since, perhaps, gone a little overboard with the hobby.</summary></entry><entry><title type="html">Weird Stuff I’ve recently made</title><link href="http://localhost:4000/weird-stuff-i-have-recently-made" rel="alternate" type="text/html" title="Weird Stuff I've recently made" /><published>2016-09-30T16:36:05-05:00</published><updated>2016-09-30T16:36:05-05:00</updated><id>http://localhost:4000/weird-stuff-i-have-recently-made</id><content type="html" xml:base="http://localhost:4000/weird-stuff-i-have-recently-made">&lt;p&gt;I don’t write like I once did because of the tiresome internet hate machine and the excessive noise from the content mills, but that doesn’t mean I eschew computering all together.&lt;/p&gt;
 
 &lt;h4&gt;Farhadlibs&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://asimone.github.io/microsites/farhadlibs&quot;&gt;&lt;img style=&quot;width: 100%&quot; src=&quot;/assets/images/farhad.PNG &quot; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -954,18 +973,4 @@ Keith Urbahn speculative tweet triggered a series of “&lt;a href=&quot;http://
 
 &lt;p&gt;He got off at the fifth floor, walked down the hall, and let himself into 507. The room smelled of new calfskin luggage and nail-lacquer remover.&lt;/p&gt;
 
-&lt;p&gt;He glanced at the girl lying asleep on one of the twin beds. Then he went over to one of the pieces of luggage, opened it, and from under a pile of shorts and undershirts he took out an Ortgies calibre 7.65 automatic. He released the magazine, looked at it, then reinserted it. He cocked the piece. Then he went over and sat down on the unoccupied twin bed, looked at the girl, aimed the pistol, and fired a bullet through his right temple.&lt;/p&gt;</content><author><name></name></author><summary type="html">by J. D. Salinger</summary></entry><entry><title type="html">A Poem by James Wright</title><link href="http://localhost:4000/a-poem-by-james-wright" rel="alternate" type="text/html" title="A Poem by James Wright" /><published>2010-01-27T15:36:05-06:00</published><updated>2010-01-27T15:36:05-06:00</updated><id>http://localhost:4000/a-poem-by-james-wright</id><content type="html" xml:base="http://localhost:4000/a-poem-by-james-wright">&lt;p&gt;&lt;strong&gt;Lying in a Hammock at William Duffy’s Farm in Pine Island, Minnesota&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Over my head, I see the bronze butterfly,
-Asleep on the black trunk,
-blowing like a leaf in green shadow.
-Down the ravine behind the empty house,
-The cowbells follow one another
-Into the distances of the afternoon.
-To my right,
-In a field of sunlight between two pines,
-The droppings of last year’s horses
-Blaze up into golden stones.
-I lean back, as the evening darkens and comes on.
-A chicken hawk floats over, looking for home.
-I have wasted my life.&lt;/p&gt;</content><author><name></name></author><summary type="html">Lying in a Hammock at William Duffy’s Farm in Pine Island, Minnesota</summary></entry></feed>
+&lt;p&gt;He glanced at the girl lying asleep on one of the twin beds. Then he went over to one of the pieces of luggage, opened it, and from under a pile of shorts and undershirts he took out an Ortgies calibre 7.65 automatic. He released the magazine, looked at it, then reinserted it. He cocked the piece. Then he went over and sat down on the unoccupied twin bed, looked at the girl, aimed the pistol, and fired a bullet through his right temple.&lt;/p&gt;</content><author><name></name></author><summary type="html">by J. D. Salinger</summary></entry></feed>
