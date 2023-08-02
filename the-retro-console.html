@@ -33,11 +33,11 @@
 
 		<div class="post">
 			<a href="#skipheader"><h2>The Retro Console</h2></a>
-			<p>Last month I started working on a retro gaming console to play some of my favorite classics on my television without the complication of a keyboard and mouse. I tried (and failed) a variety of different approaches and finally landed on this as the easiest and most manageable:</p>
+			<p>Last month [nb: in 2014] I started working on a retro gaming console to play some of my favorite classics on my television without the complication of a keyboard and mouse. I tried (and failed) a variety of different approaches and finally landed on this as the easiest and most manageable:</p>
 
 <p><img src="/assets/images/retropie.JPG" /></p>
 
-<p>####The Hardware####</p>
+<p><b>The Hardware</b></p>
 <ul>
   <li><a href="http://www.amazon.com/RASPBERRY-MODEL-756-8308-Raspberry-Pi/dp/B009SQQF9C/asimone-20">Rasberry PI Model B</a></li>
   <li><a href="http://www.amazon.com/CY-Raspberry-Pi-Case-Iceberry/dp/B00A42HA02/asimone-20">Rasberry Pi Case</a></li>
@@ -48,7 +48,7 @@
 
 <p>Keep in mind there are certainly beefier setups you could use. I have an old 2006 Mac Mini with 2 GB of RAM, for instance, that’s just itching for a good use, but the level of effort and cost (assuming you don’t have the hardware) is far greater. The Rasberry PI, however, is quiet and has more than enough power to emulate many of the classics with minimal effort.</p>
 
-<p>####The RetroPie Project####</p>
+<p><b>The RetroPie Project</b></p>
 
 <p>The trick to any retro console is to get it to <em>feel</em> like a console and that requires some sort of emulation tool that organizes emulators, BIOs, and ROMs into a controller friendly interface, a console for consoles. There are numerous platforms that do this: <a href="http://hyperspin-fe.com/">Hyperspin</a>, <a href="http://www.maximus-arcade.com/">Maximus</a>, <a href="http://themaister.net/retroarch.html">RetroArch</a>, and more I’m surely missing.</p>
 
@@ -63,7 +63,7 @@
 <p><a name="install"></a>
 Now you could follow <a href="https://github.com/Aloshi/EmulationStation/blob/master/README.md">the Emulation Station directions</a> or you could do it the easy way and download and install <a href="http://blog.petrockblock.com/download/retropie-project-image/">the RetroPie Project’s SD card image</a> on your own SD card.</p>
 
-<p>####Installing RetroPie####</p>
+<p><b>Installing RetroPie</b></p>
 
 <p>Now that you’ve downloaded the image file, there are <a href="http://elinux.org/RPi_Easy_SD_Card_Setup">a number of ways to install it</a>, depending on your computer’s OS. The gist of the easiest methods is to connect your SD card to your computer and use a “disk image to USB bootable drive” program.</p>
 
@@ -75,7 +75,7 @@ Now you could follow <a href="https://github.com/Aloshi/EmulationStation/blob/ma
 
 <p>Flash the drive with the image and then slide the card in your Rasberry PI, connect it to a monitor/TV, give it power, internet, and a keyboard, and then it should boot into Emulation Station.</p>
 
-<p>####Configuring RetroPie####</p>
+<p><b>Configuring RetroPie</b></p>
 
 <p>After the boot, you’ll get an auto-configuration utility for the controllers. Don’t even bother trying, they aren’t connect yet and there’s plenty of work to do before we get there. Instead, just press F4 on the keyboard to exit into command line.</p>
 
@@ -116,7 +116,7 @@ sleep 1</pre>
 
 <p>If you notice an emulated ROM doesn’t recognize your controller, that probably means you haven’t connected/configured RetroArch yet. Complete the directions at the bottom of the <a href="https://github.com/petrockblog/RetroPie-Setup/wiki/Setting-up-the-XBox360-controller">xboxdrv documentation</a> from earlier. Reboot after you complete those steps.</p>
 
-<p>####Advanced Configuration####</p>
+<p><b>Advanced Configuration</b></p>
 
 <p>Now, theoretically, you could play most ROMs loaded onto the PI, but let’s get a few more tweaks in before we hook this up to the TV in the living room.</p>
 
@@ -154,7 +154,7 @@ sleep 1</pre>
 
 <p><strong>Note:</strong> <em>The <strong>es_systems.cfg</strong> also defines what ROM types can be read. Make sure ROMs match the files types listed for the respective emulators.</em></p>
 
-<p>####ROMS####</p>
+<p><b>ROMS</b></p>
 
 <p>People always seem to be coy about where to get these on the web and I don’t know why. There are two ways: <a href="http://www.nintendolife.com/news/2012/01/turn_your_retro_cartridges_into_roms_legally">rip them from the cartridges and discs you own</a> (legal) or <a href="https://kickass.to/">torrent them</a> (not legal).</p>
 
@@ -173,7 +173,7 @@ Password: raspberry</p>
 
 <p><strong>Note:</strong> <em>You can connect the pi to your wireless network, but you can <a href="http://raspberrypihq.com/how-to-add-wifi-to-the-raspberry-pi/">buy a peripheral and do some more configuration</a>.</em></p>
 
-<p>####HELP####</p>
+<p><b>HELP</b></p>
 
 <p>The information here will inevitably deprecate as the RetroPie project continues to develop and I can’t be expected to update this page indefinitely or answer questions from randos, but please <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=me@andrewsimone.com" target="_blank">email me</a> if you see a glaring error.</p>
 
