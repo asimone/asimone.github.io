@@ -1,9 +1,148 @@
+<!-- I suggest I don't want to build slop, but I used AI to generate this page. What's that about? Well, I already know how to do this by hand and could easily coax AI into building it for me. Plus idea and the words are mine, from my actual head. The other day I wrote in a group chat, "I generally prefer to write things myself" which would have sounded insane 10 years ago. -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; URL='https://andrewsimone.com/documents/andrew-simone-portfolio.pdf" />
-  </head>
-  <body>
-    <p>The redirect is going slowly for some reason, but we'll get you <a href="https://andrewsimone.com/documents/andrew-simone-portfolio.pdf">there</a>. </p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Andrew Simone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --fg: #f0ede6;
+      --accent: #c8ff00;
+      --dim: #888;
+      --link: #c8ff00;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: 'IBM Plex Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: min(900px, 60vw);
+      width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      .container { max-width: 100%; }
+    }
+
+    .headline {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: 0.01em;
+      color: var(--fg);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+    }
+
+    .headline .accent-word {
+      color: var(--accent);
+      display: inline;
+    }
+
+    .tagline {
+      margin-top: clamp(1.25rem, 2vw, 2rem);
+      font-size: clamp(0.75rem, 1vw, 0.95rem);
+      font-style: italic;
+      color: var(--dim);
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+      opacity: 0;
+      animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+    }
+
+    .email {
+      margin-top: clamp(0.6rem, 1vw, 1rem);
+      font-size: clamp(0.75rem, 1vw, 0.95rem);
+      opacity: 0;
+      animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+    }
+
+    .email a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .email a:hover {
+      border-color: var(--link);
+    }
+
+    .rule {
+      width: 60px;
+      height: 2px;
+      background: var(--accent);
+      margin: clamp(1rem, 1.5vw, 2rem) auto 0;
+      opacity: 0;
+      animation: rise 0.5s ease 0.75s forwards;
+    }
+
+    @keyframes rise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="headline">
+      Remember when the web<br>
+      wasn't <span class="accent-word">dead</span> and<br>
+      search engines <span class="accent-word">worked?</span><br>
+      <span style="color: #666;">I do.</span>
+    </h1>
+
+    <p class="tagline">
+      If you want to build something cool — that isn't slop — and need a delivery and product strategist, don't hesitate to reach out.
+    </p>
+
+    <p class="email">
+      <a href="mailto:me@andrewsimone.com?subject=Let's%20Work%20Together">me@andrewsimone.com</a>
+    </p>
+
+    <div class="rule"></div>
+  </div>
+</body>
 </html>
