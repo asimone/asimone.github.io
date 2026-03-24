@@ -238,6 +238,12 @@
     .site-footer .social a:hover {
       color: #1c1c1c;
     }
+
+    @media (max-width: 480px) {
+      .location { display: none; }
+      .date-sep { display: none; }
+      .date-range { display: block; margin-top: 0.1rem; }
+    }
   </style>
 </head>
 <body>
@@ -250,8 +256,7 @@
       <h1><a href="/">Andrew Simone</a></h1>
       <div class="subtitle">Delivery Manager &nbsp;·&nbsp; Product Strategist &nbsp;·&nbsp; Custom Software Solutions</div>
       <div class="contact-line">
-        Elmira, New York
-        &nbsp;·&nbsp; <a href="mailto:me@andrewsimone.com?subject=Let's%20Work%20Together">me@andrewsimone.com</a>
+        <span class="location">Elmira, New York &nbsp;·&nbsp; </span><a href="mailto:me@andrewsimone.com?subject=Let's%20Work%20Together">me@andrewsimone.com</a>
         &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/andrewsimone/" target="_blank" rel="noopener">LinkedIn</a>
         &nbsp;·&nbsp; <a href="https://andrewsimone.com/documents/andrew-simone-portfolio.pdf">Portfolio</a>
       </div>
@@ -263,7 +268,7 @@
       <div class="job-header">
         <div class="job-title">Associate Director – Delivery</div>
         <div class="job-org">
-          Nagarro – Elmira, New York (Remote) &nbsp;·&nbsp; January 2022 – January 2026
+          Nagarro – Elmira, New York (Remote)<span class="date-sep"> &nbsp;·&nbsp; </span><span class="date-range">January 2022 – January 2026</span>
           <span class="org-note">$900M multinational technology consulting and professional services organization</span>
         </div>
       </div>
@@ -277,7 +282,7 @@
       <div class="job-header">
         <div class="job-title">Delivery Manager</div>
         <div class="job-org">
-          Nagarro – Saint Louis, Missouri (Remote) &nbsp;·&nbsp; April 2017 – December 2021
+          Nagarro – Saint Louis, Missouri (Remote)<span class="date-sep"> &nbsp;·&nbsp; </span><span class="date-range">April 2017 – December 2021</span>
           <span class="org-note">$900M multinational technology consulting and professional services organization</span>
         </div>
       </div>
@@ -291,7 +296,7 @@
       <div class="job-header">
         <div class="job-title">Product Manager</div>
         <div class="job-org">
-          Mokriya – Saint Louis, Missouri (Remote) &nbsp;·&nbsp; April 2014 – March 2017
+          Mokriya – Saint Louis, Missouri (Remote)<span class="date-sep"> &nbsp;·&nbsp; </span><span class="date-range">April 2014 – March 2017</span>
           <span class="org-note">Mobile-focused design, development, and product consultancy</span>
         </div>
       </div>
@@ -305,7 +310,7 @@
       <div class="job-header">
         <div class="job-title">Digital Strategist</div>
         <div class="job-org">
-          MBB Agency – Kansas City, Kansas (On-site) &nbsp;·&nbsp; May 2012 – April 2014
+          MBB Agency – Kansas City, Kansas (On-site)<span class="date-sep"> &nbsp;·&nbsp; </span><span class="date-range">May 2012 – April 2014</span>
           <span class="org-note">Digital marketing and advertising agency with strong healthcare focus</span>
         </div>
       </div>
@@ -322,9 +327,4 @@
     </div>
 
     <div style="margin-top: clamp(2rem, 4vw, 3.5rem); padding-top: 1.25rem; border-top: 1px solid #ddd;">
-      <a href="/" style="color:#1c1c1c;text-decoration:none;font-size:0.8rem;border-bottom:1px solid #bbb;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#1c1c1c'" onmouseout="this.style.borderColor='#bbb'">← Back</a>
-    </div>
-
-  </div>
-</body>
-</html>
+      <a href="/" style="color:#1c1c1c;text-decoration:none;font-size:0.8rem;border-bottom:1px solid #bbb;tra
