@@ -34,7 +34,7 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #999;
+      color: #666;
       text-decoration: none;
       border-bottom: 1px solid #ddd;
       transition: color 0.2s, border-color 0.2s;
@@ -72,7 +72,7 @@
       font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: #999;
+      color: #666;
       margin-bottom: 0.75rem;
     }
 
@@ -89,7 +89,7 @@
 
     .resume-header .contact-line {
       font-size: 0.8rem;
-      color: #888;
+      color: #555;
     }
 
     .resume-header .contact-line a {
@@ -110,7 +110,7 @@
       font-weight: 600;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: #999;
+      color: #666;
       margin: clamp(1.75rem, 3vw, 2.5rem) 0 1rem;
       padding-bottom: 0.5rem;
       border-bottom: 1px solid #ddd;
@@ -146,7 +146,7 @@
     .job-org .org-note {
       font-style: italic;
       font-size: 0.78rem;
-      color: #999;
+      color: #666;
       display: block;
       margin-top: 0.1rem;
     }
@@ -239,6 +239,24 @@
       color: #1c1c1c;
     }
 
+    .back-footer {
+      margin-top: clamp(2rem, 4vw, 3.5rem);
+      padding-top: 1.25rem;
+      border-top: 1px solid #ddd;
+    }
+
+    .back-footer a {
+      color: #1c1c1c;
+      text-decoration: none;
+      font-size: 0.8rem;
+      border-bottom: 1px solid #bbb;
+      transition: border-color 0.2s;
+    }
+
+    .back-footer a:hover {
+      border-color: #1c1c1c;
+    }
+
     @media (max-width: 480px) {
       .location { display: none; }
       .date-sep { display: none; }
@@ -326,5 +344,10 @@
       <p><strong>Delivery Management &amp; Tools:</strong> Agile, Waterfall, Hybrid, RAID management, Requirements Gathering, Backlog Refinement, Scope Management, Jira, Confluence, Notion, SharePoint, Slack, Teams, Smartsheet, MS Project, MS Office, Google Suite, Miro, Vizio, Figma</p>
     </div>
 
-    <div style="margin-top: clamp(2rem, 4vw, 3.5rem); padding-top: 1.25rem; border-top: 1px solid #ddd;">
-      <a href="/" style="color:#1c1c1c;text-decoration:none;font-size:0.8rem;border-bottom:1px solid #bbb;tra
+    <div class="back-footer">
+      <a href="/">← Back</a>
+    </div>
+
+  </div>
+</body>
+</html>
