@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Resume — Andrew Simone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #f5f3ef;
+      color: #1c1c1c;
+      font-family: 'Work Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: clamp(3rem, 7vw, 6rem) clamp(1.5rem, 5vw, 2rem) clamp(3rem, 7vw, 6rem);
+    }
+
+    /* PDF link */
+    .pdf-link {
+      position: fixed;
+      top: 1.25rem;
+      right: 1.25rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #999;
+      text-decoration: none;
+      border-bottom: 1px solid #ddd;
+      transition: color 0.2s, border-color 0.2s;
+      background: #f5f3ef;
+      padding: 0.3rem 0;
+    }
+
+    .pdf-link:hover {
+      color: #1c1c1c;
+      border-color: #1c1c1c;
+    }
+
+    @media print {
+      .pdf-link { display: none; }
+    }
+
+    /* Header */
+    .resume-header {
+      text-align: center;
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+      padding-bottom: clamp(1.25rem, 3vw, 2rem);
+      border-bottom: 1px solid #ddd;
+    }
+
+    .resume-header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: #1c1c1c;
+      margin-bottom: 0.4rem;
+    }
+
+    .resume-header .subtitle {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 0.75rem;
+    }
+
+    .resume-header .contact-line {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .resume-header .contact-line a {
+      color: #1c1c1c;
+      text-decoration: none;
+      border-bottom: 1px solid #bbb;
+      transition: border-color 0.2s;
+      margin: 0 0.3rem;
+    }
+
+    .resume-header .contact-line a:hover {
+      border-color: #1c1c1c;
+    }
+
+    /* Section label */
+    .section-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #999;
+      margin: clamp(1.75rem, 3vw, 2.5rem) 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Job block */
+    .job {
+      margin-bottom: clamp(1rem, 2vw, 1.25rem);
+      padding-bottom: clamp(1rem, 2vw, 1.25rem);
+      border-bottom: 1px solid #eee;
+    }
+
+    .job:last-of-type {
+      border-bottom: none;
+    }
+
+    .job-header {
+      margin-bottom: 0.6rem;
+    }
+
+    .job-title {
+      font-size: clamp(0.9rem, 1.6vw, 1rem);
+      font-weight: 600;
+      color: #1c1c1c;
+    }
+
+    .job-org {
+      font-size: 0.82rem;
+      color: #666;
+      margin-top: 0.15rem;
+    }
+
+    .job-org .org-note {
+      font-style: italic;
+      font-size: 0.78rem;
+      color: #999;
+      display: block;
+      margin-top: 0.1rem;
+    }
+
+    .job ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.5rem;
+    }
+
+    .job ul li {
+      font-size: clamp(0.85rem, 1.4vw, 0.92rem);
+      padding-left: 1.1em;
+      position: relative;
+      margin-bottom: 0.4em;
+      color: #2a2a2a;
+    }
+
+    .job ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #bbb;
+    }
+
+    .job ul li strong {
+      font-weight: 600;
+      color: #1c1c1c;
+    }
+
+    .job-body {
+      font-size: clamp(0.85rem, 1.4vw, 0.92rem);
+      color: #2a2a2a;
+      line-height: 1.8;
+      margin-top: 0.5rem;
+    }
+
+    .job-body strong {
+      font-weight: 600;
+      color: #1c1c1c;
+    }
+
+    /* Education & Skills */
+    .edu-skills {
+      font-size: clamp(0.85rem, 1.4vw, 0.92rem);
+      color: #2a2a2a;
+      line-height: 1.8;
+    }
+
+    .edu-skills p {
+      margin-bottom: 0.75em;
+    }
+
+    .edu-skills strong {
+      font-weight: 600;
+      color: #1c1c1c;
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top: clamp(2rem, 4vw, 3.5rem);
+      padding-top: 1.25rem;
+      border-top: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .site-footer a {
+      color: #1c1c1c;
+      text-decoration: none;
+      font-size: 0.8rem;
+      border-bottom: 1px solid #bbb;
+      transition: border-color 0.2s;
+    }
+
+    .site-footer a:hover {
+      border-color: #1c1c1c;
+    }
+
+    .site-footer .social a {
+      border-bottom: none;
+      color: #bbb;
+      transition: color 0.2s;
+    }
+
+    .site-footer .social a:hover {
+      color: #1c1c1c;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="pdf-link" download="\documents\andrew-simone-resume.pdf">Save as PDF</a>
+
+  <div class="page">
+
+    <header class="resume-header">
+      <h1>Andrew Simone</h1>
+      <div class="subtitle">Delivery Manager &nbsp;·&nbsp; Product Strategist &nbsp;·&nbsp; Custom Software Solutions</div>
+      <div class="contact-line">
+        Elmira, New York
+        &nbsp;·&nbsp; <a href="mailto:me@andrewsimone.com?subject=Let's%20Work%20Together">me@andrewsimone.com</a>
+        &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/andrewsimone/" target="_blank" rel="noopener">LinkedIn</a>
+        &nbsp;·&nbsp; <a href="/">Portfolio</a>
+      </div>
+    </header>
+
+    <div class="section-label">Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Associate Director – Delivery</div>
+        <div class="job-org">
+          Nagarro – Elmira, New York (Remote) &nbsp;·&nbsp; January 2022 – January 2026
+          <span class="org-note">$900M multinational technology consulting and professional services organization</span>
+        </div>
+      </div>
+      <p class="job-body"><strong>Measurable Impact:</strong> Delivered a 10% increase in business unit margin and enhanced team utilization by 30% through improved program delivery and resource allocation.</p>
+      <p class="job-body"><strong>Program Development:</strong> Conducted an audit of Merck Animal Health's global marketing consolidation program (700 to 70 websites across different language regions), identified critical gaps and new approach, resulting in a projected $20M in savings.</p>
+      <p class="job-body"><strong>Crisis Recovery:</strong> Salvaged mismanaged $10M program discovery for New York City Housing Authority housing placement technology systems, driving stalled cross-functional requirements gathering & implementation forward.</p>
+      <p class="job-body"><strong>Product Iteration:</strong> Drove a full UX revamp of Hilton Boost, an internal franchisee action-planning tool, by owning the product backlog end-to-end, resulting in a 13% lift in user retention.</p>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Delivery Manager</div>
+        <div class="job-org">
+          Nagarro – Saint Louis, Missouri (Remote) &nbsp;·&nbsp; April 2017 – December 2021
+          <span class="org-note">$900M multinational technology consulting and professional services organization</span>
+        </div>
+      </div>
+      <p class="job-body"><strong>Revenue Generation:</strong> Generated $2.6M in revenue by establishing project infrastructure and engineering teams for digital transformation program with Austria's largest real estate firm in strategic partnership with Google.</p>
+      <p class="job-body"><strong>Platform Scaling:</strong> Contributed to RMS valuation growth from $880M to $2B through Moody's acquisition by overseeing 50+ design and engineering team members to accelerate development and modernize legacy products into scalable SaaS solutions.</p>
+      <p class="job-body"><strong>Product Impact:</strong> Drove 360M annual impressions for Twitter's VIT native iOS app by defining feature roadmap and implementing celebrity-fan engagement features based on data-driven user research.</p>
+      <p class="job-body"><strong>Project Delivery:</strong> Oversaw the 0-1 development and hardware/software integration for a mobile application for the Bruvi BV-01 coffee pod brewer (named "Best Overall" pod brewer by Wired in 2025).</p>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Product Manager</div>
+        <div class="job-org">
+          Mokriya – Saint Louis, Missouri (Remote) &nbsp;·&nbsp; April 2014 – March 2017
+          <span class="org-note">Mobile-focused design, development, and product consultancy</span>
+        </div>
+      </div>
+      <p class="job-body"><strong>Funding Achievement:</strong> Secured $1.7M in funding for Fluent Forever by creating rapid prototypes and then managing agile beta 0-1 launch with cross-functional collaboration between founders, engineering, and design teams.</p>
+      <p class="job-body"><strong>Product Success:</strong> Delivered SanDisk iXpand USB app achieving 4M units sold and 4.5-star App Store rating by driving collaboration between design, iOS engineering, and external firmware vendors to overcome technical constraints.</p>
+      <p class="job-body"><strong>Product Launch:</strong> Successfully launched (0-1) Bulbrite's first smart bulb product and companion mobile app by coordinating UX design, hardware integration with cross-functional team.</p>
+      <p class="job-body"><strong>Risk Mitigation:</strong> Rescued Indi.com native iOS app three weeks before launch by evaluating critical product issues and implementing solutions to resolve 90% of defects, ensuring on-schedule delivery.</p>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title">Digital Strategist</div>
+        <div class="job-org">
+          MBB Agency – Kansas City, Kansas (On-site) &nbsp;·&nbsp; May 2012 – April 2014
+          <span class="org-note">Digital marketing and advertising agency with strong healthcare focus</span>
+        </div>
+      </div>
+      <p class="job-body"><strong>Business Analysis:</strong> Performed data analysis to optimize web enhancements and digital marketing efforts.</p>
+      <p class="job-body"><strong>User Experience:</strong> Created UI/UX strategies and wireframes for client and internal web projects.</p>
+      <p class="job-body"><strong>Business Transformation:</strong> Assessed technical feasibility and offered design input on web mock-ups to facilitate a digital transformation of the business.</p>
+
+    <div class="section-label">Education &amp; Skills</div>
+
+    <div class="edu-skills">
+      <p><strong>Thomas Aquinas College</strong> – Santa Paula, CA: Bachelor of Arts in Philosophy &amp; Intellectual History</p>
+      <p><strong>Technologies Managed:</strong> Angular, React, React Native, Node.js, iOS (native), Android (native), Headless CMS (Umbraco, Contentful, Prismic), Salesforce, API Development, Google Cloud, Azure, SaaS Architecture, Hardware/software integrations</p>
+      <p><strong>Delivery Management &amp; Tools:</strong> Agile, Waterfall, Hybrid, RAID management, Requirements Gathering, Backlog Refinement, Scope Management, Jira, Confluence, Notion, SharePoint, Slack, Teams, Smartsheet, MS Project, MS Office, Google Suite, Miro, Vizio, Figma</p>
+    </div>
+
+
+
+  </div>
+</body>
+</html>
