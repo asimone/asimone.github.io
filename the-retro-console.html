@@ -1,265 +1,218 @@
-<!--- I don't write here much and this markup is older than it probably should be. Much of the older content moved from Wordpress to Ghost to Jekyll -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--- I don't write here much and this markup is older than it probably should be. Much of the older content moved from Wordpress to Ghost to Jekyll -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Andrew Simone is a digital product specialist based near Corning, New York." />
+  <meta property="og:site_name" content="Andrew Simone's blog"/>
+  <meta property="og:type" content="blog"/>
   <title>The Retro Console — Andrew Simone</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
   <style>
-    :root {
-      --bg: #0d0d0d;
-      --fg: #f0ede6;
-      --accent: #c8ff00;
-      --dim: #888;
-      --dimmer: #444;
-      --link: #c8ff00;
-      --border: #222;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html { scroll-behavior: smooth; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background-color: var(--bg);
-      color: var(--fg);
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: clamp(0.8rem, 1vw, 0.95rem);
-      line-height: 1.8;
-      padding: 0;
-      position: relative;
+      background-color: #f5f3ef;
+      color: #1c1c1c;
+      font-family: 'Work Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Grain overlay */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      opacity: 0.15;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Layout */
     .page {
-      position: relative;
-      z-index: 1;
-      max-width: min(740px, 80vw);
+      max-width: 680px;
       margin: 0 auto;
-      padding: clamp(2rem, 5vw, 5rem) 0 clamp(3rem, 6vw, 6rem);
-    }
-
-    @media (max-width: 700px) {
-      .page { max-width: 100%; padding-left: 1.5rem; padding-right: 1.5rem; }
+      padding: clamp(3rem, 7vw, 6rem) clamp(1.5rem, 5vw, 2rem) clamp(3rem, 7vw, 6rem);
     }
 
     /* Site header */
     .site-header {
-      margin-bottom: clamp(2.5rem, 4vw, 4rem);
-      opacity: 0;
-      transform: translateY(12px);
-      animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.05s forwards;
+      text-align: center;
+      margin-bottom: clamp(2rem, 4vw, 3.5rem);
     }
 
     .site-header a {
       text-decoration: none;
+      color: inherit;
     }
 
-    .site-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      color: var(--fg);
-      letter-spacing: 0.02em;
-      line-height: 1;
+    .site-header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: #1c1c1c;
+      margin-bottom: 0.4rem;
     }
 
-    .site-sub {
-      font-size: 0.7rem;
-      color: var(--dimmer);
-      font-style: italic;
-      margin-top: 0.3rem;
+    .site-header .sub {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #666;
     }
 
-    .accent-rule {
-      width: 40px;
-      height: 2px;
-      background: var(--accent);
-      margin-top: 1rem;
+    .header-rule {
+      width: 28px;
+      height: 1px;
+      background: #bbb;
+      margin: 1.25rem auto 0;
     }
 
     /* Post header */
     .post-header {
       margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
-      opacity: 0;
-      transform: translateY(12px);
-      animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+      padding-bottom: clamp(1rem, 2vw, 1.5rem);
+      border-bottom: 1px solid #ddd;
     }
 
-    .post-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 0.95;
-      letter-spacing: 0.01em;
-      color: var(--fg);
+    .post-header h2 {
+      font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
     }
 
     .post-date {
-      font-size: 0.7rem;
-      color: var(--dimmer);
-      margin-top: 0.75rem;
-      letter-spacing: 0.08em;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
+      color: #666;
     }
 
     /* Post body */
     .post-body {
-      opacity: 0;
-      transform: translateY(12px);
-      animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
+      font-size: clamp(0.9rem, 1.6vw, 1rem);
+      line-height: 1.85;
+      color: #2a2a2a;
     }
 
     .post-body p {
-      margin-bottom: 1.4em;
-      color: var(--fg);
+      margin-bottom: 1.3em;
     }
-
-    .post-body p + p { }
 
     .post-body b,
     .post-body strong {
-      color: var(--accent);
-      font-weight: 500;
+      font-weight: 600;
+      color: #1c1c1c;
     }
 
     .post-body em {
-      color: var(--dim);
       font-style: italic;
     }
 
     .post-body a {
-      color: var(--link);
+      color: #1c1c1c;
       text-decoration: none;
-      border-bottom: 1px solid transparent;
+      border-bottom: 1px solid #bbb;
       transition: border-color 0.2s;
     }
 
     .post-body a:hover {
-      border-color: var(--link);
+      border-color: #1c1c1c;
     }
 
     .post-body ul {
       list-style: none;
-      margin: 0 0 1.4em 0;
+      margin: 0 0 1.3em 0;
       padding: 0;
     }
 
     .post-body ul li {
-      padding-left: 1.2em;
+      padding-left: 1.1em;
       position: relative;
-      margin-bottom: 0.4em;
-      color: var(--fg);
+      margin-bottom: 0.35em;
     }
 
     .post-body ul li::before {
       content: '—';
       position: absolute;
       left: 0;
-      color: var(--accent);
+      color: #bbb;
     }
 
     .post-body pre {
-      background: #111;
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent);
-      padding: 1rem 1.25rem;
-      margin: 0 0 1.4em 0;
+      background: #eeecea;
+      border-left: 2px solid #bbb;
+      padding: 0.9rem 1.1rem;
+      margin: 0 0 1.3em 0;
       overflow-x: auto;
       font-size: 0.8rem;
-      color: #b0ffb0;
+      font-family: 'Courier New', Courier, monospace;
       line-height: 1.6;
+      color: #1c1c1c;
     }
 
     .post-body img {
       max-width: 100%;
       height: auto;
       display: block;
-      margin: 0 0 1.4em 0;
-      border: 1px solid var(--border);
+      margin: 0 0 1.3em 0;
     }
 
     .post-body iframe {
       display: block;
       max-width: 100%;
-      margin: 0 0 1.4em 0;
-      border: 1px solid var(--border);
+      margin: 0 0 1.3em 0;
+      border: none;
     }
 
-    /* Section headings (b tags used as headings in original) */
     .post-body .section-head {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-      color: var(--fg);
-      letter-spacing: 0.02em;
-      margin: 2em 0 0.6em;
-      line-height: 1;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #666;
+      margin: 2em 0 0.75em;
     }
 
-    /* Note callouts */
     .post-body .note {
-      border-left: 2px solid var(--dimmer);
+      border-left: 2px solid #ddd;
       padding-left: 1rem;
-      color: var(--dim);
-      margin-bottom: 1.4em;
-    }
-
-    .post-body .note strong {
-      color: var(--dim);
+      color: #555;
+      font-style: italic;
+      margin-bottom: 1.3em;
+      font-size: 0.9em;
     }
 
     /* Footer */
-    .post-footer {
+    .site-footer {
       margin-top: clamp(2rem, 4vw, 3.5rem);
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
+      padding-top: 1.25rem;
+      border-top: 1px solid #ddd;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      opacity: 0;
-      animation: rise 0.6s ease 0.4s forwards;
+      flex-wrap: wrap;
+      gap: 0.75rem;
     }
 
-    .post-footer .back {
-      color: var(--dim);
+    .site-footer a {
+      color: #1c1c1c;
       text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 0.05em;
-      transition: color 0.2s;
-    }
-
-    .post-footer .back:hover { color: var(--accent); }
-
-    .post-footer .contact a {
-      color: var(--link);
-      text-decoration: none;
-      font-size: 0.75rem;
-      border-bottom: 1px solid transparent;
+      font-size: 0.8rem;
+      border-bottom: 1px solid #bbb;
       transition: border-color 0.2s;
     }
 
-    .post-footer .contact a:hover {
-      border-color: var(--link);
+    .site-footer a:hover {
+      border-color: #1c1c1c;
     }
 
-    @keyframes rise {
-      to { opacity: 1; transform: translateY(0); }
+    .site-footer .social a {
+      border-bottom: none;
+      color: #bbb;
+      transition: color 0.2s;
+    }
+
+    .site-footer .social a:hover {
+      color: #1c1c1c;
     }
   </style>
 </head>
@@ -267,13 +220,13 @@
   <div class="page">
 
     <header class="site-header">
-      <a href="/"><div class="site-title">This is a place</div></a>
-      <div class="site-sub">(Some call it a blog)</div>
-      <div class="accent-rule"></div>
+      <a href="/"><h1>Andrew Simone</h1></a>
+      <div class="sub">(Some call it a blog)</div>
+      <div class="header-rule"></div>
     </header>
 
     <div class="post-header">
-      <h1 class="post-title">The Retro Console</h1>
+      <h2>The Retro Console</h2>
       <div class="post-date">06 February 2014</div>
     </div>
 
@@ -303,11 +256,11 @@
 
       <p>The list of systems it can emulate is pretty long, but the ones I'm currently using are the Atari 2600, Game Boy Advance, Game Gear, Sega Master System, Sega Genesis, NES, SNES, and PlayStation 1 (PSX).</p>
 
-      <p class="note"><strong>Note:</strong> <em>In order to get PlayStation games to run smoothly, you have to overclock your PI. Also, games that swap disks are problematic. I'm told some command line fiddling and file renaming can solve this problem, but that sort of defeats the purpose of this project. I also haven't been able to get the N64 emulator to work.</em></p>
+      <p class="note"><strong>Note:</strong> In order to get PlayStation games to run smoothly, you have to overclock your PI. Also, games that swap disks are problematic. I'm told some command line fiddling and file renaming can solve this problem, but that sort of defeats the purpose of this project. I also haven't been able to get the N64 emulator to work.</p>
 
       <p class="section-head">Installing RetroPie</p>
 
-      <p><a name="install"></a>Now you could follow <a href="https://github.com/Aloshi/EmulationStation/blob/master/README.md">the Emulation Station directions</a> or you could do it the easy way and download and install <a href="http://blog.petrockblock.com/download/retropie-project-image/">the RetroPie Project's SD card image</a> on your own SD card.</p>
+      <p>Now you could follow <a href="https://github.com/Aloshi/EmulationStation/blob/master/README.md">the Emulation Station directions</a> or you could do it the easy way and download and install <a href="http://blog.petrockblock.com/download/retropie-project-image/">the RetroPie Project's SD card image</a> on your own SD card.</p>
 
       <p>Now that you've downloaded the image file, there are <a href="http://elinux.org/RPi_Easy_SD_Card_Setup">a number of ways to install it</a>, depending on your computer's OS. The gist of the easiest methods is to connect your SD card to your computer and use a "disk image to USB bootable drive" program.</p>
 
@@ -338,7 +291,7 @@ sudo apt-get upgrade</pre>
 
       <pre>sudo apt-get install xboxdrv</pre>
 
-      <p>And then follow one of the methods outline in <a href="https://github.com/petrockblog/RetroPie-Setup/wiki/Setting-up-the-XBox360-controller">the documentation</a>. I happened to use the first and found I had a conflict with the xpad driver (i.e., the controllers wouldn't connect to the dongle), so I had to add the extra line, "rmmod xpad" to the <strong>rc.local</strong> edits the wiki outlined:</p>
+      <p>And then follow one of the methods outline in <a href="https://github.com/petrockblog/RetroPie-Setup/wiki/Setting-up-the-XBox360-controller">the documentation</a>. I happened to use the first and found I had a conflict with the xpad driver (i.e., the controllers wouldn't connect to the dongle), so I had to add the extra line, "rmmod xpad" to the <strong>/etc/rc.local</strong> edits the wiki outlined:</p>
 
       <pre>rmmod xpad 
 xboxdrv --detach-kernel-driver --trigger-as-button --wid 0 --led 2 --deadzone 4000 --silent &amp; 
@@ -354,7 +307,7 @@ sleep 1</pre>
 
       <p>Now make sure the Xbox controllers are on, connect the USB dongle, and reboot the PI ("sudo reboot" should work) and it should recognize your controllers once Emulation Station finishes loading. If you were like me, however, and FUBARed the configuration, you'll need press F4 on the keyboard and go to <strong>/home/pi/.emulationstation</strong> delete <strong>es_input.cfg</strong> and reboot the PI again to reconfigure.</p>
 
-      <p class="note"><strong>Note:</strong> <em>I later found out <a href="https://github.com/petrockblog/RetroPie-Setup/wiki/Setting-up-the-XBox360-controller">the third "init.d script" option</a> is less memory intensive than the above option I used, but I couldn't tell you how well it works. I've also found sometimes out of the box XBOX controllers don't want to connect to the dongle: try connecting the dongle to your computer and get them to recognize it there first. I don't know exactly why, but it worked for me.</em></p>
+      <p class="note"><strong>Note:</strong> I later found out <a href="https://github.com/petrockblog/RetroPie-Setup/wiki/Setting-up-the-XBox360-controller">the third "init.d script" option</a> is less memory intensive than the above option I used, but I couldn't tell you how well it works. I've also found sometimes out of the box XBOX controllers don't want to connect to the dongle: try connecting the dongle to your computer and get them to recognize it there first. I don't know exactly why, but it worked for me.</p>
 
       <p>The PI should recognize your Xbox controllers and let you navigate through the different emulation menus. Don't worry if it feels like it's missing emulators, many of them don't appear unless you have ROMs.</p>
 
@@ -380,7 +333,7 @@ sleep 1</pre>
         <li>Swaps the A/B and X/Y button configuration to match Nintendo's since the Xbox gets it "backwards."</li>
       </ul>
 
-      <p class="note"><strong>Note:</strong> <em>Controller config files are found in <strong>/home/REtroPie/configs</strong> and each individual emulator folder has a configuration file that <em>overrides</em> the <strong>retroarch.cfg</strong>. You could create a whole new config for one emulator or just swap a few keybinds. I've found out recently, for instance, my config above doesn't play nice with portable console emulators. When I get around to fixing them, I'll add those to this section.</em></p>
+      <p class="note"><strong>Note:</strong> Controller config files are found in <strong>/home/REtroPie/configs</strong> and each individual emulator folder has a configuration file that <em>overrides</em> the <strong>retroarch.cfg</strong>. You could create a whole new config for one emulator or just swap a few keybinds. I've found out recently, for instance, my config above doesn't play nice with portable console emulators. When I get around to fixing them, I'll add those to this section.</p>
 
       <p>I'd also recommend tweaking the following:</p>
 
@@ -396,13 +349,13 @@ sleep 1</pre>
 
       <p>Do your thing, then exit, save, and reboot.</p>
 
-      <p class="note"><strong>Note:</strong> <em>The <strong>es_systems.cfg</strong> also defines what ROM types can be read. Make sure ROMs match the files types listed for the respective emulators.</em></p>
+      <p class="note"><strong>Note:</strong> The <strong>es_systems.cfg</strong> also defines what ROM types can be read. Make sure ROMs match the files types listed for the respective emulators.</p>
 
       <p class="section-head">ROMs</p>
 
       <p>People always seem to be coy about where to get these on the web and I don't know why. There are two ways: <a href="http://www.nintendolife.com/news/2012/01/turn_your_retro_cartridges_into_roms_legally">rip them from the cartridges and discs you own</a> (legal) or torrent them (not legal).</p>
 
-      <p class="note"><strong>Note:</strong> <em>You'll find the MAME Roms (arcade games) are particularly finicky. You'll just have to test what works and what doesn't. It's important you get MAME 0.37b5 ROM set, but even then not all may work.</em></p>
+      <p class="note"><strong>Note:</strong> You'll find the MAME Roms (arcade games) are particularly finicky. You'll just have to test what works and what doesn't. It's important you get MAME 0.37b5 ROM set, but even then not all may work.</p>
 
       <p>To load ROMs onto your PI, you'll need to make sure it's connected to your local area network, then head to the command line by pressing F4 and type:</p>
 
@@ -415,7 +368,7 @@ Password: raspberry</pre>
 
       <p>You'll find the ROMs directory at <strong>/home/pi/RetroPie/roms</strong>, load them up, and then reboot.</p>
 
-      <p class="note"><strong>Note:</strong> <em>You can connect the pi to your wireless network, but you can <a href="http://raspberrypihq.com/how-to-add-wifi-to-the-raspberry-pi/">buy a peripheral and do some more configuration</a>.</em></p>
+      <p class="note"><strong>Note:</strong> You can connect the pi to your wireless network, but you can <a href="http://raspberrypihq.com/how-to-add-wifi-to-the-raspberry-pi/">buy a peripheral and do some more configuration</a>.</p>
 
       <p class="section-head">Help</p>
 
@@ -430,15 +383,13 @@ Password: raspberry</pre>
 
       <p>Good luck and happy gaming!</p>
 
-    </div><!-- /.post-body -->
+    </div>
 
-    <footer class="post-footer">
-      <a class="back" href="/">&laquo; Back</a>
-      <div class="contact">
-        <a href="mailto:me@andrewsimone.com?subject=Let's%20Work%20Together">me@andrewsimone.com</a>
-      </div>
+    <footer class="site-footer">
+      <a href="/">← Back</a>
+      <a href="mailto:me@andrewsimone.com?subject=Let's%20Work%20Together">me@andrewsimone.com</a>
     </footer>
 
-  </div><!-- /.page -->
+  </div>
 </body>
 </html>
