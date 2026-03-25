@@ -243,6 +243,9 @@
       margin-top: clamp(2rem, 4vw, 3.5rem);
       padding-top: 1.25rem;
       border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .back-footer a {
@@ -257,12 +260,17 @@
       border-color: #1c1c1c;
     }
 
+    .mobile-pdf {
+      display: none;
+    }
+
     @media (max-width: 480px) {
       .location { display: none; }
       .date-sep { display: none; }
       .date-range { display: block; margin-top: 0.1rem; }
       .org-note { display: none !important; }
       .pdf-link { display: none; }
+      .mobile-pdf { display: inline; }
     }
   </style>
 </head>
@@ -342,13 +350,12 @@
 
     <div class="edu-skills">
       <p><strong>Thomas Aquinas College</strong> – Santa Paula, California<br>Bachelor of Arts in Philosophy &amp; Intellectual History</p>
-      <p><strong>Technologies Managed:</strong> Angular, React, React Native, Node.js, iOS (native), Android (native), Headless CMS (Umbraco, Contentful, Prismic), Salesforce, API Development, Google Cloud, Azure, SaaS Architecture, Hardware/software integrations</p>
-      <p><strong>Delivery Management &amp; Tools:</strong> Agile, Waterfall, Hybrid, RAID management, Requirements Gathering, Backlog Refinement, Scope Management, Jira, Confluence, Notion, SharePoint, Slack, Teams, Smartsheet, MS
-      <p><strong>Delivery Management &amp; Tools:</strong> Agile, Waterfall, Hybrid, RAID management, Requirements Gathering, Backlog Refinement, Scope Management, Jira, Confluence, Notion, SharePoint, Slack, Teams, Smartsheet, MS Project, MS Office, Google Suite, Miro, Vizio, Figma</p>
+      <p><strong>Technologies Managed:</strong> Angular, React, React Native, Node.js, iOS (native), Android (native), Headless CMS (Umbraco, Contentful, Prismic), Salesforce, API Development, Google Cloud, Azure, SaaS Architecture, Hardware/software integrations</p>      <p><strong>Delivery Management &amp; Tools:</strong> Agile, Waterfall, Hybrid, RAID management, Requirements Gathering, Backlog Refinement, Scope Management, Jira, Confluence, Notion, SharePoint, Slack, Teams, Smartsheet, MS Project, MS Office, Google Suite, Miro, Vizio, Figma</p>
     </div>
 
     <div class="back-footer">
       <a href="/">← Back</a>
+      <a class="mobile-pdf" href="https://andrewsimone.com/documents/andrew-simone-resume.pdf" download>Save as PDF</a>
     </div>
 
   </div>
