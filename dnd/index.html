@@ -1,121 +1,191 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><!-- CAMPAIGN_TITLE -->Tomb of Annihilation<!-- /CAMPAIGN_TITLE --></title>
+  <meta name="description" content="<!-- CAMPAIGN_DESCRIPTION -->Something evil is trapping the souls of the dead.<!-- /CAMPAIGN_DESCRIPTION -->" />
 
-<html>
-	<head>
-		<title>Tomb of Annihilation</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
-			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-			
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-	</head>
-	<body class="landing">
+  <style>
+    /* Equal-height resource/rules cards */
+    #main .row {
+      display: flex;
+      align-items: stretch;
+    }
+    #main .row > div {
+      display: flex;
+      flex-direction: column;
+    }
+    #main .row > div .box.special {
+      flex: 1;
+    }
+  </style>
 
-		<!-- Header -->
+  <!-- Original stylesheets preserved -->
+  <link rel="stylesheet" href="css/skel.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-wide.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
 
+  <!-- Original scripts preserved -->
+  <script src="js/jquery.min.js" defer></script>
+  <script src="js/jquery.dropotron.min.js" defer></script>
+  <script src="js/jquery.scrollgress.min.js" defer></script>
+  <script src="js/skel.min.js" defer></script>
+  <script src="js/skel-layers.min.js" defer></script>
+  <script src="js/init.js" defer></script>
+</head>
 
-		<!-- Banner -->
-			<section id="banner">
-				<h2 style="text-shadow: 2px 2px #000;">Tomb of Annihilation</h2>
-				<ul class="actions logos">
-					<li style="padding-right:40px;"><img width="200px;" src="images/wd-seal.png"></li>
-				</ul>
-				
+<body class="landing">
 
-			</section>
+  <!-- ============================================================
+       BANNER
+       ============================================================ -->
+  <section id="banner">
 
-		<!-- Main -->
-			<section id="main" class="container">
+    <!-- CAMPAIGN_TITLE -->
+    <h2 style="text-shadow: 2px 2px #000;">Tomb of Annihilation</h2>
+    <!-- /CAMPAIGN_TITLE -->
 
-				<section class="box special">
-					<header class="major">
-						<h2>Jungles of Chult</h2>
-						<p>Something evil is trapping the souls of the dead, even those brought back have begun to wither away. Your party must traverse a tropical wilderness composed of jungle, plateaus, impassible mountains, and belching volcanoes to find the source of the death curse.</p>
-					</header>
-				<span class="image featured"><img height=50%" src="images/pic01.png" alt="" /></span>
-				</section>
+    <!-- CAMPAIGN_SEAL_IMAGE -->
+    <ul class="actions logos">
+      <li style="padding-right: 40px;">
+        <img width="200" src="images/wd-seal.png" alt="Wizards of the Coast seal" />
+      </li>
+    </ul>
+    <!-- /CAMPAIGN_SEAL_IMAGE -->
 
-				<section class="box special features">
-					<div class="features-row">
-						<section>
-							<span class="icon major fa-user accent2"></span>
-							<h3>Stat Choices</h3>
-							<p>Standard Array<br>Point Buy<br>3d6 x 6</p>
-							</section>
-						<section>
-							<span class="icon major fas fa-gamepad accent5 "></span>
-							<h3>Playstyle</h3>
-							<p>Wilderness Survival<br>Weather Relevant<br />Hex Crawl</p>
-						</section>
-					</div>					
-					<div class="features-row">
-						<section>
-							<span class="icon major fa-calendar accent4"></span>
-							<h3>Schedule</h3>
-							<p>Once a week<br>3 hour sessions<br>Thursdays</p>
-						</section>
-						<section>
-							<span class="icon major fa-book accent3"></span>
-							<h3>Rulesets</h3>
-							<p>Unearthed Arcana<br/>All Offical Rulebooks<br/>Standard Combat Rules</p>
-						
-						</section>
-					</div>
+  </section>
 
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <main id="main" class="container">
 
-				
-				</section>
+    <!-- Intro -->
+    <section class="box special">
+      <header class="major">
 
-				<div class="row">
-					<div class="6u 12u(narrower)">
+        <!-- CAMPAIGN_REGION_TITLE -->
+        <h2>Jungles of Chult</h2>
+        <!-- /CAMPAIGN_REGION_TITLE -->
 
-						<section class="box special">
-							<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
-							<h3>Resources</h3>
-							<p>
-							<a href="https://www.dropbox.com/sh/sd3hspx3675qti6/AAAs0u6TAU36a6CJ6HA-8Bzqa?dl=0">Core Books</a><br><a href="images/chult-map.jpg">Map of Chult</a><br><a href="https://www.dropbox.com/s/jeabf4ztccom3z5/toa-handout.pdf?dl=0">Player Creation Handout</a> 
-							<p>
-							</section>
+        <!-- CAMPAIGN_DESCRIPTION -->
+        <p>Something evil is trapping the souls of the dead, even those brought back have begun to wither away. Your party must traverse a tropical wilderness composed of jungle, plateaus, impassible mountains, and belching volcanoes to find the source of the death curse.</p>
+        <!-- /CAMPAIGN_DESCRIPTION -->
 
-					</div>
-					<div class="6u 12u(narrower)">
+      </header>
 
-						<section class="box special">
-							<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
-							<h3>Notable Rules</h3>
-							<p>Heavy Armor Penalty<br>Encumberance</br>Exhaustion<br>Dehydration</p>
+      <!-- CAMPAIGN_FEATURED_IMAGE -->
+      <img class="image featured" src="images/pic01.png" alt="The Jungles of Chult" />
+      <!-- /CAMPAIGN_FEATURED_IMAGE -->
 
-						</section>
+    </section>
 
-					</div>
-				</div>
+    <!-- Feature cards -->
+    <section class="box special features">
 
-			</section>
+      <div class="features-row">
 
-		<!-- CTA -->
-			<section id="cta">
-<!-- 
-				<h2>Interested?</h2>
-				<p>Email <a href="mailto:me@andrewsimone.com">me@andrewsimone.com</a></p>
--->
-			</section>
+        <!-- STAT_CHOICES -->
+        <section>
+          <span class="icon major fa-user accent2" aria-hidden="true"></span>
+          <h3>Stat Choices</h3>
+          <p>Standard Array<br />Point Buy<br />3d6 x 6</p>
+        </section>
+        <!-- /STAT_CHOICES -->
 
-		<!-- Footer -->
+        <!-- PLAYSTYLE -->
+        <section>
+          <span class="icon major fas fa-gamepad accent5" aria-hidden="true"></span>
+          <h3>Playstyle</h3>
+          <p>Wilderness Survival<br />Weather Relevant<br />Hex Crawl</p>
+        </section>
+        <!-- /PLAYSTYLE -->
 
-	</body>
+      </div>
+
+      <div class="features-row">
+
+        <!-- SCHEDULE -->
+        <section>
+          <span class="icon major fa-calendar accent4" aria-hidden="true"></span>
+          <h3>Schedule</h3>
+          <p>Once a week<br />3 hour sessions<br />Thursdays</p>
+        </section>
+        <!-- /SCHEDULE -->
+
+        <!-- RULESETS -->
+        <section>
+          <span class="icon major fa-book accent3" aria-hidden="true"></span>
+          <h3>Rulesets</h3>
+          <p>Unearthed Arcana<br />All Official Rulebooks<br />Standard Combat Rules</p>
+        </section>
+        <!-- /RULESETS -->
+
+      </div>
+
+    </section>
+
+    <!-- Resources & Rules -->
+    <div class="row">
+
+      <div class="6u 12u(narrower)">
+        <section class="box special">
+
+          <!-- CARD_IMAGE_RESOURCES -->
+          <img class="image featured" src="images/pic02.jpg" alt="Ancient ruins" />
+          <!-- /CARD_IMAGE_RESOURCES -->
+
+          <h3>Resources</h3>
+
+          <!-- RESOURCES_LIST -->
+          <p>
+            <a href="https://www.dropbox.com/sh/sd3hspx3675qti6/AAAs0u6TAU36a6CJ6HA-8Bzqa?dl=0">Core Books</a><br />
+            <a href="images/chult-map.jpg">Map of Chult</a><br />
+            <a href="https://www.dropbox.com/s/jeabf4ztccom3z5/toa-handout.pdf?dl=0">Player Creation Handout</a>
+          </p>
+          <!-- /RESOURCES_LIST -->
+
+        </section>
+      </div>
+
+      <div class="6u 12u(narrower)">
+        <section class="box special">
+
+          <!-- CARD_IMAGE_RULES -->
+          <img class="image featured" src="images/pic03.jpg" alt="Treacherous jungle terrain" />
+          <!-- /CARD_IMAGE_RULES -->
+
+          <h3>Notable Rules</h3>
+
+          <!-- NOTABLE_RULES_LIST -->
+          <p>
+            Heavy Armor Penalty<br />
+            Encumbrance<br />
+            Exhaustion<br />
+            Dehydration
+          </p>
+          <!-- /NOTABLE_RULES_LIST -->
+
+        </section>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       CTA — remove comment tags to activate
+       ============================================================ -->
+  <!--
+  <section id="cta">
+    <h2>Interested?</h2>
+    <p>Email <a href="mailto:me@andrewsimone.com">me@andrewsimone.com</a></p>
+  </section>
+  -->
+
+</body>
 </html>
