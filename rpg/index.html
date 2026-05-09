@@ -14,7 +14,12 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #f0ece2;
+  background-color: #f0ece2;
+  background-image: url('stonetop-illustration.png.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+  background-blend-mode: multiply;
   color: #1a1008;
   font-family: 'IM Fell English', Georgia, serif;
   font-style: italic;
@@ -36,7 +41,7 @@ body {
 .scroll-content {
   max-width: 560px;
   margin: 0 auto;
-  padding: 0 28px 0;
+  padding: 0 28px calc(clamp(240px, 68.4vw, 479px) - 50px);
 }
 
 /* ── Intro paragraphs ── */
@@ -123,6 +128,22 @@ body {
   font-size: clamp(1.5rem, 2.6vw, 1.125rem);
   line-height: 1.75;
   margin-bottom: 0.5em;
+}
+
+/* ── Doc link ── */
+.doc-link {
+  color: #b5451b;
+  text-decoration: none;
+}
+
+.doc-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .scroll-content {
+    padding: 0 28px calc(68.4vw - 100px);
+  }
 }
 
 /* ── Bottom illustration ── */
@@ -219,12 +240,11 @@ body {
     <h2>Game Details</h2>
     <p>An iron-age theater of the mind game with strong narrative elements, wyld magicks, and deadly combat.</p>
     <br>
-    <p>Players: 3-5 maximum<br>Sessions: 3-4 minimum<br>Rule set: 2d6 Success Roles</p>
+    <p>Players: 3-5 maximum<br>Sessions: 3-4 minimum<br>Rule set: 2d6 Success Roles<br><a class="doc-link" href="characters/index.html">Game Documents</a></p>
   </section>
 
 </div>
 
-<img class="illustration" src="stonetop-illustration.png.png" alt="A hilltop landscape with the standing Stone silhouetted against storm clouds">
 
 </body>
 </html>
