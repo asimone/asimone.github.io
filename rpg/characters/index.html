@@ -90,6 +90,14 @@ ul li a:hover {
   text-decoration: underline;
 }
 
+/* Mobile: 1-up, Desktop: 3-up */
+.links-3up { display: none; }
+
+@media (min-width: 1024px) {
+  .links-1up { display: none; }
+  .links-3up { display: flex; }
+}
+
 .intro a {
   color: #b5451b;
   text-decoration: none;
@@ -117,15 +125,28 @@ ul li a:hover {
 
   <section>
     <h2>Player Options</h2>
-    <ul>
-      <li><a href="Playbooks/Playbook_-_The_Blessed_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_blessed_black.png" alt="">The Blessed</a></li>
-      <li><a href="Playbooks/Playbook_-_The_Fox_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_fox_black.png" alt="">The Fox</a></li>
-      <li><a href="Playbooks/Playbook_-_The_Heavy_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_heavy_black.png" alt="">The Heavy</a></li>
-      <li><a href="Playbooks/Playbook_-_The_Lightbearer_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_lightbearer_black.png" alt="">The Lightbearer</a></li>
-      <li><a href="Playbooks/Playbook_-_The_Marshal_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_marshal_black.png" alt="">The Marshal</a></li>
-      <li><a href="Playbooks/Playbook_-_The_Ranger_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_ranger_black.png" alt="">The Ranger</a></li>
-      <li><a href="Playbooks/Playbook_-_The_Seeker_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_seeker_black.png" alt="">The Seeker</a></li>
-      <li><a href="Playbooks/Playbook_-_The_Would-be_Hero_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_would-be-hero_black.png" alt="">The Would-Be Hero</a></li>
+    <!-- Mobile: 1-up -->
+    <ul class="links-1up">
+      <li><a href="Playbooks 1-Up/Playbook_-_The_Blessed_(1-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_blessed_black.png" alt="">The Blessed</a></li>
+      <li><a href="Playbooks 1-Up/Playbook_-_The_Fox_(1-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_fox_black.png" alt="">The Fox</a></li>
+      <li><a href="Playbooks 1-Up/Playbook_-_The_Heavy_(1-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_heavy_black.png" alt="">The Heavy</a></li>
+      <li><a href="Playbooks 1-Up/Playbook_-_The_Lightbearer_(1-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_lightbearer_black.png" alt="">The Lightbearer</a></li>
+      <li><a href="Playbooks 1-Up/Playbook_-_The_Marshal_(1-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_marshal_black.png" alt="">The Marshal</a></li>
+      <li><a href="Playbooks 1-Up/Playbook_-_The_Ranger_(1-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_ranger_black.png" alt="">The Ranger</a></li>
+      <li><a href="Playbooks 1-Up/Playbook_-_The_Seeker_(1-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_seeker_black.png" alt="">The Seeker</a></li>
+      <li><a href="Playbooks 1-Up/Playbook_-_The_Would-be_Hero_(1-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_would-be-hero_black.png" alt="">The Would-Be Hero</a></li>
+    </ul>
+
+    <!-- Desktop: 3-up -->
+    <ul class="links-3up">
+      <li><a href="Playbooks 3-up/Playbook_-_The_Blessed_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_blessed_black.png" alt="">The Blessed</a></li>
+      <li><a href="Playbooks 3-up/Playbook_-_The_Fox_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_fox_black.png" alt="">The Fox</a></li>
+      <li><a href="Playbooks 3-up/Playbook_-_The_Heavy_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_heavy_black.png" alt="">The Heavy</a></li>
+      <li><a href="Playbooks 3-up/Playbook_-_The_Lightbearer_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_lightbearer_black.png" alt="">The Lightbearer</a></li>
+      <li><a href="Playbooks 3-up/Playbook_-_The_Marshal_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_marshal_black.png" alt="">The Marshal</a></li>
+      <li><a href="Playbooks 3-up/Playbook_-_The_Ranger_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_ranger_black.png" alt="">The Ranger</a></li>
+      <li><a href="Playbooks 3-up/Playbook_-_The_Seeker_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_seeker_black.png" alt="">The Seeker</a></li>
+      <li><a href="Playbooks 3-up/Playbook_-_The_Would-be_Hero_(3-up).pdf"><img src="../stonetop_icons/stonetop_icons/stonetop_would-be-hero_black.png" alt="">The Would-Be Hero</a></li>
     </ul>
   </section>
 
