@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lys Royal Events Only &mdash; Grande Bataille 1026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment: #f1e6cb;
+    --parchment-dark: #e4d3a7;
+    --parchment-shadow: #cdb87d;
+    --ink: #3a2c1d;
+    --ink-soft: #5c4a34;
+    --burgundy: #7a2331;
+    --burgundy-deep: #591722;
+    --forest: #3f5d3a;
+    --gold: #a3792f;
+    --gold-bright: #c69a3f;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: radial-gradient(ellipse at top, #efe2bd 0%, #ddc98f 100%);
+    font-family:'EB Garamond', serif;
+    color: var(--ink);
+    padding: 40px 16px 80px;
+  }
+  .sheet{
+    max-width: 880px;
+    margin: 0 auto;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(255,255,255,0.35), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(0,0,0,0.05), transparent 45%),
+      var(--parchment);
+    border: 1px solid var(--parchment-shadow);
+    box-shadow: 0 0 0 1px var(--gold) inset, 0 10px 40px rgba(60,40,10,0.25);
+    padding: 48px 40px 56px;
+    position: relative;
+  }
+  .sheet::before, .sheet::after{
+    content:"";
+    position:absolute;
+    width: 46px; height: 46px;
+    border: 2px solid var(--gold);
+    opacity: 0.55;
+  }
+  .sheet::before{ top: 16px; left: 16px; border-right: none; border-bottom: none; }
+  .sheet::after{ bottom: 16px; right: 16px; border-left: none; border-top: none; }
+
+  header{ text-align:center; margin-bottom: 8px; }
+  .kicker{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    text-transform: uppercase;
+  }
+  h1{
+    font-family:'Cinzel Decorative', serif;
+    font-size: 32px;
+    color: var(--burgundy-deep);
+    margin: 6px 0 4px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  }
+  .subtitle{
+    font-family:'Cinzel', serif;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+  .rule{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    margin: 22px 0 30px;
+    color: var(--gold);
+  }
+  .rule::before, .rule::after{
+    content:"";
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+  .rule .mark{ font-size: 18px; color: var(--burgundy); }
+
+  .day{
+    margin-bottom: 34px;
+    page-break-inside: avoid;
+  }
+  .day-banner{
+    display:flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    border-bottom: 1.5px solid var(--gold);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+  .day-name{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size: 22px;
+    color: var(--burgundy-deep);
+    letter-spacing: 0.03em;
+  }
+  .day-date{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+  }
+
+  .event{
+    display:grid;
+    grid-template-columns: 112px 1fr;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--parchment-shadow);
+  }
+  .event:last-child{ border-bottom: none; }
+  .time{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--forest);
+    padding-top: 2px;
+    line-height: 1.3;
+  }
+  .event-body .fr{
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--ink);
+  }
+  .event-body .en{
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 1px;
+  }
+  .event-body .loc{
+    font-size: 13px;
+    color: var(--gold);
+    margin-top: 2px;
+  }
+  .event-body .loc::before{ content: "\2726  "; }
+  .flag{
+    display:inline-block;
+    font-size: 10.5px;
+    font-family:'Cinzel', serif;
+    letter-spacing: 0.04em;
+    color: var(--burgundy-deep);
+    background: rgba(122,35,49,0.12);
+    border: 1px solid rgba(122,35,49,0.35);
+    border-radius: 2px;
+    padding: 1px 6px;
+    margin-left: 6px;
+    vertical-align: 1px;
+  }
+
+  .ongoing{
+    margin-top: 40px;
+    border-top: 2px solid var(--gold);
+    padding-top: 20px;
+  }
+  .ongoing h2{
+    font-family:'Cinzel', serif;
+    font-size: 19px;
+    color: var(--burgundy-deep);
+    text-align:center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .ongoing-en{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    text-align:center;
+    margin-bottom: 18px;
+  }
+  .ongoing ul{
+    list-style: none;
+    margin: 0; padding: 0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 28px;
+  }
+  .ongoing li{
+    font-size: 14.5px;
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+  }
+  .ongoing li::before{
+    content: "\2727";
+    position:absolute; left:0; top:1px;
+    color: var(--gold);
+    font-size: 12px;
+  }
+  .ongoing li .loc{
+    display:block;
+    font-size: 12.5px;
+    color: var(--gold);
+    margin-top: 1px;
+  }
+  .ongoing li .loc::before{ content: "\2726  "; }
+  .ongoing li .note{
+    display:block;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin-top: 1px;
+  }
+
+  .note-box{
+    margin-top: 30px;
+    background: rgba(122,35,49,0.08);
+    border: 1px solid rgba(122,35,49,0.3);
+    border-radius: 4px;
+    padding: 14px 18px;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .note-box strong{ color: var(--burgundy-deep); }
+
+  footer{
+    text-align:center;
+    margin-top: 36px;
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 13.5px;
+  }
+
+  @media (max-width: 560px){
+    .sheet{ padding: 32px 18px 40px; }
+    h1{ font-size: 24px; }
+    .event{ grid-template-columns: 84px 1fr; }
+    .ongoing ul{ grid-template-columns: 1fr; }
+  }
+  @media print{
+    body{ background: white; padding: 0; }
+    .sheet{ box-shadow: none; border: none; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header>
+    <div class="kicker">Lys Royal Group Planner</div>
+    <h1>Lys Royal Events</h1>
+    <div class="subtitle">Grande Bataille 1026 &middot; Bicolline &middot; August 9&ndash;15</div>
+  </header>
+
+  <div class="rule"><span class="mark">&#10070;</span></div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Sunday</span><span class="day-date">August 9, 2026</span></div>
+    <div class="event">
+      <div class="time">5:00 PM&ndash;9:30 PM</div>
+      <div class="event-body"><div class="fr">Lys Royal Opening Ceremony <span class="flag">Everyone</span></div><div class="loc">Lys Alley</div><div class="en">Opening leads into the party, which ends with us going to the Grand opening.</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Grand battle opening event <span class="flag">Everyone</span></div><div class="loc">Monster Pit</div><div class="en">We know nothing jon snow</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Monday</span><span class="day-date">August 10, 2026</span></div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;1:15 PM</div>
+      <div class="event-body"><div class="fr">Merc basic training event <span class="flag">Mandatory (Try your best)</span></div><div class="loc">Mage Plain/Battle Field</div><div class="en">Erik leads with assistance from</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Tuesday</span><span class="day-date">August 11, 2026</span></div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;3:45 PM</div>
+      <div class="event-body"><div class="fr">Battle #1 (Tuesday Grande Bataille) <span class="flag">Everyone</span></div><div class="loc">Deployment Highway Entrance</div><div class="en">Loose muster at 10 am for a 12:30 march out</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 PM&ndash;12:00 AM</div>
+      <div class="event-body"><div class="fr">Scene <span class="flag">Jacopo, Liam, Yrsa</span></div><div class="loc">Trollball Arena</div><div class="en">Anyone is welcome to join!</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Wednesday</span><span class="day-date">August 12, 2026</span></div>
+    <div class="event">
+      <div class="time">12:30 PM&ndash;2:15 PM</div>
+      <div class="event-body"><div class="fr">Merc advanced training event (A) <span class="flag">Optional</span></div><div class="loc">Mage Plain/Battle Field</div><div class="en">Gawain leads it</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Thursday</span><span class="day-date">August 13, 2026</span></div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;3:30 PM</div>
+      <div class="event-body"><div class="fr">Battle #2 <span class="flag">Everyone</span></div><div class="loc">Mage Plain/Battle Field</div><div class="en">Loose muster at 10 am for a 12:30 march out</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:30 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Poetry Night <span class="flag">Serpienté</span></div><div class="loc">Auberge</div><div class="en">Theme: Conquest. Rewards: 50 solars + 1 to 10 artistic cards</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Friday</span><span class="day-date">August 14, 2026</span></div>
+    <div class="event">
+      <div class="time">12:30 PM&ndash;2:15 PM</div>
+      <div class="event-body"><div class="fr">Merc advanced training event (B) <span class="flag">Optional</span></div><div class="loc">Mage Plain/Battle Field</div><div class="en">Gawain leads it</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Saturday</span><span class="day-date">August 15, 2026</span></div>
+    <div class="event">
+      <div class="time">12:30 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Battle #3 <span class="flag">Everyone</span></div><div class="loc">Mage Plain/Battle Field</div><div class="en">Loose muster at 10 am for a 12:00 sharp march out</div></div>
+    </div>
+  </div>
+
+  <footer>Lys Royal's own scheduled events &mdash; Opening Ceremony, battles, Merc training, and Lys Royal-hosted evenings. Compiled from the Lys Royal group planner.</footer>
+
+</div>
+</body>
+</html>
