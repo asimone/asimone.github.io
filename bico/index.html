@@ -3,32 +3,593 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calendrier de la Grande Bataille de Bicolline 1026</title>
+<title>Grande Bataille 1026 &mdash; All Calendars</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --parchment: #f1e6cb;
-    --parchment-dark: #e4d3a7;
-    --parchment-shadow: #cdb87d;
-    --ink: #3a2c1d;
-    --ink-soft: #5c4a34;
-    --burgundy: #7a2331;
-    --burgundy-deep: #591722;
-    --forest: #3f5d3a;
-    --gold: #a3792f;
-    --gold-bright: #c69a3f;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
+<style>:root{
+  --parchment: #f1e6cb;
+  --parchment-dark: #e4d3a7;
+  --parchment-shadow: #cdb87d;
+  --ink: #3a2c1d;
+  --ink-soft: #5c4a34;
+  --burgundy: #7a2331;
+  --burgundy-deep: #591722;
+  --forest: #3f5d3a;
+  --navy: #2f3f66;
+  --gold: #a3792f;
+  --gold-bright: #c69a3f;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
     background: radial-gradient(ellipse at top, #efe2bd 0%, #ddc98f 100%);
     font-family:'EB Garamond', serif;
     color: var(--ink);
-    padding: 40px 16px 80px;
+    min-height: 100vh;
   }
-  .sheet{
+/* ---- Tab bar ---- */
+  .tabbar{
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    display: flex;
+    background: linear-gradient(180deg, #2a1f14 0%, #1c150d 100%);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+    border-bottom: 2px solid var(--gold-bright);
+  }
+.tab-btn{
+    flex: 1 1 0;
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: #cbb885;
+    font-family: 'Cinzel', serif;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 14px 6px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    line-height: 1.3;
+  }
+.tab-btn:hover{ color: #f1e6cb; background: rgba(255,255,255,0.04); }
+.tab-btn.active{
+    color: #ffffff;
+    border-bottom-color: var(--gold-bright);
+    background: rgba(255,255,255,0.06);
+  }
+.tab-panel{ display: none; padding: 32px 16px 70px; }
+.tab-panel.active{ display: block; }
+main{ display:block; }
+@media (max-width: 560px){
+.tab-btn{ font-size: 11.5px; padding: 12px 4px; }
+}
+@media (max-width: 400px){
+.tab-btn{ font-size: 10.2px; letter-spacing: 0.02em; padding: 11px 3px; }
+.tab-panel{ padding: 20px 6px 60px; }
+}
+#panel-official .sheet{
+    max-width: 900px;
+    margin: 0 auto;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(255,255,255,0.35), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(0,0,0,0.05), transparent 45%),
+      var(--parchment);
+    border: 1px solid var(--parchment-shadow);
+    box-shadow: 0 0 0 1px var(--gold) inset, 0 10px 40px rgba(60,40,10,0.25);
+    padding: 48px 40px 56px;
+    position: relative;
+  }
+#panel-official .sheet::before, #panel-official .sheet::after{
+    content:"";
+    position:absolute;
+    width: 46px; height: 46px;
+    border: 2px solid var(--gold);
+    opacity: 0.55;
+  }
+#panel-official .sheet::before{ top: 16px; left: 16px; border-right: none; border-bottom: none; }
+#panel-official .sheet::after{ bottom: 16px; right: 16px; border-left: none; border-top: none; }
+#panel-official header{ text-align:center; margin-bottom: 8px; }
+#panel-official .kicker{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--navy);
+    text-transform: uppercase;
+  }
+#panel-official h1{
+    font-family:'Cinzel Decorative', serif;
+    font-size: 32px;
+    color: var(--navy);
+    margin: 6px 0 4px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  }
+#panel-official .subtitle{
+    font-family:'Cinzel', serif;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+#panel-official .rule{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    margin: 22px 0 26px;
+    color: var(--gold);
+  }
+#panel-official .rule::before, #panel-official .rule::after{
+    content:"";
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+#panel-official .rule .mark{ font-size: 18px; color: var(--navy); }
+#panel-official .legend{
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 30px;
+  }
+#panel-official .day{
+    margin-bottom: 40px;
+    page-break-inside: avoid;
+  }
+#panel-official .day-banner{
+    display:flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    border-bottom: 2px solid var(--navy);
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+#panel-official .day-name{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size: 23px;
+    color: var(--navy);
+    letter-spacing: 0.03em;
+  }
+#panel-official .day-date{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+  }
+#panel-official .day-tag{
+    font-family:'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--burgundy-deep);
+    background: rgba(122,35,49,0.12);
+    border: 1px solid rgba(122,35,49,0.35);
+    border-radius: 2px;
+    padding: 2px 8px;
+  }
+#panel-official .services-box{
+    background: rgba(47,63,102,0.06);
+    border: 1px solid rgba(47,63,102,0.25);
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+  }
+#panel-official .services-label{
+    font-family:'Cinzel', serif;
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+#panel-official .services-list{
+    margin: 0; padding-left: 18px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+#panel-official .services-list li{ margin-bottom: 1px; }
+#panel-official .category{
+    font-family:'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--forest);
+    border-bottom: 1px dashed var(--gold);
+    padding-bottom: 3px;
+    margin: 18px 0 8px;
+  }
+#panel-official .event{
+    display:grid;
+    grid-template-columns: 112px 1fr;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px dotted var(--parchment-shadow);
+  }
+#panel-official .event:last-child{ border-bottom: none; }
+#panel-official .time{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--burgundy);
+    padding-top: 2px;
+    line-height: 1.3;
+  }
+#panel-official .event-body .fr{
+    font-weight: 600;
+    font-size: 15.5px;
+    color: var(--ink);
+  }
+#panel-official .event-body .en{
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 1px;
+  }
+#panel-official .event-body .loc{
+    font-size: 12.5px;
+    color: var(--gold);
+    margin-top: 2px;
+  }
+#panel-official .event-body .loc::before{ content: "\2726  "; }
+#panel-official .weekly{
+    margin-top: 44px;
+    border-top: 3px double var(--navy);
+    padding-top: 24px;
+  }
+#panel-official .weekly h2{
+    font-family:'Cinzel', serif;
+    font-size: 20px;
+    color: var(--navy);
+    text-align:center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+#panel-official .weekly-sub{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    text-align:center;
+    margin-bottom: 20px;
+  }
+#panel-official .wk-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 32px;
+  }
+#panel-official .wk-block{ break-inside: avoid; margin-bottom: 6px; }
+#panel-official .wk-title{
+    font-family:'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    color: var(--burgundy-deep);
+    margin-bottom: 4px;
+  }
+#panel-official .wk-list{
+    margin: 0; padding-left: 16px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+#panel-official footer{
+    text-align:center;
+    margin-top: 40px;
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 13.5px;
+  }
+#panel-official footer a{
+    color: var(--navy);
+    text-decoration: underline;
+    text-decoration-color: rgba(47,63,102,0.4);
+    text-underline-offset: 2px;
+  }
+#panel-official footer a:hover{ color: var(--burgundy-deep); }
+@media (max-width: 560px){
+#panel-official .sheet{ padding: 32px 18px 40px; }
+#panel-official h1{ font-size: 25px; }
+#panel-official .wk-grid{ grid-template-columns: 1fr; }
+}
+@media (max-width: 480px){
+#panel-official .sheet{ padding: 22px 14px 30px; }
+#panel-official .sheet::before, #panel-official .sheet::after{ width: 26px; height: 26px; top: 10px; left: 10px; }
+#panel-official .sheet::after{ top: auto; left: auto; bottom: 10px; right: 10px; }
+#panel-official .kicker{ font-size: 12px; letter-spacing: 0.05em; }
+#panel-official h1{ font-size: 22px; }
+#panel-official .subtitle{ font-size: 11.5px; letter-spacing: 0.08em; }
+#panel-official .rule{ margin: 16px 0 20px; }
+#panel-official .rule::before, #panel-official .rule::after{ width: 50px; }
+#panel-official .day{ margin-bottom: 28px; }
+#panel-official .day-name{ font-size: 19px; }
+#panel-official .day-date{ font-size: 14px; }
+#panel-official .event{
+      grid-template-columns: 1fr;
+      gap: 2px;
+      padding: 9px 0;
+    }
+#panel-official .time{
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding-top: 0;
+    }
+#panel-official .event-body .fr{ font-size: 15.5px; }
+#panel-official .event-body .en{ font-size: 13px; }
+#panel-official .event-body .loc{ font-size: 12.5px; }
+#panel-official .services-list, #panel-official .wk-list{ font-size: 12.5px; }
+}
+@media print{
+#panel-official .sheet{ box-shadow: none; border: none; }
+}
+#panel-youth .sheet{
+    max-width: 900px;
+    margin: 0 auto;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(255,255,255,0.35), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(0,0,0,0.05), transparent 45%),
+      var(--parchment);
+    border: 1px solid var(--parchment-shadow);
+    box-shadow: 0 0 0 1px var(--gold) inset, 0 10px 40px rgba(60,40,10,0.25);
+    padding: 48px 40px 56px;
+    position: relative;
+  }
+#panel-youth .sheet::before, #panel-youth .sheet::after{
+    content:"";
+    position:absolute;
+    width: 46px; height: 46px;
+    border: 2px solid var(--gold);
+    opacity: 0.55;
+  }
+#panel-youth .sheet::before{ top: 16px; left: 16px; border-right: none; border-bottom: none; }
+#panel-youth .sheet::after{ bottom: 16px; right: 16px; border-left: none; border-top: none; }
+#panel-youth header{ text-align:center; margin-bottom: 8px; }
+#panel-youth .kicker{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--navy);
+    text-transform: uppercase;
+  }
+#panel-youth h1{
+    font-family:'Cinzel Decorative', serif;
+    font-size: 32px;
+    color: var(--navy);
+    margin: 6px 0 4px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  }
+#panel-youth .subtitle{
+    font-family:'Cinzel', serif;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+#panel-youth .rule{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    margin: 22px 0 26px;
+    color: var(--gold);
+  }
+#panel-youth .rule::before, #panel-youth .rule::after{
+    content:"";
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+#panel-youth .rule .mark{ font-size: 18px; color: var(--navy); }
+#panel-youth .legend{
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 30px;
+  }
+#panel-youth .day{
+    margin-bottom: 40px;
+    page-break-inside: avoid;
+  }
+#panel-youth .day-banner{
+    display:flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    border-bottom: 2px solid var(--navy);
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+#panel-youth .day-name{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size: 23px;
+    color: var(--navy);
+    letter-spacing: 0.03em;
+  }
+#panel-youth .day-date{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+  }
+#panel-youth .day-tag{
+    font-family:'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--burgundy-deep);
+    background: rgba(122,35,49,0.12);
+    border: 1px solid rgba(122,35,49,0.35);
+    border-radius: 2px;
+    padding: 2px 8px;
+  }
+#panel-youth .services-box{
+    background: rgba(47,63,102,0.06);
+    border: 1px solid rgba(47,63,102,0.25);
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+  }
+#panel-youth .services-label{
+    font-family:'Cinzel', serif;
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+#panel-youth .services-list{
+    margin: 0; padding-left: 18px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+#panel-youth .services-list li{ margin-bottom: 1px; }
+#panel-youth .category{
+    font-family:'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--forest);
+    border-bottom: 1px dashed var(--gold);
+    padding-bottom: 3px;
+    margin: 18px 0 8px;
+  }
+#panel-youth .event{
+    display:grid;
+    grid-template-columns: 112px 1fr;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px dotted var(--parchment-shadow);
+  }
+#panel-youth .event:last-child{ border-bottom: none; }
+#panel-youth .time{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--burgundy);
+    padding-top: 2px;
+    line-height: 1.3;
+  }
+#panel-youth .event-body .fr{
+    font-weight: 600;
+    font-size: 15.5px;
+    color: var(--ink);
+  }
+#panel-youth .event-body .en{
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 1px;
+  }
+#panel-youth .event-body .loc{
+    font-size: 12.5px;
+    color: var(--gold);
+    margin-top: 2px;
+  }
+#panel-youth .event-body .loc::before{ content: "\2726  "; }
+#panel-youth .weekly{
+    margin-top: 44px;
+    border-top: 3px double var(--navy);
+    padding-top: 24px;
+  }
+#panel-youth .weekly h2{
+    font-family:'Cinzel', serif;
+    font-size: 20px;
+    color: var(--navy);
+    text-align:center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+#panel-youth .weekly-sub{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    text-align:center;
+    margin-bottom: 20px;
+  }
+#panel-youth .wk-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 32px;
+  }
+#panel-youth .wk-block{ break-inside: avoid; margin-bottom: 6px; }
+#panel-youth .wk-title{
+    font-family:'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    color: var(--burgundy-deep);
+    margin-bottom: 4px;
+  }
+#panel-youth .wk-list{
+    margin: 0; padding-left: 16px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+#panel-youth footer{
+    text-align:center;
+    margin-top: 40px;
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 13.5px;
+  }
+#panel-youth footer a{
+    color: var(--navy);
+    text-decoration: underline;
+    text-decoration-color: rgba(47,63,102,0.4);
+    text-underline-offset: 2px;
+  }
+#panel-youth footer a:hover{ color: var(--burgundy-deep); }
+@media (max-width: 560px){
+#panel-youth .sheet{ padding: 32px 18px 40px; }
+#panel-youth h1{ font-size: 25px; }
+#panel-youth .wk-grid{ grid-template-columns: 1fr; }
+}
+@media (max-width: 480px){
+#panel-youth .sheet{ padding: 22px 14px 30px; }
+#panel-youth .sheet::before, #panel-youth .sheet::after{ width: 26px; height: 26px; top: 10px; left: 10px; }
+#panel-youth .sheet::after{ top: auto; left: auto; bottom: 10px; right: 10px; }
+#panel-youth .kicker{ font-size: 12px; letter-spacing: 0.05em; }
+#panel-youth h1{ font-size: 22px; }
+#panel-youth .subtitle{ font-size: 11.5px; letter-spacing: 0.08em; }
+#panel-youth .rule{ margin: 16px 0 20px; }
+#panel-youth .rule::before, #panel-youth .rule::after{ width: 50px; }
+#panel-youth .day{ margin-bottom: 28px; }
+#panel-youth .day-name{ font-size: 19px; }
+#panel-youth .day-date{ font-size: 14px; }
+#panel-youth .event{
+      grid-template-columns: 1fr;
+      gap: 2px;
+      padding: 9px 0;
+    }
+#panel-youth .time{
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding-top: 0;
+    }
+#panel-youth .event-body .fr{ font-size: 15.5px; }
+#panel-youth .event-body .en{ font-size: 13px; }
+#panel-youth .event-body .loc{ font-size: 12.5px; }
+#panel-youth .services-list, #panel-youth .wk-list{ font-size: 12.5px; }
+}
+@media print{
+#panel-youth .sheet{ box-shadow: none; border: none; }
+}
+#panel-unofficial .sheet{
     max-width: 880px;
     margin: 0 auto;
     background:
@@ -40,18 +601,17 @@
     padding: 48px 40px 56px;
     position: relative;
   }
-  .sheet::before, .sheet::after{
+#panel-unofficial .sheet::before, #panel-unofficial .sheet::after{
     content:"";
     position:absolute;
     width: 46px; height: 46px;
     border: 2px solid var(--gold);
     opacity: 0.55;
   }
-  .sheet::before{ top: 16px; left: 16px; border-right: none; border-bottom: none; }
-  .sheet::after{ bottom: 16px; right: 16px; border-left: none; border-top: none; }
-
-  header{ text-align:center; margin-bottom: 8px; }
-  .kicker{
+#panel-unofficial .sheet::before{ top: 16px; left: 16px; border-right: none; border-bottom: none; }
+#panel-unofficial .sheet::after{ bottom: 16px; right: 16px; border-left: none; border-top: none; }
+#panel-unofficial header{ text-align:center; margin-bottom: 8px; }
+#panel-unofficial .kicker{
     font-family:'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 15px;
@@ -59,45 +619,44 @@
     color: var(--burgundy);
     text-transform: uppercase;
   }
-  .kicker-en{
+#panel-unofficial .kicker-en{
     font-family:'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 12.5px;
     color: var(--ink-soft);
     margin-top: 1px;
   }
-  h1{
+#panel-unofficial h1{
     font-family:'Cinzel Decorative', serif;
     font-size: 34px;
     color: var(--burgundy-deep);
     margin: 6px 0 4px;
     text-shadow: 0 1px 0 rgba(255,255,255,0.4);
   }
-  .subtitle{
+#panel-unofficial .subtitle{
     font-family:'Cinzel', serif;
     font-size: 15px;
     letter-spacing: 0.14em;
     color: var(--ink-soft);
     text-transform: uppercase;
   }
-  .rule{
+#panel-unofficial .rule{
     display:flex; align-items:center; justify-content:center; gap:14px;
     margin: 22px 0 30px;
     color: var(--gold);
   }
-  .rule::before, .rule::after{
+#panel-unofficial .rule::before, #panel-unofficial .rule::after{
     content:"";
     height: 1px;
     width: 120px;
     background: linear-gradient(to right, transparent, var(--gold), transparent);
   }
-  .rule .mark{ font-size: 18px; color: var(--burgundy); }
-
-  .day{
+#panel-unofficial .rule .mark{ font-size: 18px; color: var(--burgundy); }
+#panel-unofficial .day{
     margin-bottom: 34px;
     page-break-inside: avoid;
   }
-  .day-banner{
+#panel-unofficial .day-banner{
     display:flex;
     align-items: baseline;
     flex-wrap: wrap;
@@ -106,20 +665,20 @@
     padding-bottom: 6px;
     margin-bottom: 14px;
   }
-  .day-name{
+#panel-unofficial .day-name{
     font-family:'Cinzel', serif;
     font-weight:600;
     font-size: 22px;
     color: var(--burgundy-deep);
     letter-spacing: 0.03em;
   }
-  .day-date{
+#panel-unofficial .day-date{
     font-family:'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 17px;
     color: var(--ink-soft);
   }
-  .day-name-en{
+#panel-unofficial .day-name-en{
     font-family:'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 500;
@@ -127,16 +686,15 @@
     color: var(--gold);
     letter-spacing: 0.02em;
   }
-
-  .event{
+#panel-unofficial .event{
     display:grid;
     grid-template-columns: 108px 1fr;
     gap: 10px;
     padding: 9px 0;
     border-bottom: 1px dotted var(--parchment-shadow);
   }
-  .event:last-child{ border-bottom: none; }
-  .time{
+#panel-unofficial .event:last-child{ border-bottom: none; }
+#panel-unofficial .time{
     font-family:'Cormorant Garamond', serif;
     font-weight: 600;
     font-size: 14px;
@@ -144,23 +702,23 @@
     padding-top: 2px;
     line-height: 1.3;
   }
-  .event-body .fr{
+#panel-unofficial .event-body .fr{
     font-weight: 600;
     font-size: 16.5px;
     color: var(--ink);
   }
-  .event-body .en{
+#panel-unofficial .event-body .en{
     font-style: italic;
     font-size: 14.5px;
     color: var(--ink-soft);
   }
-  .event-body .loc{
+#panel-unofficial .event-body .loc{
     font-size: 13.5px;
     color: var(--gold);
     margin-top: 2px;
   }
-  .event-body .loc::before{ content: "\2726  "; }
-  .flag{
+#panel-unofficial .event-body .loc::before{ content: "\2726  "; }
+#panel-unofficial .flag{
     display:inline-block;
     font-size: 11px;
     font-family:'Cinzel', serif;
@@ -174,13 +732,12 @@
     vertical-align: 1px;
     text-transform: uppercase;
   }
-
-  .ongoing{
+#panel-unofficial .ongoing{
     margin-top: 40px;
     border-top: 2px solid var(--gold);
     padding-top: 20px;
   }
-  .ongoing h2{
+#panel-unofficial .ongoing h2{
     font-family:'Cinzel', serif;
     font-size: 19px;
     color: var(--burgundy-deep);
@@ -189,7 +746,7 @@
     text-transform: uppercase;
     margin-bottom: 2px;
   }
-  .ongoing-en{
+#panel-unofficial .ongoing-en{
     font-family:'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 13.5px;
@@ -197,36 +754,35 @@
     text-align:center;
     margin-bottom: 16px;
   }
-  .ongoing ul{
+#panel-unofficial .ongoing ul{
     list-style: none;
     margin: 0; padding: 0;
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px 28px;
   }
-  .ongoing li{
+#panel-unofficial .ongoing li{
     font-size: 14.5px;
     line-height: 1.5;
     padding-left: 16px;
     position: relative;
   }
-  .ongoing li::before{
+#panel-unofficial .ongoing li::before{
     content: "\2727";
     position:absolute; left:0; top:1px;
     color: var(--gold);
     font-size: 12px;
   }
-  .ongoing li .loc{
+#panel-unofficial .ongoing li .loc{
     display:block;
     font-size: 12.5px;
     color: var(--gold);
     margin-top: 1px;
   }
-  .ongoing li .loc::before{ content: "\2726  "; }
-  .ongoing li .fr{ font-weight:600; }
-  .ongoing li .en{ font-style: italic; color: var(--ink-soft); }
-
-  .note{
+#panel-unofficial .ongoing li .loc::before{ content: "\2726  "; }
+#panel-unofficial .ongoing li .fr{ font-weight:600; }
+#panel-unofficial .ongoing li .en{ font-style: italic; color: var(--ink-soft); }
+#panel-unofficial .note{
     margin-top: 30px;
     background: rgba(122,35,49,0.08);
     border: 1px solid rgba(122,35,49,0.3);
@@ -235,44 +791,48 @@
     font-size: 13.5px;
     line-height: 1.6;
   }
-  .note strong{ color: var(--burgundy-deep); }
-
-  footer{
+#panel-unofficial .note strong{ color: var(--burgundy-deep); }
+#panel-unofficial footer{
     text-align:center;
     margin-top: 36px;
     font-family:'Cormorant Garamond', serif;
     font-style: italic;
     color: var(--ink-soft);
     font-size: 13.5px;
+    line-height: 1.7;
   }
-
-  @media (max-width: 560px){
-    .sheet{ padding: 32px 18px 40px; }
-    h1{ font-size: 26px; }
-    .ongoing ul{ grid-template-columns: 1fr; }
+#panel-unofficial footer a{
+    color: var(--gold);
+    text-decoration: underline;
+    text-decoration-color: rgba(163,121,47,0.4);
+    text-underline-offset: 2px;
   }
-
-  @media (max-width: 480px){
-    body{ padding: 16px 6px 48px; }
-    .sheet{ padding: 22px 14px 30px; }
-    .sheet::before, .sheet::after{ width: 26px; height: 26px; top: 10px; left: 10px; }
-    .sheet::after{ top: auto; left: auto; bottom: 10px; right: 10px; }
-    .kicker{ font-size: 12px; letter-spacing: 0.05em; }
-    .kicker-en{ font-size: 11px; }
-    h1{ font-size: 22px; }
-    .subtitle{ font-size: 11.5px; letter-spacing: 0.08em; }
-    .rule{ margin: 16px 0 22px; }
-    .rule::before, .rule::after{ width: 50px; }
-    .day{ margin-bottom: 24px; }
-    .day-name{ font-size: 19px; }
-    .day-date{ font-size: 14px; }
-    .day-name-en{ font-size: 13px; }
-    .event{
+#panel-unofficial footer a:hover{ color: var(--burgundy-deep); }
+@media (max-width: 560px){
+#panel-unofficial .sheet{ padding: 32px 18px 40px; }
+#panel-unofficial h1{ font-size: 26px; }
+#panel-unofficial .ongoing ul{ grid-template-columns: 1fr; }
+}
+@media (max-width: 480px){
+#panel-unofficial .sheet{ padding: 22px 14px 30px; }
+#panel-unofficial .sheet::before, #panel-unofficial .sheet::after{ width: 26px; height: 26px; top: 10px; left: 10px; }
+#panel-unofficial .sheet::after{ top: auto; left: auto; bottom: 10px; right: 10px; }
+#panel-unofficial .kicker{ font-size: 12px; letter-spacing: 0.05em; }
+#panel-unofficial .kicker-en{ font-size: 11px; }
+#panel-unofficial h1{ font-size: 22px; }
+#panel-unofficial .subtitle{ font-size: 11.5px; letter-spacing: 0.08em; }
+#panel-unofficial .rule{ margin: 16px 0 22px; }
+#panel-unofficial .rule::before, #panel-unofficial .rule::after{ width: 50px; }
+#panel-unofficial .day{ margin-bottom: 24px; }
+#panel-unofficial .day-name{ font-size: 19px; }
+#panel-unofficial .day-date{ font-size: 14px; }
+#panel-unofficial .day-name-en{ font-size: 13px; }
+#panel-unofficial .event{
       grid-template-columns: 1fr;
       gap: 2px;
       padding: 10px 0;
     }
-    .time{
+#panel-unofficial .time{
       font-size: 12.5px;
       font-weight: 700;
       color: var(--burgundy);
@@ -280,33 +840,1332 @@
       letter-spacing: 0.03em;
       padding-top: 0;
     }
-    .event-body .fr{ font-size: 16px; }
-    .event-body .en{ font-size: 14px; }
-    .event-body .loc{ font-size: 13px; }
-    .flag{ margin-left: 0; margin-top: 4px; }
-    .ongoing li{ font-size: 13.5px; }
-  }
+#panel-unofficial .event-body .fr{ font-size: 16px; }
+#panel-unofficial .event-body .en{ font-size: 14px; }
+#panel-unofficial .event-body .loc{ font-size: 13px; }
+#panel-unofficial .flag{ margin-left: 0; margin-top: 4px; }
+#panel-unofficial .ongoing li{ font-size: 13.5px; }
+}
+@media print{
+#panel-unofficial .sheet{ box-shadow: none; border: none; }
+}
+@media (max-width: 560px){
 
-  @media print{
-    body{ background: white; padding: 0; }
-    .sheet{ box-shadow: none; border: none; }
+}
+@media (max-width: 480px){
+
+}
+@media print{
+
+}
+
+#panel-lysroyal .sheet{
+    max-width: 880px;
+    margin: 0 auto;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(255,255,255,0.35), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(0,0,0,0.05), transparent 45%),
+      var(--parchment);
+    border: 1px solid var(--parchment-shadow);
+    box-shadow: 0 0 0 1px var(--gold) inset, 0 10px 40px rgba(60,40,10,0.25);
+    padding: 48px 40px 56px;
+    position: relative;
   }
-</style>
+#panel-lysroyal .sheet::before, #panel-lysroyal .sheet::after{
+    content:"";
+    position:absolute;
+    width: 46px; height: 46px;
+    border: 2px solid var(--gold);
+    opacity: 0.55;
+  }
+#panel-lysroyal .sheet::before{ top: 16px; left: 16px; border-right: none; border-bottom: none; }
+#panel-lysroyal .sheet::after{ bottom: 16px; right: 16px; border-left: none; border-top: none; }
+#panel-lysroyal header{ text-align:center; margin-bottom: 8px; }
+#panel-lysroyal .kicker{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    text-transform: uppercase;
+  }
+#panel-lysroyal .kicker-en{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-top: 1px;
+  }
+#panel-lysroyal h1{
+    font-family:'Cinzel Decorative', serif;
+    font-size: 34px;
+    color: var(--burgundy-deep);
+    margin: 6px 0 4px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  }
+#panel-lysroyal .subtitle{
+    font-family:'Cinzel', serif;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+#panel-lysroyal .rule{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    margin: 22px 0 30px;
+    color: var(--gold);
+  }
+#panel-lysroyal .rule::before, #panel-lysroyal .rule::after{
+    content:"";
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+#panel-lysroyal .rule .mark{ font-size: 18px; color: var(--burgundy); }
+#panel-lysroyal .day{
+    margin-bottom: 34px;
+    page-break-inside: avoid;
+  }
+#panel-lysroyal .day-banner{
+    display:flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    border-bottom: 1.5px solid var(--gold);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+#panel-lysroyal .day-name{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size: 22px;
+    color: var(--burgundy-deep);
+    letter-spacing: 0.03em;
+  }
+#panel-lysroyal .day-date{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+  }
+#panel-lysroyal .day-name-en{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+  }
+#panel-lysroyal .event{
+    display:grid;
+    grid-template-columns: 108px 1fr;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px dotted var(--parchment-shadow);
+  }
+#panel-lysroyal .event:last-child{ border-bottom: none; }
+#panel-lysroyal .time{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--forest);
+    padding-top: 2px;
+    line-height: 1.3;
+  }
+#panel-lysroyal .event-body .fr{
+    font-weight: 600;
+    font-size: 16.5px;
+    color: var(--ink);
+  }
+#panel-lysroyal .event-body .en{
+    font-style: italic;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+#panel-lysroyal .event-body .loc{
+    font-size: 13.5px;
+    color: var(--gold);
+    margin-top: 2px;
+  }
+#panel-lysroyal .event-body .loc::before{ content: "\2726  "; }
+#panel-lysroyal .flag{
+    display:inline-block;
+    font-size: 11px;
+    font-family:'Cinzel', serif;
+    letter-spacing: 0.05em;
+    color: var(--burgundy-deep);
+    background: rgba(122,35,49,0.12);
+    border: 1px solid rgba(122,35,49,0.35);
+    border-radius: 2px;
+    padding: 1px 6px;
+    margin-left: 8px;
+    vertical-align: 1px;
+    text-transform: uppercase;
+  }
+#panel-lysroyal .ongoing{
+    margin-top: 40px;
+    border-top: 2px solid var(--gold);
+    padding-top: 20px;
+  }
+#panel-lysroyal .ongoing h2{
+    font-family:'Cinzel', serif;
+    font-size: 19px;
+    color: var(--burgundy-deep);
+    text-align:center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+#panel-lysroyal .ongoing-en{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    text-align:center;
+    margin-bottom: 16px;
+  }
+#panel-lysroyal .ongoing ul{
+    list-style: none;
+    margin: 0; padding: 0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 28px;
+  }
+#panel-lysroyal .ongoing li{
+    font-size: 14.5px;
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+  }
+#panel-lysroyal .ongoing li::before{
+    content: "\2727";
+    position:absolute; left:0; top:1px;
+    color: var(--gold);
+    font-size: 12px;
+  }
+#panel-lysroyal .ongoing li .loc{
+    display:block;
+    font-size: 12.5px;
+    color: var(--gold);
+    margin-top: 1px;
+  }
+#panel-lysroyal .ongoing li .loc::before{ content: "\2726  "; }
+#panel-lysroyal .ongoing li .fr{ font-weight:600; }
+#panel-lysroyal .ongoing li .en{ font-style: italic; color: var(--ink-soft); }
+#panel-lysroyal .note{
+    margin-top: 30px;
+    background: rgba(122,35,49,0.08);
+    border: 1px solid rgba(122,35,49,0.3);
+    border-radius: 4px;
+    padding: 14px 18px;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+#panel-lysroyal .note strong{ color: var(--burgundy-deep); }
+#panel-lysroyal footer{
+    text-align:center;
+    margin-top: 36px;
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 13.5px;
+  }
+@media (max-width: 560px){
+#panel-lysroyal .sheet{ padding: 32px 18px 40px; }
+#panel-lysroyal h1{ font-size: 26px; }
+#panel-lysroyal .ongoing ul{ grid-template-columns: 1fr; }
+}
+@media (max-width: 480px){
+#panel-lysroyal .sheet{ padding: 22px 14px 30px; }
+#panel-lysroyal .sheet::before, #panel-lysroyal .sheet::after{ width: 26px; height: 26px; top: 10px; left: 10px; }
+#panel-lysroyal .sheet::after{ top: auto; left: auto; bottom: 10px; right: 10px; }
+#panel-lysroyal .kicker{ font-size: 12px; letter-spacing: 0.05em; }
+#panel-lysroyal .kicker-en{ font-size: 11px; }
+#panel-lysroyal h1{ font-size: 22px; }
+#panel-lysroyal .subtitle{ font-size: 11.5px; letter-spacing: 0.08em; }
+#panel-lysroyal .rule{ margin: 16px 0 22px; }
+#panel-lysroyal .rule::before, #panel-lysroyal .rule::after{ width: 50px; }
+#panel-lysroyal .day{ margin-bottom: 24px; }
+#panel-lysroyal .day-name{ font-size: 19px; }
+#panel-lysroyal .day-date{ font-size: 14px; }
+#panel-lysroyal .day-name-en{ font-size: 13px; }
+#panel-lysroyal .event{
+      grid-template-columns: 1fr;
+      gap: 2px;
+      padding: 10px 0;
+    }
+#panel-lysroyal .time{
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--burgundy);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding-top: 0;
+    }
+#panel-lysroyal .event-body .fr{ font-size: 16px; }
+#panel-lysroyal .event-body .en{ font-size: 14px; }
+#panel-lysroyal .event-body .loc{ font-size: 13px; }
+#panel-lysroyal .flag{ margin-left: 0; margin-top: 4px; }
+#panel-lysroyal .ongoing li{ font-size: 13.5px; }
+}
+@media print{
+#panel-lysroyal .sheet{ box-shadow: none; border: none; }
+}</style>
 </head>
 <body>
-<div class="sheet">
 
-  <header>
-    <div class="kicker">Recueil incomplet des activit&eacute;s non-officielles</div>
-    <div class="kicker-en">Incomplete compilation of unofficial activities</div>
-    <h1>Calendrier de la Grande Bataille</h1>
-    <div class="subtitle">Bicolline &middot; 9&ndash;15 Ao&ucirc;t 1026</div>
+<nav class="tabbar" role="tablist" aria-label="Calendar selection">
+  <button class="tab-btn active" data-tab="panel-official" role="tab" aria-selected="true">Official</button>
+  <button class="tab-btn" data-tab="panel-youth" role="tab" aria-selected="false">Youth</button>
+  <button class="tab-btn" data-tab="panel-unofficial" role="tab" aria-selected="false">Unofficial</button>
+  <button class="tab-btn" data-tab="panel-lysroyal" role="tab" aria-selected="false">Lys Royal</button>
+</nav>
+
+<main>
+
+  <section id="panel-official" class="tab-panel active">
+    <div class="sheet">
+<header>
+    <div class="kicker">Official Program</div>
+    <h1>Grande Bataille 1026</h1>
+    <div class="subtitle">Duch&eacute; de Bicolline &middot; August 7&ndash;16</div>
+  </header>
+
+  <div class="rule"><span class="mark">&#9830;</span></div>
+  <div class="legend">* Activity reserved for persons aged 16 and over</div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Friday</span><span class="day-date">August 7, 2026</span> <span class="day-tag">Early Arrival</span></div>
+    <div class="services-box">
+      <div class="services-label">Site Services</div>
+      <ul class="services-list"><li>Site access (registration and Accueil): 10:00 AM to 6:00 PM</li><li>Shuttle to P0 parking lot: 10:00 AM to 6:00 PM</li><li>Caregivers 24-hour presence at the dispensary (starting at 10:00 AM)</li><li>24-hour presence at the Accueil (starting at 10:00 AM)</li></ul>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Saturday</span><span class="day-date">August 8, 2026</span> <span class="day-tag">Early Arrival</span></div>
+    <div class="services-box">
+      <div class="services-label">Site Services</div>
+      <ul class="services-list"><li>Site access (registration and Accueil): 10:00 AM to 6:00 PM</li><li>Shuttle to P0 parking lot: 10:00 AM to 6:00 PM</li><li>Caregivers 24-hour presence at the dispensary</li><li>24-hour presence at the Accueil</li><li>Fire prevention specialist on call</li></ul>
+    </div>
+    <div class="category">Homologation</div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (mobile, preregistered appointment)</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Sunday</span><span class="day-date">August 9, 2026</span></div>
+    <div class="services-box">
+      <div class="services-label">Site Services</div>
+      <ul class="services-list"><li>Site access (registration and Accueil): 9:00 AM to 8:00 PM</li><li>Shuttle to P0 parking lot: 9:00 AM to 8:00 PM</li><li>Caregivers 24-hour presence at the dispensary</li><li>24-hour presence at the Accueil and 1540 building</li><li>Fire prevention specialist on call</li><li>Night Watch on site from 9:00 PM to 2:00 AM</li></ul>
+    </div>
+    <div class="category">Game</div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;3:00 PM</div>
+      <div class="event-body"><div class="fr">Greffe Counter</div><div class="loc">Banque de l’Hippocampe</div></div>
+    </div>
+    <div class="category">Homologation</div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter, Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter, Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (mobile, pre-registered appointment)</div></div>
+    </div>
+    <div class="category">Ceremonies &amp; Music</div>
+    <div class="event">
+      <div class="time">9:30 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Opening ceremony</div><div class="loc">Fosse aux monstres</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 PM&ndash;11:00 PM</div>
+      <div class="event-body"><div class="fr">Lemon Bucket Orkestra</div><div class="loc">Main stage, Vieille Ville</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Monday</span><span class="day-date">August 10, 2026</span></div>
+    <div class="services-box">
+      <div class="services-label">Site Services</div>
+      <ul class="services-list"><li>Site access (registration and Accueil): 10:00 AM to 6:00 PM</li><li>Shuttle to P0 parking lot: 10:00 AM to 6:00 PM</li><li>Haute Ville Information Booth: 9:00 AM to 4:00 PM</li><li>24-hour presence at the Accueil and 1540 building</li><li>Caregivers 24-hour presence at the dispensary</li><li>Fire prevention specialist at the Caserne on call</li><li>Community Brigade on site 10:00 AM–3:00 PM and 5:00 PM–10:00 PM</li><li>Tandem on site 6:00 PM–12:00 AM</li><li>Night Watch on site 9:00 PM–2:00 AM</li></ul>
+    </div>
+    <div class="category">Game</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Exploration and maritime Quests</div><div class="loc">Plaine du Fort</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Herboristerie Quests</div><div class="loc">Herboristerie on the Allée marchande</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;4:30 PM</div>
+      <div class="event-body"><div class="fr">Magic and Occult Quests</div><div class="loc">Tour de magie et d’occultisme</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Artistic Quests</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:30 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Political Quests (distribution)</div><div class="loc">Tonnellerie (near the Auberge)</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Clash of the Admirals</div><div class="loc">2nd floor of the Banque de l’Hippocampe</div><div class="en">Registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;3:00 PM</div>
+      <div class="event-body"><div class="fr">Greffe Counter</div><div class="loc">Banque de l’Hippocampe</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Patron’s Office</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Grandes Archives</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:30 PM&ndash;9:30 PM</div>
+      <div class="event-body"><div class="fr">Faeric Heritage Ceremony</div><div class="loc">Fort (interior, exterior)</div></div>
+    </div>
+    <div class="category">Combat</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;10:00 AM</div>
+      <div class="event-body"><div class="fr">Homologation (war machines)</div><div class="loc">Auberge (balcon)</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;10:00 AM</div>
+      <div class="event-body"><div class="fr">Homologation (war machines and monsters)</div><div class="loc">Homologation Counter, Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (mobile, fixe)</div><div class="loc">Homologation Counter, Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (mobile, fixe)</div><div class="loc">Homologation Counter, Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;2:00 PM</div>
+      <div class="event-body"><div class="fr">Skirmish – Merchant’s Caravan*</div><div class="loc">Forest</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:30 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Skirmish – Terre à l'horizon*</div><div class="loc">Forest</div></div>
+    </div>
+    <div class="category">Tournaments</div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Artillery* (homologated machines)</div><div class="loc">Plain to the North of the Fort</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Cercle de Loren Women and Mixed*</div><div class="loc">Fort</div><div class="en">Registration required 9:00–10:00</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Trollball Friendly league*</div><div class="loc">Lice de Trollball Haute Ville</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Endurance du guerrier*</div><div class="loc">Place des Tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;6:00 PM</div>
+      <div class="event-body"><div class="fr">Trollball*</div><div class="loc">Lice de Trollball</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;2:00 PM</div>
+      <div class="event-body"><div class="fr">Cutpurse Challenge*</div><div class="loc">Vieille Taverne</div><div class="en">Registration; tournament runs continuously Mon Aug 10, 14:00 to Fri Aug 14, 9:00</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:30 PM&ndash;5:30 PM</div>
+      <div class="event-body"><div class="fr">Francs archers Mixed and Women*</div><div class="loc">Fort</div><div class="en">Registration required 9:00–10:00</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Decorum Camp Competition</div><div class="loc">Camps of pre-registered guilds</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">5:00 PM&ndash;7:00 PM</div>
+      <div class="event-body"><div class="fr">Fines lames*</div><div class="loc">Lice de Trollball Haute Ville</div><div class="en">Registrations 16:30</div></div>
+    </div>
+    <div class="category">Vie du Duché (and other activities)</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;10:00 AM</div>
+      <div class="event-body"><div class="fr">Trollball Master Class*</div><div class="loc">Lice de Trollball Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;11:00 AM</div>
+      <div class="event-body"><div class="fr">Healer Master Class*</div><div class="loc">Fosse aux Monstres</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:30 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Exchanging of Attires*</div><div class="loc">Auberge basement</div><div class="en">16 and over</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM</div>
+      <div class="event-body"><div class="fr">Quêtes des Guildes</div><div class="loc">Boutique Les Artisans d’Azure</div><div class="en">Open to all</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Calligraphy Master Class*</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Combat Rules Master Class*</div><div class="loc">Fosse aux monstres</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Music by the Tritons joufflus</div><div class="loc">Travelling performances</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;2:00 PM</div>
+      <div class="event-body"><div class="fr">Archer/Swordsman Master Class*</div><div class="loc">Lice de Trollball Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;2:00 PM</div>
+      <div class="event-body"><div class="fr">Geopolitical Master Class*</div><div class="loc">Banque de l’Hippocampe forecourt</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:30 PM&ndash;4:30 PM</div>
+      <div class="event-body"><div class="fr">Tournament of Hearts</div><div class="loc">Auberge basement</div><div class="en">18 and over</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Culinary Contest*</div><div class="loc">Tonnellerie near the Auberge</div><div class="en">Registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 PM</div>
+      <div class="event-body"><div class="fr">Music by Ulfhednar</div><div class="loc">Main stage in Vieille Ville</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Tuesday</span><span class="day-date">August 11, 2026</span></div>
+    <div class="services-box">
+      <div class="services-label">Site Services</div>
+      <ul class="services-list"><li>Site access (registration and Accueil): 10:00 AM to 6:00 PM</li><li>Shuttle to P0 parking lot: 10:00 AM to 6:00 PM</li><li>Haute Ville Information Booth: 9:00 AM to 4:00 PM</li><li>24-hour presence at the Accueil and 1540 building</li><li>Caregivers 24-hour presence at the dispensary</li><li>Fire prevention specialist on call</li><li>Community Brigade on site 10:00 AM–3:00 PM and 5:00 PM–10:00 PM</li><li>Tandem on site 6:00 PM–12:00 AM</li><li>Night Watch on site 9:00 PM–2:00 AM</li></ul>
+    </div>
+    <div class="category">Game</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Exploration and maritime Quests</div><div class="loc">Fort</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Herboristerie Quests</div><div class="loc">Herboristerie on the Allée marchande</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;4:30 PM</div>
+      <div class="event-body"><div class="fr">Magic and Occult Quests</div><div class="loc">Tour de magie et d’occultisme</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Artistic Quests</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Greffe Counter</div><div class="loc">Banque de l’Hippocampe</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:30 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Political Quests (winnings)</div><div class="loc">Tonnellerie (near the Auberge)</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Patron’s Office</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Grandes Archives</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;3:00 PM</div>
+      <div class="event-body"><div class="fr">Grand Corsaire Recruitment</div><div class="loc">Préau du Faubourg</div></div>
+    </div>
+    <div class="event">
+      <div class="time">5:00 PM&ndash;7:00 PM</div>
+      <div class="event-body"><div class="fr">Registration – Hero’s company</div><div class="loc">2nd floor of the Banque de l’Hippocampe</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Concert of the bards</div><div class="loc">Auberge</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Supernatural Auction</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="category">Combat</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;10:00 AM</div>
+      <div class="event-body"><div class="fr">Homologation (war machines and monsters)</div><div class="loc">Homologation Counter, Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter, Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter, Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;3:45 PM</div>
+      <div class="event-body"><div class="fr">Tuesday Grande Bataille*</div><div class="loc">Deployment: Highway entrance at 13:00</div><div class="en">Battle from 14:00 to 15:30</div></div>
+    </div>
+    <div class="category">Tournaments</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Baron’s Chess*</div><div class="loc">Auberge basement</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Trollball*</div><div class="loc">Lice de Trollball Vieille Ville</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">5:00 PM&ndash;7:00 PM</div>
+      <div class="event-body"><div class="fr">Fines lames Mixed*</div><div class="loc">Lice de Trollball Haute Ville</div><div class="en">Registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;8:30 PM</div>
+      <div class="event-body"><div class="fr">Pétanque*</div><div class="loc">Place des Tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;9:00 PM</div>
+      <div class="event-body"><div class="fr">Decorum Camp Competition</div><div class="loc">Camps of pre-registered guilds</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="category">Vie du Duché (and other activities)</div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;11:00 AM</div>
+      <div class="event-body"><div class="fr">Strategist Master Class*</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM</div>
+      <div class="event-body"><div class="fr">Quêtes des Guildes</div><div class="loc">Boutique Les Artisans d’Azure</div><div class="en">Open to all</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Calligraphy Master Class*</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Music by the Tritons joufflus</div><div class="loc">Travelling performances</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 PM</div>
+      <div class="event-body"><div class="fr">Music by Bedlam Boys</div><div class="loc">Main stage in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 PM&ndash;12:00 AM</div>
+      <div class="event-body"><div class="fr">Grand Bazar</div><div class="loc">Lice de Trollball, Vieille Ville</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Wednesday</span><span class="day-date">August 12, 2026</span></div>
+    <div class="services-box">
+      <div class="services-label">Site Services</div>
+      <ul class="services-list"><li>Site access (registration and Accueil): 10:00 AM to 6:00 PM</li><li>Shuttle to P0 parking lot: 10:00 AM to 6:00 PM</li><li>Haute Ville Information Booth: 9:00 AM to 4:00 PM</li><li>24-hour presence at the Accueil and 1540 building</li><li>Caregivers 24-hour presence at the dispensary</li><li>Fire prevention specialist on call</li><li>Community Brigade on site 10:00 AM–3:00 PM and 5:00 PM–10:00 PM</li><li>Tandem on site 6:00 PM–12:00 AM</li><li>Night Watch on site 9:00 PM–2:00 AM</li></ul>
+    </div>
+    <div class="category">Game</div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Herboristerie Quests</div><div class="loc">Herboristerie on the Allée marchande</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Exploration and maritime Quests</div><div class="loc">Plaine du Fort</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;4:30 PM</div>
+      <div class="event-body"><div class="fr">Magic and Occult Quests</div><div class="loc">Tour de magie et d’occultisme</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Artistic Quests</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:30 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Political Quests (distribution)</div><div class="loc">Tonnellerie (near the Auberge)</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Clash of the Admirals</div><div class="loc">2nd floor of the Banque de l’Hippocampe</div><div class="en">Registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Greffe Counter</div><div class="loc">Banque de l’Hippocampe</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Patron’s Office</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Grandes Archives</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;3:00 PM</div>
+      <div class="event-body"><div class="fr">Matrimoniales</div><div class="loc">Preau du Faubourg</div></div>
+    </div>
+    <div class="event">
+      <div class="time">3:00 PM&ndash;3:30 PM</div>
+      <div class="event-body"><div class="fr">Auction</div><div class="loc">Banque de l’Hippocampe forecourt</div></div>
+    </div>
+    <div class="event">
+      <div class="time">3:30 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Heborist’s Symposium</div><div class="loc">Preau du Faubourg</div></div>
+    </div>
+    <div class="event">
+      <div class="time">5:00 PM&ndash;7:00 PM</div>
+      <div class="event-body"><div class="fr">Dwarf Conclave</div><div class="loc">Auberge basement</div><div class="en">For dwarves only</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Poetry Night</div><div class="loc">Auberge balcony</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:00 PM&ndash;11:00 PM</div>
+      <div class="event-body"><div class="fr">Tripot</div><div class="loc">Ragnarok’s camp</div></div>
+    </div>
+    <div class="category">Combat</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter Haute Ville, Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;11:30 AM</div>
+      <div class="event-body"><div class="fr">Homologation (war machines and monsters)</div><div class="loc">Homologation Counter Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;2:00 PM</div>
+      <div class="event-body"><div class="fr">Skirmish – Merchant’s Caravan*</div><div class="loc">Forest</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:30 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Skirmish – À l'abordage*</div><div class="loc">Hameau</div></div>
+    </div>
+    <div class="category">Tournaments</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">The Baron’s Chess*</div><div class="loc">Auberge basement</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Tactika*</div><div class="loc">Place des tournois</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;4:30 PM</div>
+      <div class="event-body"><div class="fr">Tests of Strength*</div><div class="loc">In front of the main stage in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;6:00 PM</div>
+      <div class="event-body"><div class="fr">Carcolline*</div><div class="loc">Vieille Taverne</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;6:00 PM</div>
+      <div class="event-body"><div class="fr">Trollball*</div><div class="loc">Lice de Trollball Vieille Ville</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;3:00 PM</div>
+      <div class="event-body"><div class="fr">Kroft’s Race*</div><div class="loc">Departure in front of the Auberge balcony</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Cercle de Loren Mixed and Women*</div><div class="loc">Lice Trollball Haute Ville</div><div class="en">Registration required — Monday 9:00 to 10:00</div></div>
+    </div>
+    <div class="event">
+      <div class="time">4:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Francs archers Mixed and Women*</div><div class="loc">Lice Trollball Haute Ville</div><div class="en">Registration required — Monday 9:00 to 10:00</div></div>
+    </div>
+    <div class="event">
+      <div class="time">6:00 PM&ndash;8:00 PM</div>
+      <div class="event-body"><div class="fr">Fines lames Duchy and Women*</div><div class="loc">Lice de Trollball Haute Ville</div><div class="en">Registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;8:30 PM</div>
+      <div class="event-body"><div class="fr">Pétanque*</div><div class="loc">Place des Tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:30 PM&ndash;11:30 PM</div>
+      <div class="event-body"><div class="fr">Assassin’s Tournament*</div><div class="loc">Lice de Trollball (in front)</div><div class="en">Registration required; registration 20:00–20:30</div></div>
+    </div>
+    <div class="category">Vie du Duché (and other activities)</div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;11:00 AM</div>
+      <div class="event-body"><div class="fr">Merchant Master Class*</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;11:00 AM</div>
+      <div class="event-body"><div class="fr">Chess Master Class*</div><div class="loc">Auberge basement</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM</div>
+      <div class="event-body"><div class="fr">Quêtes des Guildes</div><div class="loc">Boutique Les Artisans d’Azure</div><div class="en">Open to all</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Archeology and Ancient History Master Class I*</div><div class="loc">Grandes Archives</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Music by the Tritons joufflus</div><div class="loc">Travelling performances</div></div>
+    </div>
+    <div class="event">
+      <div class="time">4:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Hirsute Contest*</div><div class="loc">Colibrille, behind Auberge</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:30 PM&ndash;8:45 PM</div>
+      <div class="event-body"><div class="fr">Drag-on-the-Colline*</div><div class="loc">Main stage in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:30 PM&ndash;9:30 PM</div>
+      <div class="event-body"><div class="fr">Possession of the Fosse aux Monstres</div><div class="loc">Fosse aux Monstres</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 PM</div>
+      <div class="event-body"><div class="fr">Music by Deferlante</div><div class="loc">Main stage in Vieille Ville</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Thursday</span><span class="day-date">August 13, 2026</span></div>
+    <div class="services-box">
+      <div class="services-label">Site Services</div>
+      <ul class="services-list"><li>Site access (registration and Accueil): 9:00 AM to 8:00 PM</li><li>Shuttle to P0 parking lot: 9:00 AM to 8:00 PM</li><li>Haute Ville Information Booth: 9:00 AM to 4:00 PM</li><li>24-hour presence at the Accueil and 1540 building</li><li>Caregivers 24-hour presence at the dispensary</li><li>Fire prevention specialist on call</li><li>Community Brigade on site 10:00 AM–3:00 PM and 5:00 PM–10:00 PM</li><li>CALACS on site 10:00 AM–2:00 PM</li><li>Tandem on site 6:00 PM–12:00 AM</li><li>Night Watch on site 9:00 PM–2:00 AM</li></ul>
+    </div>
+    <div class="category">Game</div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Herboristerie Quests</div><div class="loc">Herboristerie on the Allée marchande</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Exploration and maritime Quests</div><div class="loc">Fort</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;4:30 PM</div>
+      <div class="event-body"><div class="fr">Magic and Occult Quests</div><div class="loc">Tour de magie et d’occultisme</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Artistic Quests</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Greffe Counter</div><div class="loc">Banque de l’Hippocampe</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:30 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Political Quests (winnings)</div><div class="loc">Tonnellerie (near the Auberge)</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Patron’s Office</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Grandes Archives</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;3:00 PM</div>
+      <div class="event-body"><div class="fr">Grand Corsaire Recruitment</div><div class="loc">Préau du Faubourg</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Tales Night</div><div class="loc">Auberge balcony</div></div>
+    </div>
+    <div class="category">Combat</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Thursday Grande Bataille*</div><div class="loc">Deployment from Plaine du Fort at 13:00</div><div class="en">Battle from 14:00 to 15:30</div></div>
+    </div>
+    <div class="category">Tournaments</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Tactika*</div><div class="loc">Place des tournois</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Trollball*</div><div class="loc">Lice de Trollball Vieille Ville</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">3:00 PM&ndash;5:30 PM</div>
+      <div class="event-body"><div class="fr">Carcolline*</div><div class="loc">Vieille Taverne</div></div>
+    </div>
+    <div class="event">
+      <div class="time">5:00 PM&ndash;7:00 PM</div>
+      <div class="event-body"><div class="fr">Gladiators*</div><div class="loc">Lice Trollball Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;8:30 PM</div>
+      <div class="event-body"><div class="fr">Pétanque*</div><div class="loc">Fosse aux monstres</div></div>
+    </div>
+    <div class="category">Vie du Duché (and other activities)</div>
+    <div class="event">
+      <div class="time">11:00 AM</div>
+      <div class="event-body"><div class="fr">Quêtes des Guildes</div><div class="loc">Boutique Les Artisans d’Azure</div><div class="en">Open to all</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Calligraphy Advanced Master Class*</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Magpie’s eggs Hunt*</div><div class="loc">Tour de magie et d’occultisme</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Music by the Tritons joufflus</div><div class="loc">Travelling performances</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:00 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Night Trollball*</div><div class="loc">Lice de Trollball Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 PM</div>
+      <div class="event-body"><div class="fr">Music by Astheur</div><div class="loc">Main stage in Vieille Ville</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Friday</span><span class="day-date">August 14, 2026</span> <span class="day-tag">Discovery Day</span></div>
+    <div class="services-box">
+      <div class="services-label">Site Services</div>
+      <ul class="services-list"><li>Site access (registration and Accueil): 9:00 AM to 8:00 PM</li><li>Discovery Day departure until midnight, no shuttle service required</li><li>Shuttle to P0 parking lot: 9:00 AM to 8:00 PM</li><li>Haute Ville Information Booth: 9:00 AM to 7:00 PM</li><li>24-hour presence at the Accueil and 1540 building</li><li>Caregivers 24-hour presence at the dispensary</li><li>Fire prevention specialist on call</li><li>Community Brigade on site 8:00 AM–10:00 PM</li><li>Tandem on site 6:00 PM–12:00 AM</li><li>Night Watch on site 9:00 PM–3:00 AM</li></ul>
+    </div>
+    <div class="category">Game</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Exploration and maritime Quests</div><div class="loc">Fort</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Herboristerie Quests</div><div class="loc">Herboristerie on the Allée marchande</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;4:30 PM</div>
+      <div class="event-body"><div class="fr">Magic and Occult Quests</div><div class="loc">Tour de magie et d’occultisme</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Artistic Quests (winnings)</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:30 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Political Quests (distribution)</div><div class="loc">Tonnellerie (near the Auberge)</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Greffe Counter</div><div class="loc">Banque de l’Hippocampe</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Clash of the Admirals</div><div class="loc">2nd floor of the Banque de l’Hippocampe</div><div class="en">Registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Patron’s Office</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Grandes Archives</div><div class="loc">Grandes Archives</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;2:00 PM</div>
+      <div class="event-body"><div class="fr">Maritime Elections</div><div class="loc">2nd floor of the Banque de l’Hippocampe</div><div class="en">Admirals only</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Concert of the bards</div><div class="loc">Auberge</div></div>
+    </div>
+    <div class="category">Combat</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;2:30 PM</div>
+      <div class="event-body"><div class="fr">Escarmouche – Ramenez-les à bon port</div><div class="loc">Hameau</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:30 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Escarmouche – La première vague*</div><div class="loc">Fort (indoor)</div><div class="en">Spectator allowed</div></div>
+    </div>
+    <div class="category">Tournaments</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Cutpurse Challenge* (tally)</div><div class="loc">Vieille Taverne</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;11:00 AM</div>
+      <div class="event-body"><div class="fr">Kroft’s Hunt*</div><div class="loc">Departure from the Auberge balcony</div><div class="en">No age restrictions — open to all</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Tactika* (finals)</div><div class="loc">Place des tournois</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Baron’s Chess* (finals)</div><div class="loc">Auberge basement</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;6:00 PM</div>
+      <div class="event-body"><div class="fr">Trollball* (finals)</div><div class="loc">Lice de Trollball Vieille Ville</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;7:45 PM</div>
+      <div class="event-body"><div class="fr">Awards Ceremony</div><div class="loc">Fosse aux monstres</div></div>
+    </div>
+    <div class="category">Vie du Duché (and other activities)</div>
+    <div class="event">
+      <div class="time">11:00 AM</div>
+      <div class="event-body"><div class="fr">Quêtes des Guildes</div><div class="loc">Boutique Les Artisans d’Azure</div><div class="en">Open to all</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Archeology and Ancient History Master Class II*</div><div class="loc">Grandes Archives</div><div class="en">Pre-registration required</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Music by the Tritons joufflus</div><div class="loc">Travelling performances</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:30 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Hobbit Grand Gathering</div><div class="loc">In front of the main stage in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Music by Sytar Polson</div><div class="loc">Travelling performances</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;3:00 PM</div>
+      <div class="event-body"><div class="fr">Codex Botania</div><div class="loc">Departure from the Auberge balcony</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Canteraine</div><div class="loc">Travelling performances, Allée marchande</div></div>
+    </div>
+    <div class="event">
+      <div class="time">3:30 PM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Rabaska</div><div class="loc">Auberge balcony</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:00 PM&ndash;9:00 PM</div>
+      <div class="event-body"><div class="fr">Yorick’s talent show</div><div class="loc">Fosse aux monstres</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 PM&ndash;9:30 PM</div>
+      <div class="event-body"><div class="fr">Fire Breathing Show</div><div class="loc">Fosse aux monstres</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 PM</div>
+      <div class="event-body"><div class="fr">Music by Svarica</div><div class="loc">Main stage in Vieille Ville</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Saturday</span><span class="day-date">August 15, 2026</span></div>
+    <div class="services-box">
+      <div class="services-label">Site Services</div>
+      <ul class="services-list"><li>Site access (registration and Accueil): Closed</li><li>Landing area: Closed</li><li>Shuttle to P0 parking lot: 10:00 AM to 6:00 PM</li><li>24-hour presence at the Accueil and 1540 building</li><li>Caregivers 24-hour presence at the dispensary</li><li>Fire prevention specialist on call</li><li>Community Brigade on site 10:00 AM–3:00 PM and 5:00 PM–10:00 PM</li><li>Tandem on site 6:00 PM–12:00 AM</li><li>Night Watch on site 9:00 PM–2:00 AM</li></ul>
+    </div>
+    <div class="category">Game</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Exploration and maritime Quests</div><div class="loc">Fort</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Magic and Occult Quests</div><div class="loc">Tour de magie et d’occultisme</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Artistic Quests (winnings)</div><div class="loc">Bureau du Patron in Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Greffe Counter</div><div class="loc">Banque de l’Hippocampe</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:30 PM</div>
+      <div class="event-body"><div class="fr">Political Quests (winnings)</div><div class="loc">Tonnellerie (near the Auberge)</div></div>
+    </div>
+    <div class="category">Combat</div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Homologation (fixed)</div><div class="loc">Homologation Counter Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:30 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Saturday Grande Bataille*</div><div class="loc">Deployment at the Fort at 12:30</div></div>
+    </div>
+    <div class="category">Vie du Duché (and other activities)</div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">Music by the Tritons joufflus</div><div class="loc">Travelling performances</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:00 PM&ndash;9:00 PM</div>
+      <div class="event-body"><div class="fr">Volunteer Appreciation Evening</div><div class="loc">Auberge</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 PM</div>
+      <div class="event-body"><div class="fr">Music by Sang Vertus</div><div class="loc">Main stage in Vieille Ville</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Sunday</span><span class="day-date">August 16, 2026</span> <span class="day-tag">Departure</span></div>
+    <div class="services-box">
+      <div class="services-label">Site Services</div>
+      <ul class="services-list"><li>Site access by car (departure): 8:00 AM to 3:00 PM</li><li>Shuttle to P0 parking lot: 8:00 AM to 3:00 PM</li><li>Caregivers presence at the dispensary near the Accueil</li></ul>
+    </div>
+  </div>
+
+  <div class="weekly">
+    <h2>Weekly &amp; Site Services</h2>
+    <div class="weekly-sub">Recurring services that apply across multiple days of the event</div>
+    <div class="wk-grid">
+
+    <div class="wk-block">
+      <div class="wk-title">Security</div>
+      <ul class="wk-list"><li>Registration Building (Accueil): 24-hour presence starting Friday, Aug. 7 (10:00 AM)</li><li>1540: 24-hour presence starting Sunday, Aug. 9 (9:00 AM)</li><li>Caregivers/Dispensary: 24-hour presence (near the Accueil) starting Friday, Aug. 7 (10:00 AM)</li><li>Fire Prevention Specialist: 24-hour presence, on call</li><li>Community Brigade: Monday to Thursday, 10:00 AM to 3:00 PM and 5:00 PM to 10:00 PM / Friday 8:00 AM to 10:00 PM / Saturday 10:00 AM to 3:00 PM and 5:00 PM to 10:00 PM</li><li>Night Watch: Sunday to Saturday, 9:00 PM to 2:00 AM / Friday August 14th 9:00 PM to 3:00 AM</li><li>CALACS: Thursday, 10:00 AM to 2:00 PM</li><li>Tandem: Monday to Saturday, 6:00 PM to midnight</li></ul>
+    </div>
+    <div class="wk-block">
+      <div class="wk-title">Auberge Showers</div>
+      <ul class="wk-list"><li>Payment by credit card reader on site (Can$6.00)</li><li>Access cards on sale at the Market (Can$6.00) (bundles available)</li><li>Open 24/7, with temporary closures for cleaning</li></ul>
+    </div>
+    <div class="wk-block">
+      <div class="wk-title">Faubourg Showers</div>
+      <ul class="wk-list"><li>Payment by credit card reader on site (Can$6.00)</li><li>Open from 7:00 AM to 10:00 PM with temporary closures during maintenance (when required)</li></ul>
+    </div>
+    <div class="wk-block">
+      <div class="wk-title">Garbage, Returnable Containers and Recycling</div>
+      <ul class="wk-list"><li>In-game collection (Farfouilleurs): Monday to Saturday, 11:00 AM to 12:00 PM at the Faubourg Préau</li><li>Site-wide collection of returnable containers: Monday to Saturday, 2:00 PM to 4:00 PM</li><li>Garbage collection from identified sectors: Monday to Saturday, 10:00 AM to 2:00 PM</li><li>Garbage drop-off by participants from other sectors in containers directly on site</li><li>Recycling drop-off by all participants in the container at the P1 parking lot</li></ul>
+    </div>
+    <div class="wk-block">
+      <div class="wk-title">Haute Ville Market</div>
+      <ul class="wk-list"><li>Friday, Aug. 7: closed</li><li>Saturday, Aug. 8: 8:00 AM to 4:00 PM</li><li>Sunday, Aug. 9 to Saturday, Aug. 15: 8:00 AM to 8:00 PM</li><li>Sunday, Aug. 16: 8:00 AM to 1:00 PM</li></ul>
+    </div>
+    <div class="wk-block">
+      <div class="wk-title">Haute Ville Inn (Auberge)</div>
+      <ul class="wk-list"><li>Early Arrival: closed</li><li>Sunday to Thursday: 4:00 PM to 10:00 PM</li><li>Friday Aug. 14: 11:00 AM to 10:00 PM</li><li>Saturday Aug. 15: 4:00 PM to 10:00 PM</li></ul>
+    </div>
+    <div class="wk-block">
+      <div class="wk-title">Vieille Ville Old Tavern (Vieille Taverne)</div>
+      <ul class="wk-list"><li>Early Arrival: closed</li><li>Sunday to Saturday: 11:30 AM to midnight</li></ul>
+    </div>
+    <div class="wk-block">
+      <div class="wk-title">Meeting the Game Masters (Maîtres de jeu)</div>
+      <ul class="wk-list"><li>Check the schedule for each sphere in the Grande Bataille de Bicolline Game Document</li></ul>
+    </div>
+    </div>
+  </div>
+
+  <footer>Compiled from the official <a href="https://bicolline.org/wp-content/uploads/2026/07/GB2026_DocProgrammation-en_FINAL-v4-3.pdf" target="_blank" rel="noopener">Grande Bataille 1026 Program Document</a> (Version 4, August 5) &middot; Duch&eacute; de Bicolline</footer>
+    </div>
+  </section>
+
+  <section id="panel-youth" class="tab-panel">
+    <div class="sheet">
+<header>
+    <div class="kicker">Official Program</div>
+    <h1>Youth Activities</h1>
+    <div class="subtitle">Grande Bataille 1026 &middot; 15 and under</div>
+  </header>
+
+  <div class="rule"><span class="mark">&#9830;</span></div>
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Monday</span><span class="day-date">August 10, 2026</span></div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;10:00 AM</div>
+      <div class="event-body"><div class="fr">Story Time (2 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:15 AM&ndash;11:45 AM</div>
+      <div class="event-body"><div class="fr">Page Camp (4 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Page Camp (4 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Tuesday</span><span class="day-date">August 11, 2026</span></div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;10:00 AM</div>
+      <div class="event-body"><div class="fr">Story Time (2 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:15 AM&ndash;11:45 AM</div>
+      <div class="event-body"><div class="fr">Page Camp (4 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Page Camp (4 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;8:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Wednesday</span><span class="day-date">August 12, 2026</span></div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;10:00 AM</div>
+      <div class="event-body"><div class="fr">Story Time (2 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Trollball (12 to 15 years old)</div><div class="loc">Lice Trollball Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:15 AM&ndash;11:45 AM</div>
+      <div class="event-body"><div class="fr">Page Camp (4 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Page Camp (4 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;8:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Thursday</span><span class="day-date">August 13, 2026</span></div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;10:00 AM</div>
+      <div class="event-body"><div class="fr">Story Time (2 to 9 years old)</div><div class="loc">Auberge balcony</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Page Camp (12 to 15 years old)</div><div class="loc">Lice Trollball Haute Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:15 AM&ndash;11:45 AM</div>
+      <div class="event-body"><div class="fr">Page Camp (4 to 9 years old)</div><div class="loc">Auberge balcony</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Page Camp (4 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM&ndash;8:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Friday</span><span class="day-date">August 14, 2026</span> <span class="day-tag">Discovery Day</span></div>
+    <div class="event">
+      <div class="time">9:30 AM&ndash;10:00 AM</div>
+      <div class="event-body"><div class="fr">Story Time (2 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Page Camp (4 to 9 years old)</div><div class="loc">Clos des flos</div><div class="en">Parent-child activity</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Saturday</span><span class="day-date">August 15, 2026</span></div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;12:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Squire Camp (10 to 15 years old)</div><div class="loc">Departure from the Place des tournois</div></div>
+    </div>
+  </div>
+
+  <footer>Youth Activities (15 and under) &mdash; compiled from the official <a href="https://bicolline.org/wp-content/uploads/2026/07/GB2026_DocProgrammation-en_FINAL-v4-3.pdf" target="_blank" rel="noopener">Grande Bataille 1026 Program Document</a> (Version 4, August 5)</footer>
+    </div>
+  </section>
+
+  <section id="panel-unofficial" class="tab-panel">
+    <div class="sheet">
+<header>
+    <div class="kicker">Grande Bataille 1026</div>
+    <h1>Incomplete Compilation of Unofficial Activities</h1>
+    <div class="subtitle">Duch&eacute; de Bicolline &middot; August 9&ndash;15</div>
   </header>
 
   <div class="rule"><span class="mark">&#10070;</span></div>
 
   <div class="day">
-    <div class="day-banner"><span class="day-name">Dimanche</span><span class="day-date">9 ao&ucirc;t</span><span class="day-name-en">Sunday, August 9</span></div>
+    <div class="day-banner"><span class="day-name">Sunday</span><span class="day-date">August 9</span><span class="day-name-en">dimanche, 9 ao&ucirc;t</span></div>
     <div class="event">
       <div class="time">8:00 AM</div>
       <div class="event-body">
@@ -318,7 +2177,7 @@
   </div>
 
   <div class="day">
-    <div class="day-banner"><span class="day-name">Lundi</span><span class="day-date">10 ao&ucirc;t</span><span class="day-name-en">Monday, August 10</span></div>
+    <div class="day-banner"><span class="day-name">Monday</span><span class="day-date">August 10</span><span class="day-name-en">lundi, 10 ao&ucirc;t</span></div>
     <div class="event">
       <div class="time">8:00 AM</div>
       <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
@@ -362,7 +2221,7 @@
   </div>
 
   <div class="day">
-    <div class="day-banner"><span class="day-name">Mardi</span><span class="day-date">11 ao&ucirc;t</span><span class="day-name-en">Tuesday, August 11</span></div>
+    <div class="day-banner"><span class="day-name">Tuesday</span><span class="day-date">August 11</span><span class="day-name-en">mardi, 11 ao&ucirc;t</span></div>
     <div class="event">
       <div class="time">8:00 AM</div>
       <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
@@ -371,10 +2230,14 @@
       <div class="time">11:00 AM&ndash;1:00 PM</div>
       <div class="event-body"><div class="fr">Inscriptions &mdash; Tournoi de Steve l'Assassin</div><div class="en">Registration &mdash; Tournament of Steve the Assassin</div><div class="loc">Galerie du jugement, Tour rouge</div></div>
     </div>
+    <div class="event">
+      <div class="time">10:00 PM&ndash;12:00 AM</div>
+      <div class="event-body"><div class="fr">Grand Bazaar Night</div><div class="loc">Market Trollball Field</div></div>
+    </div>
   </div>
 
   <div class="day">
-    <div class="day-banner"><span class="day-name">Mercredi</span><span class="day-date">12 ao&ucirc;t</span><span class="day-name-en">Wednesday, August 12</span></div>
+    <div class="day-banner"><span class="day-name">Wednesday</span><span class="day-date">August 12</span><span class="day-name-en">mercredi, 12 ao&ucirc;t</span></div>
     <div class="event">
       <div class="time">8:00 AM</div>
       <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
@@ -406,7 +2269,7 @@
   </div>
 
   <div class="day">
-    <div class="day-banner"><span class="day-name">Jeudi</span><span class="day-date">13 ao&ucirc;t</span><span class="day-name-en">Thursday, August 13</span></div>
+    <div class="day-banner"><span class="day-name">Thursday</span><span class="day-date">August 13</span><span class="day-name-en">jeudi, 13 ao&ucirc;t</span></div>
     <div class="event">
       <div class="time">8:00 AM</div>
       <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
@@ -434,7 +2297,7 @@
   </div>
 
   <div class="day">
-    <div class="day-banner"><span class="day-name">Vendredi</span><span class="day-date">14 ao&ucirc;t</span><span class="day-name-en">Friday, August 14</span></div>
+    <div class="day-banner"><span class="day-name">Friday</span><span class="day-date">August 14</span><span class="day-name-en">vendredi, 14 ao&ucirc;t</span></div>
     <div class="event">
       <div class="time">8:00 AM</div>
       <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
@@ -478,7 +2341,7 @@
   </div>
 
   <div class="day">
-    <div class="day-banner"><span class="day-name">Samedi</span><span class="day-date">15 ao&ucirc;t</span><span class="day-name-en">Saturday, August 15</span></div>
+    <div class="day-banner"><span class="day-name">Saturday</span><span class="day-date">August 15</span><span class="day-name-en">samedi, 15 ao&ucirc;t</span></div>
     <div class="event">
       <div class="time">8:00 AM</div>
       <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
@@ -508,8 +2371,159 @@
     <strong>&Agrave; noter&nbsp;/ Note:</strong> the sobriety meeting poster disagrees with itself &mdash; the French text says Monday, Wednesday, and <strong>Saturday</strong> at 5:30&nbsp;PM, while the English text says Monday, Wednesday, and <strong>Friday</strong>. It's listed on all four days above; worth confirming on-site.
   </div>
 
-  <footer>&Eacute;dition non officielle &mdash; usage priv&eacute; &middot; Que la Protectrice veille sur vous</footer>
+  <footer>Compiled from the <a href="https://mcusercontent.com/fbb49d01577d3257dbeff05a8/files/9a7b6cec-9935-1df0-78d8-acd55ed1043a/act._non_offGB2026.pdf" target="_blank" rel="noopener">Recueil incomplet des activit&eacute;s non-officielles</a>, put together by Hugo P&eacute;loquin, Head GB Coordinator</footer>
+    </div>
+  </section>
 
-</div>
+  <section id="panel-lysroyal" class="tab-panel">
+    <div class="sheet">
+<header>
+    <div class="kicker">Grande Bataille 1026</div>
+    <h1>Lys Royal Events</h1>
+    <div class="subtitle">Duch&eacute; de Bicolline &middot; August 9&ndash;15</div>
+  </header>
+
+  <div class="rule"><span class="mark">&#10070;</span></div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Sunday</span><span class="day-date">August 9, 2026</span><span class="day-name-en">dimanche, 9 ao&ucirc;t</span></div>
+    <div class="event">
+      <div class="time">5:00 PM&ndash;9:30 PM</div>
+      <div class="event-body"><div class="fr">Lys Royal Opening Ceremony</div><div class="loc">Lys Alley</div><div class="en">Opening leads into the party, which ends with us going to the Grand opening.</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM</div>
+      <div class="event-body"><div class="fr">Lys Noir Meeting</div><div class="loc">Tavern Au Coin</div><div class="en">Guild Members Only</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:30 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Grand battle opening event</div><div class="loc">Monster Pit</div><div class="en">We know nothing jon snow</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Monday</span><span class="day-date">August 10, 2026</span><span class="day-name-en">lundi, 10 ao&ucirc;t</span></div>
+    <div class="event">
+      <div class="time">10:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Merc basic training event</div><div class="loc">Mage Plain/Battle Field</div><div class="en">Erik leads with assistance from Officers</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Tuesday</span><span class="day-date">August 11, 2026</span><span class="day-name-en">mardi, 11 ao&ucirc;t</span></div>
+    <div class="event">
+      <div class="time">10:00 AM</div>
+      <div class="event-body"><div class="fr">Gather at Lys Alley</div><div class="loc">Lys Alley</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:30 PM</div>
+      <div class="event-body"><div class="fr">Final attendance and march out</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM</div>
+      <div class="event-body"><div class="fr">Muster for Battle 1</div><div class="loc">Highway Entrance</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;3:45 PM</div>
+      <div class="event-body"><div class="fr">Battle #1 (Tuesday Grande Bataille)</div><div class="loc">Mage Plain/Battle Field</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Wednesday</span><span class="day-date">August 12, 2026</span><span class="day-name-en">mercredi, 12 ao&ucirc;t</span></div>
+    <div class="event">
+      <div class="time">12:30 PM&ndash;2:15 PM</div>
+      <div class="event-body"><div class="fr">Merc advanced training event (A)</div><div class="loc">Mage Plain/Battle Field</div><div class="en">Gawain leads it</div></div>
+    </div>
+    <div class="event">
+      <div class="time">~5:00 PM</div>
+      <div class="event-body"><div class="fr">Guild Party</div><div class="loc">Lys Alley</div><div class="en">Supper time / around 5pm</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Thursday</span><span class="day-date">August 13, 2026</span><span class="day-name-en">jeudi, 13 ao&ucirc;t</span></div>
+    <div class="event">
+      <div class="time">10:00 AM</div>
+      <div class="event-body"><div class="fr">Gather at Lys Alley</div><div class="loc">Lys Alley</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:30 PM</div>
+      <div class="event-body"><div class="fr">Final attendance and march out</div></div>
+    </div>
+    <div class="event">
+      <div class="time">1:00 PM</div>
+      <div class="event-body"><div class="fr">Muster for Battle 2</div><div class="loc">Fort/Mage Plain</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:00 PM&ndash;3:30 PM</div>
+      <div class="event-body"><div class="fr">Battle #2</div><div class="loc">Mage Plain/Battle Field</div></div>
+    </div>
+    <div class="event">
+      <div class="time">3:15 PM</div>
+      <div class="event-body"><div class="fr">The First Wave Skirmish — Sol Umbra/Ferrara Fidelis</div><div class="loc">Sol Umbra Camp</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:30 PM&ndash;10:00 PM</div>
+      <div class="event-body"><div class="fr">Poetry Night</div><div class="loc">Auberge</div><div class="en">Theme: Conquest. Rewards: 50 solars + 1 to 10 artistic cards</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Friday</span><span class="day-date">August 14, 2026</span><span class="day-name-en">vendredi, 14 ao&ucirc;t</span></div>
+    <div class="event">
+      <div class="time">12:30 PM&ndash;2:15 PM</div>
+      <div class="event-body"><div class="fr">Merc advanced training event (B)</div><div class="loc">Mage Plain/Battle Field</div><div class="en">Gawain leads it</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Saturday</span><span class="day-date">August 15, 2026</span><span class="day-name-en">samedi, 15 ao&ucirc;t</span></div>
+    <div class="event">
+      <div class="time">10:00 AM</div>
+      <div class="event-body"><div class="fr">Gather at Lys Alley</div><div class="loc">Lys Alley</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM</div>
+      <div class="event-body"><div class="fr">Final attendance and march out</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:30 PM</div>
+      <div class="event-body"><div class="fr">Muster for Battle 3</div><div class="loc">Fort/Mage Plain</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:30 PM&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Battle #3</div><div class="loc">Mage Plain/Battle Field</div></div>
+    </div>
+  </div>
+
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var buttons = document.querySelectorAll('.tab-btn');
+    var panels = document.querySelectorAll('.tab-panel');
+    function activate(id){
+      panels.forEach(function(p){ p.classList.toggle('active', p.id === id); });
+      buttons.forEach(function(b){
+        var isActive = b.getAttribute('data-tab') === id;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      window.scrollTo({top: 0, behavior: 'instant' in window ? 'instant' : 'auto'});
+      try { history.replaceState(null, '', '#' + id); } catch(e) {}
+    }
+    buttons.forEach(function(b){
+      b.addEventListener('click', function(){ activate(b.getAttribute('data-tab')); });
+    });
+    var hash = window.location.hash.replace('#', '');
+    if (hash && document.getElementById(hash)) {
+      activate(hash);
+    }
+  })();
+</script>
+
 </body>
 </html>
