@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calendrier de la Grande Bataille de Bicolline 1026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment: #f1e6cb;
+    --parchment-dark: #e4d3a7;
+    --parchment-shadow: #cdb87d;
+    --ink: #3a2c1d;
+    --ink-soft: #5c4a34;
+    --burgundy: #7a2331;
+    --burgundy-deep: #591722;
+    --forest: #3f5d3a;
+    --gold: #a3792f;
+    --gold-bright: #c69a3f;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: radial-gradient(ellipse at top, #efe2bd 0%, #ddc98f 100%);
+    font-family:'EB Garamond', serif;
+    color: var(--ink);
+    padding: 40px 16px 80px;
+  }
+  .sheet{
+    max-width: 880px;
+    margin: 0 auto;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(255,255,255,0.35), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(0,0,0,0.05), transparent 45%),
+      var(--parchment);
+    border: 1px solid var(--parchment-shadow);
+    box-shadow: 0 0 0 1px var(--gold) inset, 0 10px 40px rgba(60,40,10,0.25);
+    padding: 48px 40px 56px;
+    position: relative;
+  }
+  .sheet::before, .sheet::after{
+    content:"";
+    position:absolute;
+    width: 46px; height: 46px;
+    border: 2px solid var(--gold);
+    opacity: 0.55;
+  }
+  .sheet::before{ top: 16px; left: 16px; border-right: none; border-bottom: none; }
+  .sheet::after{ bottom: 16px; right: 16px; border-left: none; border-top: none; }
+
+  header{ text-align:center; margin-bottom: 8px; }
+  .kicker{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--burgundy);
+    text-transform: uppercase;
+  }
+  .kicker-en{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-top: 1px;
+  }
+  h1{
+    font-family:'Cinzel Decorative', serif;
+    font-size: 34px;
+    color: var(--burgundy-deep);
+    margin: 6px 0 4px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  }
+  .subtitle{
+    font-family:'Cinzel', serif;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+  .rule{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    margin: 22px 0 30px;
+    color: var(--gold);
+  }
+  .rule::before, .rule::after{
+    content:"";
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+  .rule .mark{ font-size: 18px; color: var(--burgundy); }
+
+  .day{
+    margin-bottom: 34px;
+    page-break-inside: avoid;
+  }
+  .day-banner{
+    display:flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    border-bottom: 1.5px solid var(--gold);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+  .day-name{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size: 22px;
+    color: var(--burgundy-deep);
+    letter-spacing: 0.03em;
+  }
+  .day-date{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+  }
+  .day-name-en{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--gold);
+    letter-spacing: 0.02em;
+  }
+
+  .event{
+    display:grid;
+    grid-template-columns: 108px 1fr;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px dotted var(--parchment-shadow);
+  }
+  .event:last-child{ border-bottom: none; }
+  .time{
+    font-family:'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--forest);
+    padding-top: 2px;
+    line-height: 1.3;
+  }
+  .event-body .fr{
+    font-weight: 600;
+    font-size: 16.5px;
+    color: var(--ink);
+  }
+  .event-body .en{
+    font-style: italic;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+  }
+  .event-body .loc{
+    font-size: 13.5px;
+    color: var(--gold);
+    margin-top: 2px;
+  }
+  .event-body .loc::before{ content: "\2726  "; }
+  .flag{
+    display:inline-block;
+    font-size: 11px;
+    font-family:'Cinzel', serif;
+    letter-spacing: 0.05em;
+    color: var(--burgundy-deep);
+    background: rgba(122,35,49,0.12);
+    border: 1px solid rgba(122,35,49,0.35);
+    border-radius: 2px;
+    padding: 1px 6px;
+    margin-left: 8px;
+    vertical-align: 1px;
+    text-transform: uppercase;
+  }
+
+  .ongoing{
+    margin-top: 40px;
+    border-top: 2px solid var(--gold);
+    padding-top: 20px;
+  }
+  .ongoing h2{
+    font-family:'Cinzel', serif;
+    font-size: 19px;
+    color: var(--burgundy-deep);
+    text-align:center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .ongoing-en{
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    text-align:center;
+    margin-bottom: 16px;
+  }
+  .ongoing ul{
+    list-style: none;
+    margin: 0; padding: 0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 28px;
+  }
+  .ongoing li{
+    font-size: 14.5px;
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+  }
+  .ongoing li::before{
+    content: "\2727";
+    position:absolute; left:0; top:1px;
+    color: var(--gold);
+    font-size: 12px;
+  }
+  .ongoing li .loc{
+    display:block;
+    font-size: 12.5px;
+    color: var(--gold);
+    margin-top: 1px;
+  }
+  .ongoing li .loc::before{ content: "\2726  "; }
+  .ongoing li .fr{ font-weight:600; }
+  .ongoing li .en{ font-style: italic; color: var(--ink-soft); }
+
+  .note{
+    margin-top: 30px;
+    background: rgba(122,35,49,0.08);
+    border: 1px solid rgba(122,35,49,0.3);
+    border-radius: 4px;
+    padding: 14px 18px;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .note strong{ color: var(--burgundy-deep); }
+
+  footer{
+    text-align:center;
+    margin-top: 36px;
+    font-family:'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 13.5px;
+  }
+
+  @media (max-width: 560px){
+    .sheet{ padding: 32px 18px 40px; }
+    h1{ font-size: 26px; }
+    .event{ grid-template-columns: 78px 1fr; }
+    .ongoing ul{ grid-template-columns: 1fr; }
+  }
+
+  @media print{
+    body{ background: white; padding: 0; }
+    .sheet{ box-shadow: none; border: none; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header>
+    <div class="kicker">Recueil incomplet des activit&eacute;s non-officielles</div>
+    <div class="kicker-en">Incomplete compilation of unofficial activities</div>
+    <h1>Calendrier de la Grande Bataille</h1>
+    <div class="subtitle">Bicolline &middot; 9&ndash;15 Ao&ucirc;t 1026</div>
+  </header>
+
+  <div class="rule"><span class="mark">&#10070;</span></div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Dimanche</span><span class="day-date">9 ao&ucirc;t</span><span class="day-name-en">Sunday, August 9</span></div>
+    <div class="event">
+      <div class="time">8:00 AM</div>
+      <div class="event-body">
+        <div class="fr">Groupe de m&eacute;ditation quotidienne</div>
+        <div class="en">Daily meditation group</div>
+        <div class="loc">Champ de bataille, pr&egrave;s de la c&ocirc;te Norse</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Lundi</span><span class="day-date">10 ao&ucirc;t</span><span class="day-name-en">Monday, August 10</span></div>
+    <div class="event">
+      <div class="time">8:00 AM</div>
+      <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
+    </div>
+    <div class="event">
+      <div class="time">10:30 AM</div>
+      <div class="event-body"><div class="fr">L'&Eacute;change des Atours</div><div class="en">The attire exchange (clothing swap)</div><div class="loc">Sous-sol de l'auberge</div></div>
+    </div>
+    <div class="event">
+      <div class="time">3:00 PM</div>
+      <div class="event-body"><div class="fr">Le D&eacute;fi de la Protectrice <span class="flag">Croyants du Cercle</span></div><div class="en">The Challenge of the Protectress &mdash; duo challenge</div><div class="loc">Plaine des Mages</div></div>
+    </div>
+    <div class="event">
+      <div class="time">2:30&ndash;4:00 PM</div>
+      <div class="event-body"><div class="fr">Le Grand Partage Culinaire</div><div class="en">The great culinary sharing</div><div class="loc">Entre l'Hibougriffe et la taverne de la Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">5:30 PM</div>
+      <div class="event-body"><div class="fr">Rencontre de sobri&eacute;t&eacute; <span class="flag">voir note</span></div><div class="en">Sobriety meeting</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM</div>
+      <div class="event-body"><div class="fr">Feste Citadienne (3e &eacute;d.) &mdash; rassemblement</div><div class="en">City festival &mdash; gathering</div><div class="loc">Pr&egrave;s de la Tour de magie</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:30 PM</div>
+      <div class="event-body"><div class="fr">Le Band du Sud en performance</div><div class="en">Live music, part of Feste Citadienne</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:30 PM</div>
+      <div class="event-body"><div class="fr">La Grande Joute Verbale de la Cit&eacute;</div><div class="en">The great verbal joust of the city</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:30 PM</div>
+      <div class="event-body"><div class="fr">La C&eacute;r&eacute;monie du Cercle <span class="flag">Croyants du Cercle</span></div><div class="en">The Ceremony of the Circle &mdash; come in armor</div><div class="loc">Pr&egrave;s de la forge</div></div>
+    </div>
+    <div class="event">
+      <div class="time">9:00 PM</div>
+      <div class="event-body"><div class="fr">Pub Night Sing-Along Spectacular</div><div class="en">Bards drink free &mdash; Lys Noir</div><div class="loc">Taverne au coin, Lys Noir</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Mardi</span><span class="day-date">11 ao&ucirc;t</span><span class="day-name-en">Tuesday, August 11</span></div>
+    <div class="event">
+      <div class="time">8:00 AM</div>
+      <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Inscriptions &mdash; Tournoi de Steve l'Assassin</div><div class="en">Registration &mdash; Tournament of Steve the Assassin</div><div class="loc">Galerie du jugement, Tour rouge</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Mercredi</span><span class="day-date">12 ao&ucirc;t</span><span class="day-name-en">Wednesday, August 12</span></div>
+    <div class="event">
+      <div class="time">8:00 AM</div>
+      <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM</div>
+      <div class="event-body"><div class="fr">Le Chemin de Miettes</div><div class="en">The breadcrumb trail (scavenger hunt), teams of 1&ndash;5</div><div class="loc">D&eacute;part au camp Magpie</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00 PM</div>
+      <div class="event-body"><div class="fr">La Chasse au Tr&eacute;sor du Capitaine Valtramir</div><div class="en">Captain Valtramir's treasure hunt &mdash; Cie du B&eacute;lier</div><div class="loc">Campement de la Cie du B&eacute;lier</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00&ndash;3:00 PM</div>
+      <div class="event-body"><div class="fr">Grande Exposition et March&eacute; Artisanal</div><div class="en">Grand exhibition and artisan market</div><div class="loc">Camp des Traqueurs, Vieille Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">5:30 PM</div>
+      <div class="event-body"><div class="fr">Rencontre de sobri&eacute;t&eacute; <span class="flag">voir note</span></div><div class="en">Sobriety meeting</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
+    </div>
+    <div class="event">
+      <div class="time">7:00 PM</div>
+      <div class="event-body"><div class="fr">Session Traditionnelle Irlandaise</div><div class="en">Traditional Irish music session</div><div class="loc">Taverne du Lys Noir</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:00&ndash;11:00 PM</div>
+      <div class="event-body"><div class="fr">Le Pari des Sir&egrave;nes &mdash; Casino &amp; Spectacle burlesque</div><div class="en">The mermaids' gamble &mdash; casino and burlesque show</div><div class="loc">Grand hall du Ragnarok</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Jeudi</span><span class="day-date">13 ao&ucirc;t</span><span class="day-name-en">Thursday, August 13</span></div>
+    <div class="event">
+      <div class="time">8:00 AM</div>
+      <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Inscriptions &mdash; Tournoi de Steve l'Assassin</div><div class="en">Registration &mdash; Tournament of Steve the Assassin</div><div class="loc">Galerie du jugement, Tour rouge</div></div>
+    </div>
+    <div class="event">
+      <div class="time">3:00 PM</div>
+      <div class="event-body"><div class="fr">Fin des inscriptions &mdash; Les Marmaraderies</div><div class="en">Sign-up deadline &mdash; talent festival</div><div class="loc">Monast&egrave;re de Marmara</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:00 PM</div>
+      <div class="event-body"><div class="fr">Tournoi de Steve l'Assassin</div><div class="en">The unique tournament of Steve the Assassin</div><div class="loc">Galerie du jugement, Tour rouge</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:00 PM</div>
+      <div class="event-body"><div class="fr">Les Marmaraderies (3e &eacute;d.) &mdash; th&egrave;me&nbsp;: Maritime</div><div class="en">Talent festival &mdash; theme: maritime</div><div class="loc">Monast&egrave;re de Marmara</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:30 PM</div>
+      <div class="event-body"><div class="fr">Bardes de Bicolline</div><div class="en">Bards of Bicolline &mdash; grande finale jam band</div><div class="loc">Monast&egrave;re de Marmara</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Vendredi</span><span class="day-date">14 ao&ucirc;t</span><span class="day-name-en">Friday, August 14</span></div>
+    <div class="event">
+      <div class="time">8:00 AM</div>
+      <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM</div>
+      <div class="event-body"><div class="fr">Festival Avent&yuml;r &mdash; le Festival de la Fortune (3e &eacute;d.)</div><div class="en">Festival of fortune</div><div class="loc">Terrasse de l'Hydre, Nouvelle-Ville</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:00 AM&ndash;1:30 PM</div>
+      <div class="event-body"><div class="fr">Duels de Dagues de Darganof</div><div class="en">Darganof dagger off &mdash; bring your own dagger</div><div class="loc">Portes du fort</div></div>
+    </div>
+    <div class="event">
+      <div class="time">11:30 AM&ndash;1:00 PM</div>
+      <div class="event-body"><div class="fr">Le Pique-Nique Hobbit</div><div class="en">The hobbit picnic &mdash; coronation &amp; foot contest</div><div class="loc">Devant la sc&egrave;ne</div></div>
+    </div>
+    <div class="event">
+      <div class="time">12:00&ndash;3:00 PM</div>
+      <div class="event-body"><div class="fr">Festival des Arts des Terres du Sud</div><div class="en">Southlands arts festival</div><div class="loc">L'Avant-Poste</div></div>
+    </div>
+    <div class="event">
+      <div class="time">3:00&ndash;5:00 PM</div>
+      <div class="event-body"><div class="fr">La Joute P&eacute;destre de Derzat (2e ann&eacute;e)</div><div class="en">The Derzat foot joust &mdash; no horses</div><div class="loc">Terrain de Taktika</div></div>
+    </div>
+    <div class="event">
+      <div class="time">4:00 PM</div>
+      <div class="event-body"><div class="fr">La Course &agrave; Cheval du Kik'wa'ju</div><div class="en">The Kik'wa'ju horse race &mdash; anything goes</div></div>
+    </div>
+    <div class="event">
+      <div class="time">5:30 PM</div>
+      <div class="event-body"><div class="fr">Rencontre de sobri&eacute;t&eacute; <span class="flag">voir note</span></div><div class="en">Sobriety meeting</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
+    </div>
+    <div class="event">
+      <div class="time">6:00 PM</div>
+      <div class="event-body"><div class="fr">M&eacute;choui Annuel des Gloutons</div><div class="en">Annual gluttons' m&eacute;choui (roast dinner)</div><div class="loc">Le Faubourg</div></div>
+    </div>
+    <div class="event">
+      <div class="time">8:00 PM</div>
+      <div class="event-body"><div class="fr">The Hour of Many Moons &mdash; The Court of Time</div><div class="en">A ritual of magic, fate, and blood</div><div class="loc">Plaine des Mages</div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-banner"><span class="day-name">Samedi</span><span class="day-date">15 ao&ucirc;t</span><span class="day-name-en">Saturday, August 15</span></div>
+    <div class="event">
+      <div class="time">8:00 AM</div>
+      <div class="event-body"><div class="fr">Groupe de m&eacute;ditation quotidienne</div><div class="en">Daily meditation group</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
+    </div>
+    <div class="event">
+      <div class="time">5:30 PM</div>
+      <div class="event-body"><div class="fr">Rencontre de sobri&eacute;t&eacute; <span class="flag">voir note</span></div><div class="en">Sobriety meeting</div><div class="loc">Champ de bataille, c&ocirc;te Norse</div></div>
+    </div>
+  </div>
+
+  <div class="ongoing">
+    <h2>Toute la semaine &mdash; sans horaire fixe</h2>
+    <div class="ongoing-en">All week &mdash; no fixed schedule</div>
+    <ul>
+      <li><span class="fr">MIBIPOC</span> &mdash; <span class="en">p&eacute;tanque championship, matches anytime, anywhere on Bicolline</span><span class="loc">Info &amp; results: b&acirc;timent du Fer de Lance, Quartier Romain</span></li>
+      <li><span class="fr">Le Talisman de Protection</span> &mdash; <span class="en">craft &amp; display all week, judged at week's end</span><span class="loc">Camp DTCo, secteur de l'Avant-Poste</span></li>
+      <li><span class="fr">Coupe du Kraken</span> &mdash; <span class="en">pirate chief election &amp; games, 5 solars entry</span></li>
+      <li><span class="fr">La Grande &Eacute;choppe Norse</span> &mdash; <span class="en">mead, jewelry, weaving &amp; more</span><span class="loc">C&ocirc;te Norse, terrain des Lions du Nord</span></li>
+      <li><span class="fr">Vente chez Agnarr L&eacute;b&eacute;niste</span> &mdash; <span class="en">furniture sale, one week only</span><span class="loc">Basse Ville, terrain des Lions du Nord, C&ocirc;te Norse</span></li>
+      <li><span class="fr">Le&ccedil;ons C&eacute;lestes d'Astraline</span> &mdash; <span class="en">astronomy &amp; Perseids, clear evenings</span><span class="loc">Dans la Cit&eacute;</span></li>
+      <li><span class="fr">L'Arbre des Souhaits</span> &mdash; <span class="en">leave a wish on the fairies' tree</span><span class="loc">Au Clos des Flots</span></li>
+      <li><span class="fr">Sont o&ugrave; les Gnomes?</span> &mdash; <span class="en">spot the hidden gnomes around Bicolline</span></li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <strong>&Agrave; noter&nbsp;/ Note:</strong> the sobriety meeting poster disagrees with itself &mdash; the French text says Monday, Wednesday, and <strong>Saturday</strong> at 5:30&nbsp;PM, while the English text says Monday, Wednesday, and <strong>Friday</strong>. It's listed on all four days above; worth confirming on-site.
+  </div>
+
+  <footer>&Eacute;dition non officielle &mdash; usage priv&eacute; &middot; Que la Protectrice veille sur vous</footer>
+
+</div>
+</body>
+</html>
